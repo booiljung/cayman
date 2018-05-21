@@ -34,10 +34,14 @@ namespace PseudoRandom
   		private uint VM2   { get { return STATE[(state_i+M2) & 0x0000001fU]; } }
   		private uint VM3   { get { return STATE[(state_i+M3) & 0x0000001fU]; } }
   		private uint VRm1  { get { return STATE[(state_i+31) & 0x0000001fU]; } }
-  		private uint newV0 { get { return STATE[(state_i+31) & 0x0000001fU]; }
-                       set { STATE[(state_i+31) & 0x0000001fU] = value; } }
-  		private uint newV1 { get { return STATE[state_i                   ]; }
-                       set { STATE[state_i                   ] = value; } }
+  		private uint newV0 {
+            get { return STATE[(state_i+31) & 0x0000001fU]; }
+            set { STATE[(state_i+31) & 0x0000001fU] = value; }
+        }
+  		private uint newV1 {
+            get { return STATE[state_i]; }
+            set { STATE[state_i] = value; }
+        }
 
   		private const double FACT = 2.32830643653869628906e-10;
 
