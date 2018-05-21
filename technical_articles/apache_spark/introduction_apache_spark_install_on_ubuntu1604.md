@@ -1,6 +1,6 @@
 [Top](index.md)
 
-#아파치 스파크(Apache Spark)의 소개와 우분투 16.04 LTS에 설치
+# 아파치 스파크(Apache Spark)의 소개와 우분투 16.04 LTS에 설치
 
 [스파크](http://spark.apache.org/)는 UC 버클리의 AMPLab에 의해 탄생하여, 아파치 소프트웨어 재단(Apache Software Foundation)에 기증되었고, 관리되고 있습니다.
 
