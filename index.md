@@ -5,7 +5,13 @@
 * [의료정보시스템](./medical_information_systems/index.md)
 
 
+
+{% raw %} 
+ 	
 $$
     \mathbb E = E
 $$
 
+{% endraw %} 
+
+END
