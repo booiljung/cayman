@@ -22,7 +22,7 @@
 - [영상처리 (Image Processing)](image_processing/index.md)
 - 패턴인식 (Pattern Recognition)
 - [컴퓨터 비전 (Computer Vision)](computer_vision/index.md)
-- 데이터 분석 (Data Analytics)
+- [데이터 분석 (Data Analytics)](data_analystics/index.md)
 - 데이터 시각화 (Data Visualization)
 - [머신러닝 (Machine Learning)](machine_learning/index.md)
 - [딥러닝 (Deep Learning)](deep_learning/index.md)
