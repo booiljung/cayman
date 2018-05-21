@@ -26,7 +26,7 @@
 - 데이터 시각화 (Data Visualization)
 - [머신러닝 (Machine Learning)](machine_learning/index.md)
 - [딥러닝 (Deep Learning)](deep_learning/index.md)
-- 3D 그래픽스 (3D Graphics)
+- [3D 그래픽스 (3D Graphics)](3d_graphics/index.md)
 - 물리엔진 (Physics Engine)
 - 컴퓨터 아키텍처 (Computer Architecture)
 - 소프트웨어 아키텍쳐 (Software Architecture)
@@ -35,7 +35,7 @@
 - 병렬처리 (Parallel Processing)
 - 분산 컴퓨팅 (Distributed Computing)
 - OpenGL
-- Unity3D
+- [Unity3D](unity3d/index.md)
 - 셰이더 프로그래밍 (Shader Programming)
 - 텐서플로우 (Tensorflow)
 - [토치 (Torch)](torch/index.md)

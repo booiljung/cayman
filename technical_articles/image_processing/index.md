@@ -2,7 +2,7 @@
 
 # 영상처리 (image processing)
 
-- Image Geometry Transformation
+- [이미지 기하 변환(Image Geometry Transformation)](image_geometry_transformation.md)
 - Cross Corelation 과 Convolution
 - Gradiant, Laplacian, Hessian
 - Gaussian Bluring
