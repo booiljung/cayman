@@ -1,6 +1,6 @@
 [Top](index.md)
 
-#오일러 회전과 짐벌락(Euler angles gimbol lock)
+# 오일러 회전과 짐벌락(Euler angles gimbol lock)
 
 <iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/zc8b2Jo7mno" width="420"></iframe>
 

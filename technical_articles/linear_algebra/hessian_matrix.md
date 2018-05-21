@@ -1,12 +1,13 @@
 [Top](index.md)
 
-#헤시안 행렬(Hessian matrix)
+# 헤시안 행렬(Hessian matrix)
 
 주의: 이 글의 수학은 공학 분야 활용 중심이며 수학 전공자가 보기에 엄밀하지 않을 수 있습니다.
 
 헤시안 행렬 또는 헤시안은 스칼라 변수가 주어진 함수의 2차 편미분 함수를 [정칙행렬](nonsingularc_matrix.md)로 표현한 행렬 입니다. 헤시안 행렬에서 헤시안은 독일(프로이센)의 수학자 루트비오 오토 헤세(Ludwig Otto Hesse, 1811년 4월 22일 ~ 1874년 8월 4일)의 이름입니다. 헤시안 행렬은 다변수 함수가 극값을 가질때, 그것이 극대인지, 극소인지, 안장점(saddle point)인지 판정할 때 사용합니다.
 
 어떤 실함수 $f(x_1, x_2, x_3, \cdots , x_n)$ 에 대하여 헤시안 행렬은:
+
 $$
 H(f) = \begin{pmatrix}
 \frac{\partial ^2 f}{\partial x_1^2} &

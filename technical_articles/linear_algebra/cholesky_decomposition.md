@@ -1,6 +1,6 @@
 [Top](index.md)
 
-#숄레스키 분해(Cholesky decomposition)
+# 숄레스키 분해(Cholesky decomposition)
 
 주의: 이 글의 수학은 공학 분야 활용 중심이며 수학 전공자가 보기에 엄밀하지 않을 수 있습니다.
 
@@ -8,7 +8,8 @@
 
 이때 행렬은 [대칭행렬(symmetric matrix)](symmetric_matrix.md)이면서 [정칙행렬(nonsingular matrix)](nonsingular_matrix.md)인 행렬을 말합니다. 즉, 역행렬이 존재하면서 전치행렬도 동일할때 숄레스키 분해가 가능합니다.
 
-콜레스키 행렬은 하삼각행렬 $\mathbf L$과 상삼각행렬 $\mathbf U$로 분해합니다. 이때 $\mathbf A$가 대칭행렬이므로 $\mathbf L$과 $\mathbf U$는 서로 전치이기도 합니다. 
+콜레스키 행렬은 하삼각행렬 $\mathbf L$과 상삼각행렬 $\mathbf U$로 분해합니다. 이때 $\mathbf A$가 대칭행렬이므로 $\mathbf L$과 $\mathbf U$는 서로 전치이기도 합니다.
+
 $$
 \mathbf{A} = \mathbf{L} \mathbf{U}
 $$
@@ -71,6 +72,7 @@ u_{1,1} & u_{1,2} & u_{1,3} \\
 \end{pmatrix}
 \end{aligned}
 $$
+
 과 같습니다. 숄레스키 분해는 최적화 문제의 해를 수치해석을 사용하여 구할때 가중최소제곱법을 반복하여 구할 수 있는데, 이때 가중최소제곱의 답을 숄레스키 분해로 구할 수 있습니다.
 
 ## PyTorch
