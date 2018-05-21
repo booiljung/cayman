@@ -4,14 +4,3 @@
 * [머신러닝 노트](./machine_learning_notes/index.md)
 * [의료정보시스템](./medical_information_systems/index.md)
 
-
-
-{% raw %} 
- 	
-$$
-    \mathbb E = E
-$$
-
-{% endraw %} 
-
-END
