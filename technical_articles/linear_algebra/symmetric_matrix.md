@@ -11,7 +11,7 @@ $$
 
 인 행렬을 말합니다. 즉 어떤 행렬을 전치하면 다시 그 행렬이 되는 행렬을 말합니다.
 $$
-\mathbf{A} = \mathbf{A}^T
+\mathbf{A} = \mathbf{A}^\mathrm T
 $$
 
 

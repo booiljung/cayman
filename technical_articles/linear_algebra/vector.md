@@ -90,7 +90,7 @@ $$
 벡터는 전치(transpose)할 수 있으며 $\mathbf{u}^T$로 표기합니다. 열벡터를 전치하면 행벡터가 되고, 행벡터를 전치하면 열벡터가 됩니다. 벡터 $\mathbf{u}$를 전치하면 $\mathbf{v}$ 와 같습니다.
 
 $$
-\mathbf{u}^T = \mathbf{v}
+\mathbf{u}^\mathrm T = \mathbf{v}
 $$
 
 $$
@@ -100,7 +100,7 @@ $$
   3 &
   \cdots &
   N
-\end{pmatrix}^T
+\end{pmatrix}^\mathrm T
 =
 \begin{pmatrix}
   1 \\
@@ -133,7 +133,7 @@ $$
 	\cdots &
 	u_{N-1} &
 	u_N
-\end{pmatrix}^T
+\end{pmatrix}^\mathrm T
 $$
 
 로 표기하여 문서 공간을 절약하기도 합니다.

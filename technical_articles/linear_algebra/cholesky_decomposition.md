@@ -17,13 +17,13 @@ $$
 $\mathbf L$과 $\mathbf U$는 전치관계이므로
 
 $$
-\mathbf{A} = \mathbf{L} \mathbf{L}^T
+\mathbf{A} = \mathbf{L} \mathbf{L}^\mathrm T
 $$
 
 또는
 
 $$
-\mathbf{A} = \mathbf{U}^T \mathbf{U}
+\mathbf{A} = \mathbf{U}^\mathrm T \mathbf{U}
 $$
 
 로 표현할 수 있으며, 행렬의 항목을 자세히 보면
