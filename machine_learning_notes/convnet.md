@@ -1,8 +1,10 @@
 [Top](index.md)
 
-# CNN: Convolutional Neural Networks
+# ConvNet: Convolutional Neural Networks
 
-## CNN Basics
+Convolutional Netural Networks를 간단히 줄여서 ConvNet 또는 CNN으로 부르고 있습니다. CNN의 경우 [미국 케이블 뉴스 네트워크](https://edition.cnn.com/)와 이름이 동일하여 검색이 어려운 점이 있어, ConvNet로 부르자는 주장도 있습니다. 이 블로그는 ConvNet으로 표기하며, 다른 페이지를 참조할때는 해당 페이지에서 표시에 따릅니다.
+
+## ConvNet Basics
 
 * CNN #1 - 라온피플 [blog #1](https://laonple.blog.me/220811172205)
 * CNN #2 - 라온피플 [blog #2](https://laonple.blog.me/220594258301)
@@ -11,7 +13,7 @@
 * CNN #5 - 라온피플 [blog #5](https://laonple.blog.me/220624485850)
 * CS231n: Convolutional Neural Networks for Visual Recognition - Stanford University [youtube](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
 
-## CNN Basic Papers
+## ConvNet Basic Papers
 
 * Backpropagation Applied to Handwritten Zip Code - 1989 [paper](http://yann.lecun.com/exdb/publis/abs/lecun-89e.pdf)
 * Gradient-Based Learning Applied to Document Recognition - 1998 [paper](http://yann.lecun.com/exdb/publis/abs/lecun-98.pdf)
