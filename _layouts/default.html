@@ -9,6 +9,35 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
+
+      <script type = "text/javascript" src = "http://cdn.mathjax.org/mathjax/latest/MathJax.js">
+        MathJax.Hub.Config({          
+          extensions:[            
+            "tex2jax.js",
+            "TeX/AMSmath.js",
+            "TeX/AMSsymbols.js"
+          ],          
+          jax:[
+            "input/TeX",
+            "output/HTML-CSS"
+          ],
+          tex2jax:{
+            inlineMath: [['$','$'], ["\\(","\\)"]],
+            displayMath: [['$$','$$'], ["\\[","\\]"]],
+            processEscapes: true
+          },
+          "HTML-CSS": { availableFonts: ["TeX"] }
+        });
+        </script>
+        
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/vs.min.css" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.5.0/styles/default.min.css" />
+        <script src="//cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
     <section class="page-header">
       <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
