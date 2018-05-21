@@ -10,6 +10,18 @@
   </head>
   <body>
 
+      <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            displayMath: [['$$','$$'], ["\\[","\\]"]],
+          }
+        });
+      </script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+      <!--
       <script type = "text/javascript" src = "http://cdn.mathjax.org/mathjax/latest/MathJax.js">
         MathJax.Hub.Config({          
           extensions:[            
@@ -29,6 +41,7 @@
           "HTML-CSS": { availableFonts: ["TeX"] }
         });
         </script>
+        -->
         
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/vs.min.css" />
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
