@@ -1,4 +1,63 @@
-# Technical Articles
+# 기술 블로그
 
+콘텐츠 타이틀이 거창해 보입니다. 결코 이 방대한 지식들을 잘 알고 있지 않습니다. 실무 경험을 통해 아는 분야도 있고, 겉만 핥은 분야도 있습니다. 새로 시작하시는 분들이 참고 할 수 있도록 접근해야 할 필수 타이틀을 나열 하였습니다.
 
-
+- 집합론 (Set Theory)
+- 논리학 (Logic)
+- 대수학 (Algebra)
+- 수론 (Number Theory)
+- 기하학 (Geometry)
+- [선형대수학 (Linear Algebra)](./linear_algebra/index.md)
+- 미적분 및 해석학 (Calculus and Analysis)
+- [확률 및 통계 (Probabilistics and Statistics)](probabilistics_and_statistics/index.md)
+- 정보이론 (Information Theory)
+- 결정이론 (Decision Theory)
+- 동적계획법 (Dynamic Programming)
+- 데이터 구조와 알고리즘 (Data Structure and Algorithm)
+- 암호학 (Cryptology)
+- 수치해석 (Numerical Methods)
+- 신호처리 (Signal Processing)
+- [영상처리 (Image Processing)](image_processing/index.md)
+- 패턴인식 (Pattern Recognition)
+- [컴퓨터 비전 (Computer Vision)](computer_vision/index.md)
+- 데이터 분석 (Data Analytics)
+- 데이터 시각화 (Data Visualization)
+- [머신러닝 (Machine Learning)](machine_learning/index.md)
+- [딥러닝 (Deep Learning)](deep_learning/index.md)
+- 3D 그래픽스 (3D Graphics)
+- 물리엔진 (Physics Engine)
+- 컴퓨터 아키텍처 (Computer Architecture)
+- 소프트웨어 아키텍쳐 (Software Architecture)
+- 객체지향 프로그래밍 및 디자인 패턴 (Object Oriented Programming and Design Patterns)
+- 컴파일러 이론 (Compiler Theory)
+- 병렬처리 (Parallel Processing)
+- 분산 컴퓨팅 (Distributed Computing)
+- OpenGL
+- Unity3D
+- 셰이더 프로그래밍 (Shader Programming)
+- 텐서플로우 (Tensorflow)
+- [토치 (Torch)](torch/index.md)
+- [파이토치 (PyTorch)](pytorch.md)
+- [케라스 (Keras)](keras/index.md)
+- 아파치 스파크 (Apache Spark)
+- OpenCV
+- dlib
+- CUDA
+- MetalKit
+- OpenMP
+- OpenACC
+- 레이텍 $\LaTeX$
+- 파이썬 (Python)
+- C#
+- C/C++
+- Objective-C
+- JavaScript
+- 루아 (Lua)
+- 네트워크 프로그래밍 (Network Programming)
+- RDBMS, SQL
+- iOS 프로그래밍 (iOS Programming)
+- Qt 프로그래밍 (Qt Programming)
+- 윈도우 프로그래밍 (Windows Programming)
+- 닷넷 프로그래밍 (.NET Programming)
+- 제품 및 서비스 기획 (Product Management)
+- 프로젝트 관리 (Project Management)
