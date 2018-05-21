@@ -1,6 +1,6 @@
 [Top](../index.md)
 
-#토치 (Torch)
+# 토치 (Torch)
 
 - Torch 설치시 cuda 빌드 half-precision 오류 해결
 - thrift_compiler가 없다는 오류 해결

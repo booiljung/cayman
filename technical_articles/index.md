@@ -39,7 +39,7 @@
 - 셰이더 프로그래밍 (Shader Programming)
 - 텐서플로우 (Tensorflow)
 - [토치 (Torch)](torch/index.md)
-- [파이토치 (PyTorch)](pytorch.md)
+- [파이토치 (PyTorch)](pytorch/index.md)
 - [케라스 (Keras)](keras/index.md)
 - [아파치 스파크 (Apache Spark)](apache_spark/index.md)
 - OpenCV

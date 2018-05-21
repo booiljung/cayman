@@ -171,13 +171,18 @@ $$
 기하 변환에 행렬을 사용하면 계산량이 많은 것처럼 보입니다. 왜 기하 변환에 행렬을 사용해야 할까요? 만일 이동, 회전, 확대를 모두 적용하는 좌표를 연산한다면 3번의 행렬 연산을 하게 됩니다.
 
 $$
-\mathbf{a}' = T(t_y, t_x) \cdot \mathbf{a} \\ \\
+\mathbf{a}' = T(t_y, t_x) \cdot \mathbf{a} \\
+\\
 $$
+
 $$
-\mathbf{a}'' = R(\theta) \cdot \mathbf{a}' \\ \\
+\mathbf{a}'' = R(\theta) \cdot \mathbf{a}' \\
+\\
 $$
+
 $$
-\mathbf{a}''' = S(s_y, s_x) \cdot \mathbf{a}'' \\ \\
+\mathbf{a}''' = S(s_y, s_x) \cdot \mathbf{a}'' \\
+\\
 $$
 
 1개의 좌표만 변환한다면 3번의 행렬 연산을 하게 됩니다. 그런데, 만일 $100\times100 \times 1$의 크기를 가지는 이미지라면 30,000번의 행렬 연산을 하게 됩니다.
@@ -185,10 +190,13 @@ $$
 기하 변환에 동차 행렬을 적용하면 미리 행렬을 연산해 둘 수 있어 행렬 연산을 줄일 수 있습니다.
 
 $$
-\mathbf{A} = T(t_y, t_x) \cdot R(\theta) \cdot S(s_y, s_x) \\ \\
+\mathbf{A} = T(t_y, t_x) \cdot R(\theta) \cdot S(s_y, s_x) \\
+\\
 $$
+
 $$
-\mathbf{a}''' = \mathbf{A} \cdot \mathbf{a} \\ \\
+\mathbf{a}''' = \mathbf{A} \cdot \mathbf{a} \\
+\\
 $$
 
 $100 \times 100 \times 1$의 크기를 가지는 이미지라면 10,003번의 행렬 연산으로 줄어들게 됩니다. $3\times3$ 동차 행렬과 3차원 동차 좌표는 9번의 곱셈과 6번의 덧셈으로 계산하므로 계산량이 많다고 생각되지만, SIMD나 GPU를 통해 병렬처리하여 빠르게 처리할 수 있습니다.
