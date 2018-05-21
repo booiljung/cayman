@@ -1,10 +1,8 @@
 ## Contents
 
-* [Technical Articles](./technical_articles/index.md)
-* [Machine Learning Notes](./machine_learning_notes/index.md)
-* [Medical Information Systems](./medical_information_systems/index.md)
-
-
+* [기술 블로그](./technical_articles/index.md)
+* [머신러닝 노트](./machine_learning_notes/index.md)
+* [의료정보시스템](./medical_information_systems/index.md)
 
 
 $$
