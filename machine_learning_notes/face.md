@@ -73,7 +73,8 @@ License: Free for non- commercial use, Commercial license.
 
 * Resolution-Aware 3D Morphable Model - Guosheng Hu, Chi Ho Chan, Josef Kittler, William Christmas - 2012 [paper](http://www.ee.surrey.ac.uk/CVSSP/Publications/papers/Hu-BMVC-2012.pdf)
 
-   A Multiresolution 3D Morphable Face Model and Fitting Framework - Patrik	Huber, Guosheng	Hu, Pouria Mortazavian, W.P. Koppen - 2015 [paper](https://www.researchgate.net/publication/285054377_A_Multiresolution_3D_Morphable_Face_Model_and_Fitting_Framework)
+* A Multiresolution 3D Morphable Face Model and Fitting Framework - Patrik	Huber, Guosheng	Hu, Pouria Mortazavian, W.P. Koppen - 2015 [paper](https://www.researchgate.net/publication/285054377_A_Multiresolution_3D_Morphable_Face_Model_and_Fitting_Framework)
+
   * eos: A lightweight header-only 3D Morphable Face Model fitting library in modern C++11/14 [github](https://github.com/patrikhuber/eos)
 
 * Fitting 3D Morphable Models using Local Features - Patrik Huber, Zhen-Hua Feng, William Christmas, Josef Kittler - 2015 [paper](https://arxiv.org/pdf/1503.02330v1.pdf)
@@ -83,5 +84,4 @@ License: Free for non- commercial use, Commercial license.
 
 - Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields [paper](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwjKnsKq6O7WAhXFXbwKHZ9iB_YQFggrMAE&url=https%3A%2F%2Farxiv.org%2Fabs%2F1611.08050&usg=AOvVaw2WbHoISe-y-1kPw-YR88Hy) 
 - Hand Keypoint Detection in Single Images using Multiview Bootstrapping [paper](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwisp-L66O7WAhWMvrwKHbLSBNcQFggnMAA&url=https%3A%2F%2Farxiv.org%2Fabs%2F1704.07809&usg=AOvVaw0VkheeM_5dtwGlU5oqXtua) 
-- Convolutional pose machines [paper](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjYosqM6e7WAhXJvLwKHXpECq4QFggnMAA&url=https%3A%2F%2Farxiv.org%2Fabs%2F1602.00134&usg=AOvVaw0UofcH2X5xlsKnZHNM0k8Q) 
-- ​
+- Convolutional pose machines [paper](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjYosqM6e7WAhXJvLwKHXpECq4QFggnMAA&url=https%3A%2F%2Farxiv.org%2Fabs%2F1602.00134&usg=AOvVaw0UofcH2X5xlsKnZHNM0k8Q) ​
