@@ -8,6 +8,7 @@
 
 ## 콘텐츠
 
+- [머신러닝 스킬 피라미드](machine_learning_skill_pyramid.md)
 - [머신러닝 기본 개념 (Basic Concept of Machine Learning)](basic_concept_of_machine_learning.md)
 
 

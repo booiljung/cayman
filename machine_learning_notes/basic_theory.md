@@ -6,7 +6,21 @@
 
 * Algorithm - SanghyukChun [blog](http://sanghyukchun.github.io/60/)
 
+## Linear Algebra
 
+- MML-book Linear Algebra [pdf](https://mml-book.github.io/book/chapter02.pdf)
+
+## Analytic Geometry
+
+- MML-book Analytic Geometry [pdf](https://mml-book.github.io/book/chapter03.pdf)
+
+## Matrix Decomposition
+
+
+
+## Vector Calculus
+
+- MML-book Vector Calculus [pdf](https://mml-book.github.io/book/chapter05.pdf)
 
 ## Probability & Statistics Theory
 
@@ -18,15 +32,11 @@
 * 표준편차(standard deviation)와 표준오차(standard error) - leerider [blog](http://blog.naver.com/PostList.nhn?from=postList&blogId=leerider&categoryNo=59&currentPage=6)
 * 공분산과 상관계수에 대한 이해 - leerider [blog](http://blog.naver.com/PostList.nhn?from=postList&blogId=leerider&categoryNo=59&currentPage=30)
 
-
-
 ### Bayesian Theory
 
 * 베이즈정리(Bayes' Theorem) - leerider [blog](http://blog.naver.com/PostList.nhn?from=postList&blogId=leerider&categoryNo=59&currentPage=22)
 * 베이즈 정리, ML과 MAP, 그리고 영상처리 - 다크 프로그래머 [blog](http://darkpgmr.tistory.com/62?category=761008)
 * 베이지언 확률(Bayesian Probability) [blog](http://darkpgmr.tistory.com/119?category=761008)
-
-
 
 ### Estimations
 
@@ -35,7 +45,11 @@
 * Kernel Density Estimation(커널밀도추정)에 대한 이해 - 다크 프로그래머 [blog](http://darkpgmr.tistory.com/147?category=761008)
 * EM 알고리즘이 무엇일까 - 수원혼모노이현성 [blog](https://ita9naiwa.github.io/%ED%86%B5%EA%B3%84/2018/03/21/EM.html)
 
-## Decision Theory
+## Continuous Optimization
+
+- MML-book Continuous Optimization [pdf](https://mml-book.github.io/book/chapter07.pdf)
+
+##Decision Theory
 
 * Decision Theory: A Brief Introduction - Sven Ove Hansson - 1994 [overview paper](https://people.kth.se/~soh/decisiontheory.pdf)
 * Decision Theory - SanghyukChun [blog](http://sanghyukchun.github.io/61/)
