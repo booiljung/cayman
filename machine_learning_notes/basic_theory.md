@@ -49,7 +49,7 @@
 
 - MML-book Continuous Optimization [pdf](https://mml-book.github.io/book/chapter07.pdf)
 
-##Decision Theory
+## Decision Theory
 
 * Decision Theory: A Brief Introduction - Sven Ove Hansson - 1994 [overview paper](https://people.kth.se/~soh/decisiontheory.pdf)
 * Decision Theory - SanghyukChun [blog](http://sanghyukchun.github.io/61/)
