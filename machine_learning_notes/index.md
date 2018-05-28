@@ -8,7 +8,9 @@
 
 단편적인 기술 블로그의 글은 검색하여 찾아 보기 쉬운 잇점이 있으며, 중급 이상의 엔지니어에게 도움이 됩니다. **새로운 분야를 시작하려는 입문자들에게 경고 합니다.** 블로그는 단편적인 내용을 담고 있으며, 체계적이지도 않으며 학습 순서에 따라 기술하지도 않습니다. 입문자가 블로그를 통해 공부를 하면 빠져나오기 힘든 함정에 빠질 수 있습니다. 반드시! 체계적인 전문서적이나 강의를 통해 학습하시기 바랍니다. 이 블로그에서 링크들은 웹사이트, 블로그, 서적, 논문임을 표시하고 있으므로 해당 링크를 클릭하기 전에 확인하시기 바랍니다. **머신러닝은 새로운 프레임워크를 익히듯 쉽게 익혀서 사용하는 수준의 분야가 아닙니다.**
 
-## 콘텐츠
+# Contents
+
+## Basics
 
 * [Basic Theory](basic_theory.md)
 * [Algorithms](algorithms.md)
@@ -21,8 +23,10 @@
 * [Activation Functions](activate_functions.md)
 * [Optimizations](optimizations.md)
 * [Regularizations](regularizations.md)
+
+## Models
+
 * [Auto-Encoders](auto_encoders.md)
-* [Signal Processing](signal_processing.md)
 * [ConvNet: Convolutional Neural Networks](convnet.md)
 * [RNN: Recurrent Neural Networks](rnn.md)
 * [Generations](generations.md)
@@ -40,10 +44,24 @@
 * [NLP: Natural Language Processing](natural_language_processing.md)
 * [Speech Separations](speech_separations.md)
 * [Medical](medical.md)
+
+## Signal & Image Processing
+
+* [Signal Processing](signal_processing.md)
+* [Image Noise Reduction](image_noise_reduction.md)
+
+## Visualizations
+
+- [Data Visualization](data_visualizations.md)
+
+## Datasets
+
+- [Datasets](datasets.md)
+
+## References
+
 * [People](people.md)
 * [Tools](tools.md)
-* [Data Visualization](data_visualizations.md)
-* [Datasets](datasets.md)
 * [References](references.md)
 
 

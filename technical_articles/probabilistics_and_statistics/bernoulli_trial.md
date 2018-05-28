@@ -17,7 +17,7 @@ $$
 \begin{aligned}
 성공확률&: p \\
 실패확률&: 1-p \\
-기대값&: E = p \\
+기대값&: \mathbb E = p \\
 표준편차&: \sigma = \sqrt{p\cdot(1-p)}
 \end{aligned}
 $$

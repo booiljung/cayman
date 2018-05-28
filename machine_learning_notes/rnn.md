@@ -24,6 +24,6 @@
 
 * Translation with a Sequence to Sequence Network and Attention - PyTorch Tutorial [official site](http://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html)
 
-## LSTM-Regiression
+## LSTM-Regression
 
 * Sequence prediction using recurrent neural networks(LSTM) with TensorFlow - Mourad Mourafiq [blog](http://mourafiq.com/2016/05/15/predicting-sequences-using-rnn-in-tensorflow.html)

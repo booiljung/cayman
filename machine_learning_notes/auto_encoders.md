@@ -10,7 +10,7 @@
 * UFLDL Tutorial – 1. 오토인코더(Sparse Autoencoder) 1 – AutoEncoders & Sparsity - Solaris [blog](http://solarisailab.com/archives/113)
 * UFLDL Tutorial – 2. 오토인코더(Sparse Autoencoder) 2 – Visualizing a Trained Autoencoder - Solaris [blog](http://solarisailab.com/archives/272)
 
-## Varational Auto-Encoder
+## Variational Auto-Encoder
 
 * Auto-Encoding Variational Bayes - Diederik P Kingma, Max Welling - 2013 [paper](https://arxiv.org/abs/1312.6114)
 * Tutorial on Variational Autoencoders - Carl Doersch - 2016 [paper](https://arxiv.org/abs/1606.05908)
