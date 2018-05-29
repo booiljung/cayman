@@ -14,6 +14,15 @@
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
     </section>
 
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.0&appId=233012396808363&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>    
+
     <section class="main-content">
 
       <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -26,6 +35,8 @@
       </script>      
 
       {{ content }}
+
+      <div class="fb-comments" data-href="https://booiljung.github.io/" data-width="640" data-numposts="5"></div>      
 
       <footer class="site-footer">
         <span class="site-footer-copyright">이 블로그의 콘텐트의 모든 권리는 Booil Jung에게 있으며 허락없이 복사 게시를 금지합니다.</span>
