@@ -41,15 +41,14 @@
 
       <div class="fb-comments" id="fb-comments" data-href="https://booiljung.github.io/" data-width="100%" data-numposts="5"></div>
 
-      <p id="ooo">101</p>
+      <p id="ooo">102</p>
 
-      <script type="text/javascript">
-        function addFacebookComment(){
-          var fbComment = document.getElementById("fb-comments");
-          fbComment.setAttribute("data-href", window.location.href);
-          fbComment.innerHTML = window.location.href + 5
-        }
-        addFacebookComment();
+      <script>
+      (function(){
+        var fbComment = document.getElementById("fb-comments");
+        fbComment.setAttribute("data-href", window.location.href);
+        fbComment.innerHTML = window.location.href + 5
+      }())
       </script>      
 
       <footer class="site-footer">
