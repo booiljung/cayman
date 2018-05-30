@@ -6,22 +6,6 @@
 
 * Algorithm - SanghyukChun [blog](http://sanghyukchun.github.io/60/)
 
-## Linear Algebra
-
-- MML-book Linear Algebra [pdf](https://mml-book.github.io/book/chapter02.pdf)
-
-## Analytic Geometry
-
-- MML-book Analytic Geometry [pdf](https://mml-book.github.io/book/chapter03.pdf)
-
-## Matrix Decomposition
-
-
-
-## Vector Calculus
-
-- MML-book Vector Calculus [pdf](https://mml-book.github.io/book/chapter05.pdf)
-
 ## Probability & Statistics Theory
 
 ### Statistics Basics
@@ -44,10 +28,6 @@
 * MLE(Maximum Likelihood Estimation)에 대한 이해 - leerider [blog](http://blog.naver.com/PostView.nhn?blogId=leerider&logNo=100189193480)
 * Kernel Density Estimation(커널밀도추정)에 대한 이해 - 다크 프로그래머 [blog](http://darkpgmr.tistory.com/147?category=761008)
 * EM 알고리즘이 무엇일까 - 수원혼모노이현성 [blog](https://ita9naiwa.github.io/%ED%86%B5%EA%B3%84/2018/03/21/EM.html)
-
-## Continuous Optimization
-
-- MML-book Continuous Optimization [pdf](https://mml-book.github.io/book/chapter07.pdf)
 
 ## Decision Theory
 
