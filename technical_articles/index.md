@@ -44,6 +44,10 @@
 
 - 신호처리 (Signal Processing)
 - [영상처리 (Image Processing)](image_processing/index.md)
+
+## 병렬컴퓨팅
+
+- [GPGPU](gpgpu.md)
 - CUDA
 - MetalKit
 - OpenMP
