@@ -25,6 +25,7 @@ $$
 
 
 또는
+
 $$
 \begin{aligned}
 \mathrm{Var}(X)
@@ -61,10 +62,12 @@ $$
 $$
 
 여기서 $a$, $b$는 상수이며, 공분산(covariance)는:
+
 $$
 \begin{aligned}
 \mathrm{Cov}(X, Y) &= \mathbb E[X - \mathbb E(X)][Y - \mathbb E(Y)] \\
 &= \mathbb E (X, Y) - \mathbb E (X) \mathbb E(Y)
 \end{aligned}
 $$
+
 입니다.
