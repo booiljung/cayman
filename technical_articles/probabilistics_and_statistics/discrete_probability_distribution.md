@@ -1,3 +1,5 @@
+[Top](index.md)
+
 # 이산 확률 분포 (Discrete probability distribution)
 
 확률변수가 이산확률변수일 경우 확률분포는 이산확률분포라고 합니다.

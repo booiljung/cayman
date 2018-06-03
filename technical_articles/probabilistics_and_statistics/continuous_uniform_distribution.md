@@ -1,3 +1,5 @@
+[Top](index.md)
+
 # 연속균등분포 (continuous uniform distribution)
 
 연속균등분포는 연속확률분포로 분포가 특정 구간 내에서 균등하게 있을 경우를 나타낼 수 있다. 이 분포는 매개변수 $a$, $b$를 받으며 $[a, b]$ 구간에서 균등한 확률을 가진다. 이때, $\infty < a < b < \infty$이다.

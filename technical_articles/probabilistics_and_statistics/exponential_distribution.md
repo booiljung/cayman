@@ -1,3 +1,5 @@
+[Top](index.md)
+
 # 지수분포 (exponential distribution)
 
 지수분포는 연속확률분포(continuous probability distribution)의 일종으로, 사건(event)이 서로 독립적일때, 일정 시간 동안 발생하는 사건의 횟수가 [푸아송분포(Poisson distribution)](poisson_distribution.md)를 따른다면, 다음 사건이 일어날때까지 대기 시간은 지수분포를 따릅니다. 이는 기하분포와 유사한 측면이 있습니다.

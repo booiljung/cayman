@@ -1,3 +1,5 @@
+[Top](index.md)
+
 # Gaussian distribution
 
 ## 가우시안 분포식:

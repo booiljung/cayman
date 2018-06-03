@@ -1,3 +1,5 @@
+[Top](index.md)
+
 # 감마분포 (gamma distribution)
 
 감마분포는 지수분포(exponential distribution)와 얼랭분포(Erlang distribution), 그리고 카이제곱분포(chi-square distribution)의 일반적인 경우입니다. 일반적이기 때문에 매개변수의 변화에 따라 분포의 모양이 비교적 크게 변합니다.

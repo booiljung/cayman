@@ -1,3 +1,5 @@
+[Top](index.md)
+
 # Bayes' theorem
 
 $$

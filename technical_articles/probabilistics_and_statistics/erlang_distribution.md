@@ -1,3 +1,5 @@
+[Top](index.md)
+
 # 얼랭분포(Erlang distribution)
 
 얼랭분포는 [지수분포(exponential distribution)](exponential_distribution.md)를 일반화한 분포입니다. 지수분포를 사용하여, 어떤 기준점에서 시작해 **첫번째** 사건이 발생할 때까지 시간이 얼마나 소요되는 지에 대한 확률을 계산할 수 있었는데 얼랭분포를 사용하면 **n번** 성공할 때 까지의 소요시간에 대해 모델링 할 수 있습니다. 이는 이산확률분포에서 [기하분포](geometric_distributon.md)와 음이항분포의 관계와 유사합니다.
