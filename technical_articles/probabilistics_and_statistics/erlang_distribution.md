@@ -19,7 +19,7 @@ $$
 
 $n = 1$이면 지수분포와 동일하며, $n=\infty$이면 일정한 값을 갖습니다.
 
-기대값(expectation)은 
+기대값(expectation)은
 $$
 \mathbb E(X) = \frac{n}{\lambda}
 $$

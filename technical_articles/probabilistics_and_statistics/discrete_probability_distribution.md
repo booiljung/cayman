@@ -8,6 +8,8 @@ $$
 \mathbb E = \sum [ X \cdot P(X) ]
 $$
 
+
+
 ## 분산 (variance):
 
 $$
@@ -18,6 +20,8 @@ $$
 \end{aligned}
 $$
 
+
+
 또는
 $$
 \begin{aligned}
@@ -26,6 +30,8 @@ $$
 &= \sum X^2 \cdot P(X) - [\mathbb E(X)]^2
 \end{aligned}
 $$
+
+
 
 ## 기대값의 특성:
 
