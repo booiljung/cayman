@@ -2,6 +2,8 @@
 
 # NLP: Natural Language Processing
 
+- GT-NLP-Class - Jacob Eisenstein [github pdf](https://github.com/jacobeisenstein/gt-nlp-class)  ***
+
 * Deep Learning Research Review Week 3: Natural Language Processing - Deshpande [blog](https://adeshpande3.github.io/adeshpande3.github.io/Deep-Learning-Research-Review-Week-3-Natural-Language-Processing)
 * Deep Learning for NLP (without Magic) - Richard Socher - 2014 [slide](http://lxmls.it.pt/2014/socher-lxmls.pdf)
 * DL for NLP From the Basics to Research - Richard Socher - 2016 [slide](https://media.wix.com/ugd/142eb4_7581cfcf090e4e31a52599315f77c648.pdf)

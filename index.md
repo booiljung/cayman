@@ -4,7 +4,7 @@
 
 생각나는 대로 적습니다.
 
-#### [유니티 C# 스크립트](unity_csharp_script_book/index.md)
+#### [유니티 C# 스크립트 Book](technical_articles/unity_csharp_script_book/index.md)
 
 유니티에서 C# 스크립팅을 안내하는 웹북입니다.
 

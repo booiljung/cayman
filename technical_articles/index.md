@@ -47,7 +47,7 @@
 
 ## 병렬컴퓨팅
 
-- [GPGPU](gpgpu.md)
+- [GPGPU](gpgpu/index.md)
 - CUDA
 - MetalKit
 - OpenMP
@@ -62,7 +62,8 @@
 ### 게임 개발
 
 - 물리엔진 (Physics Engine)
-- [Unity3D](unity3d/index.md)
+- [Unity](unity3d/index.md)
+- [Unity C# 스크립트 Book](unity_csharp_script_book/index.md)
 
 ### 데이터
 
