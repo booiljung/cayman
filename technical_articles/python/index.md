@@ -1,4 +1,4 @@
-[Top](index.md)
+[Top](../index.md)
 
 # Python (파이썬)
 

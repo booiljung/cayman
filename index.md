@@ -1,20 +1,22 @@
 ## Contents
 
-#### [기술 블로그](./technical_articles/index.md)
+#### [Technical Articles](./technical_articles/index.md)
 
-생각나는 대로 적습니다.
+개발중 발생하는 이슈를 해결하는 과정의 경험 위주로 적습니다.
 
-#### [유니티 C# 스크립트 Book](technical_articles/unity_csharp_script_book/index.md)
+#### [Unity C# Script Book](technical_articles/unity_csharp_script_book/index.md)
 
 유니티에서 C# 스크립팅을 안내하는 웹북입니다.
 
-#### [머신러닝 노트](./machine_learning_notes/index.md)
+#### [Dev Portal](dev_portal/index.md)
+
+개발에 도움이 되는 웹 페이지들을 연결 합니다.
+
+#### [Machine Learning Notes](./machine_learning_notes/index.md)
 
 머신러닝을 다루는 웹사이트, 논문, 서적, 블로그의 페이지를 콘텐트별로 분류 하였으며 링크를 통해 참조 할 수 있습니다.
 
-#### [의료정보시스템](./medical_information_systems/index.md)
+#### [Medical Information Systems](./medical_information_systems/index.md)
 
-누군가의 부탁으로 자료 정리 중입니다.
-
-의료SI는 관심 없으며 하지 않습니다.
+누군가의 부탁으로 자료 정리 중입니다. 의료SI는 관심 없으며 하지 않습니다.
 
