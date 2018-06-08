@@ -45,7 +45,20 @@
         var fbComment = document.getElementById("fb-comments");
         fbComment.setAttribute("data-href", window.location.href);
       }())
-      </script>      
+      </script>
+      
+      <script>
+        (function() {
+          var cx = '012971652190830977012:udy7jvimsgm';
+          var gcse = document.createElement('script');
+          gcse.type = 'text/javascript';
+          gcse.async = true;
+          gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(gcse, s);
+        })();
+      </script>
+      <gcse:search></gcse:search>      
 
       <footer class="site-footer">
         <span class="site-footer-copyright">이 블로그의 콘텐트의 모든 권리는 Booil Jung에게 있으며 허락없이 복사 게시를 금지합니다.</span>
