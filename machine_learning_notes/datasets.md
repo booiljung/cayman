@@ -26,3 +26,6 @@
 
 - UCSD Anomaly Detection Dataset [web](http://www.svcl.ucsd.edu/projects/anomaly/dataset.htm)
 
+## Medical
+
+- The mini-MIAS database of mammograms [web](http://peipa.essex.ac.uk/info/mias.html)
