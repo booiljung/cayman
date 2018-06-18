@@ -17,3 +17,12 @@
 - Oxford flowers [web](http://www.robots.ox.ac.uk/~vgg/data/flowers/)
 - ILSVRC - ImageNet Large Scale Visual Recognition Competition [web](www.image-net.org/challenges/LSVRC/)
 
+## Competitions
+
+- MSCOCO [web](http://cocodataset.org/#download)
+
+
+## Transpotation
+
+- UCSD Anomaly Detection Dataset [web](http://www.svcl.ucsd.edu/projects/anomaly/dataset.htm)
+
