@@ -47,7 +47,7 @@ React.js는 인스턴스의 데이터를 표현하는 방법으로 HTML을 변�
 Vue.js는 뷰와 컴포넌트를 별도로 구분하여 지정합니다. 다음은 HTML에 직접적으로 적용하는 v-text 디렉티브를 사용하는 문자열 보간법 예제입니다.
 
 ```vue
-	<div id="app">
+<div id="app">
     <span v-text="msg"></span>
 </div>
 <script>
