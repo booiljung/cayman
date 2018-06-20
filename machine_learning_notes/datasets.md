@@ -29,3 +29,8 @@
 ## Medical
 
 - The mini-MIAS database of mammograms [web](http://peipa.essex.ac.uk/info/mias.html)
+
+## Human pose
+
+- Leeds Sports Pose Dataset, Sam Johnson and Mark Everingham [web](http://sam.johnson.io/research/lsp.html)
+- Leeds Sports Pose Extended Training Dataset, Sam Johnson and Mark Everingham [web](http://sam.johnson.io/research/lspet.html)
