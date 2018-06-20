@@ -23,6 +23,7 @@
 * [Activation Functions](activate_functions.md)
 * [Optimizations](optimizations.md)
 * [Regularizations](regularizations.md)
+* [Demension Reduction](demension_reduction.md)
 
 ## Models
 
