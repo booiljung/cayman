@@ -1,6 +1,6 @@
 [Top](index.md)
 
-# Colab에서 PyTorch 사용하기
+# Google Colab에서 PyTorch 사용하기
 
 이 글은 2018년 3월 28일 현재 유효합니다.
 

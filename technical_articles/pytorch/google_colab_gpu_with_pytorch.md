@@ -1,6 +1,6 @@
 [Top](index.md)
 
-# Google Colab의 GPU 정보를 확인해 봤습니다.
+# Google Colab의 GPU 정보 확인.
 
 이 글은 2018년 4월 5일 현재 유효합니다. 
 
