@@ -12,4 +12,4 @@
 
 ## 게임 개발 리소스
 
-- 포켓몬 1세대 3D 모델 로우 폴리 [web](https://gumroad.com/l/PNZOA)
+- 포케몬 1세대 3D 모델 로우 폴리 [web](https://gumroad.com/l/PNZOA)
