@@ -6,6 +6,6 @@
 
 이 안내서의 저작권은 정부일에게 있으며, 허락 없이 복제, 배포, 게시할 수 없으며, 허락 없이 형태를 변경하여 저장하거나 소지 할 수 없습니다. 출판, 교육을 목적으로 허가가 필요한 경우 booiljung@me.com으로 연락 주시기 바랍니다.
 
-## 1. [유니티 설치](install/index.md)
-
-## 2. [던전입구](entrance_dungeon/index.md)
+1. [유니티 설치](install/index.md)
+2. [던전입구](entrance_dungeon/index.md)
+3. 
