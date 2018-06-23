@@ -2,6 +2,7 @@
 
 #### 최신 글
 
+- Unity C# Script Book: [던전과 인사하기](technical_articles/unity_csharp_script_book/hello_dungeon/index.md)
 - Unity C# Script Book: [던전 입구](technical_articles/unity_csharp_script_book/entrance_dungeon/index.md)
 - [리뷰: Vue.js 첫걸음](technical_articles/vue/vue_js_first_step.md)
 - Unity C# Script Book: [유니티 설치](technical_articles/unity_csharp_script_book/install/index.md)
