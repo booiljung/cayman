@@ -1,4 +1,4 @@
-[Top](index.md)
+[Upper](index.md)
 
 # 아파치 스파크(Apache Spark)의 소개와 우분투 16.04 LTS에 설치
 

@@ -1,4 +1,4 @@
-[Top](../index.md)
+[Upper](../index.md)
 
 # 머신러닝 (Machine Learning)
 

@@ -1,4 +1,4 @@
-[Top](../index.md)
+[Upper](../index.md)
 
 # Python (파이썬)
 

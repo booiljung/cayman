@@ -1,4 +1,4 @@
-[Top](index.md)
+[Upper](index.md)
 
 # 지수분포 (exponential distribution)
 

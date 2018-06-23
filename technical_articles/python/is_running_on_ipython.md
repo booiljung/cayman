@@ -1,4 +1,4 @@
-[Top](index.md)
+[Upper](index.md)
 
 # IPython에서 실행중인지 체크
 

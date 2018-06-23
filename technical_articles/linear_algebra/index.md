@@ -1,4 +1,4 @@
-[Top](../index.md)
+[Upper](../index.md)
 
 # 선형대수학 (linear algebra)
 

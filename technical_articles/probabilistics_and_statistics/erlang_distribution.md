@@ -1,4 +1,4 @@
-[Top](index.md)
+[Upper](index.md)
 
 # 얼랭분포(Erlang distribution)
 

@@ -1,4 +1,4 @@
-[Top](../index.md)
+[Upper](../index.md)
 
 # 파이토치 (PyTorch)
 

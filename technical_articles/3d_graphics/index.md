@@ -1,4 +1,4 @@
-[Top](../index.md)
+[Upper](../index.md)
 
 # 3D 그래픽스(3D Graphics)
 

@@ -1,4 +1,4 @@
-[Top](index.md)
+[Upper](index.md)
 
 # 연속균등분포 (continuous uniform distribution)
 

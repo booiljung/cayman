@@ -1,4 +1,4 @@
-[Top](index.md)
+[Upper](index.md)
 
 # 심층신경망에서 데이터 시각화의 중요성
 

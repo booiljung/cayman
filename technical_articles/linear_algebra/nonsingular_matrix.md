@@ -1,4 +1,4 @@
-[Top](index.md)
+[Upper](index.md)
 # 정칙행렬(Nonsingular Matrix)
 
 주의: 이 글의 수학은 공학 분야 활용 중심이며 수학 전공자가 보기에 엄밀하지 않을 수 있습니다.

@@ -1,4 +1,4 @@
-[Top](index.md)
+[Upper](index.md)
 
 # 데이터의 중요성
 

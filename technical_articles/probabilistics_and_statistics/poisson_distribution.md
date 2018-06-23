@@ -1,4 +1,4 @@
-[Top](index.md)
+[Upper](index.md)
 
 # 포아송분포 (Poisson distribution)
 

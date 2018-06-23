@@ -1,4 +1,4 @@
-[Top](index.md)
+[Upper](index.md)
 
 # 감마분포 (gamma distribution)
 

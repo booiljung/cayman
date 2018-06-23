@@ -1,4 +1,4 @@
-[Top](index.md)
+[Upper](index.md)
 
 # 머신러닝의 기본 개념 (Basic Concept of Machine learning)
 

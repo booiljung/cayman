@@ -1,4 +1,4 @@
-[Top](index.md)
+[Upper](index.md)
 
 # 정보이론
 

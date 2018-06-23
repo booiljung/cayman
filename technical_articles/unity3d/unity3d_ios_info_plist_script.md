@@ -1,4 +1,4 @@
-[Top](index.md)
+[Upper](index.md)
 
 # 유니티 스크립트에서 iOS Info.plist 설정 방법.
 
