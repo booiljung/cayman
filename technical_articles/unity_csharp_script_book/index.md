@@ -1,4 +1,4 @@
-[Top](../index.md)
+[Upper](../index.md)
 
 # 유니티 C# 스크립트
 
@@ -8,4 +8,4 @@
 
 1. [유니티 설치](install/index.md)
 2. [던전입구](entrance_dungeon/index.md)
-3. 
+3. [던전과 인사하기](hello_dungeon/index.md)
