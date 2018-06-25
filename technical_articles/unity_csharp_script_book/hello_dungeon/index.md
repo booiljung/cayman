@@ -716,7 +716,7 @@ $$
 
 우리가 작성한 메서드는
 
-```C#
+```c#
 08		void Start () {
 09			Debug.Log("Hello, Dungeon”);
 10		}
