@@ -9,6 +9,7 @@
 1. [유니티 설치](install/index.md)
 2. [던전입구](entrance_dungeon/index.md)
 3. [던전과 인사하기](hello_dungeon/index.md)
+4. [체력 int 타입](int_type/index.md)
 
 ---
 

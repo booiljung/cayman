@@ -2,6 +2,7 @@
 
 #### 최신 글
 
+- Unity C# Script Book: [체력 int 타입](technical_articles/unity_csharp_script_book/int_type/index.md)
 - Unity C# Script Book: [던전과 인사하기](technical_articles/unity_csharp_script_book/hello_dungeon/index.md)
 - Unity C# Script Book: [던전 입구](technical_articles/unity_csharp_script_book/entrance_dungeon/index.md)
 - [리뷰: Vue.js 첫걸음](technical_articles/vue/vue_js_first_step.md)

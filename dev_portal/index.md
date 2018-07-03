@@ -6,7 +6,11 @@
 
 - Open Text Book Library [web](http://open.umn.edu/opentextbooks/)
 
-## 개발 문서 작성
+## 아키텍쳐
+
+- 10가지 소프트웨어 아키텍처 패턴 요약 [web](https://mingrammer.com/translation-10-common-software-architectural-patterns-in-a-nutshell/)
+
+## 문서 작성
 
 - Pandoc, Markdown, KaTeX, Visual Studio Code로 논문쓰기 - 이수진 [web](https://sujinlee.me/pandoc-thesis/)
 
