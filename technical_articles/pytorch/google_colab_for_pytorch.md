@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # Google Colab에서 PyTorch 사용하기
 

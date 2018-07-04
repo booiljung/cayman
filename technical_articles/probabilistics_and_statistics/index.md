@@ -1,4 +1,4 @@
-[Upper](../index.md)
+[Up](../index.md)
 
 # 확률 및 통계 (probabilistics and statistics)
 

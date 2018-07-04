@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 아홉가지 사례로 익히는 스파크 분석 (원제: Advanced Analytics with Spark, 2nd Edition)
 

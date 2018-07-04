@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 베타분포 (beta distribution)
 

@@ -1,4 +1,4 @@
-[Upper](../index.md)
+[Up](../index.md)
 
 #아파치 스파크 (Apache Spark)
 

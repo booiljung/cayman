@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 헤시안 행렬(Hessian matrix)
 

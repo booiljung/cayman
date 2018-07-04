@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 오일러 회전과 짐벌락(Euler angles gimbol lock)
 

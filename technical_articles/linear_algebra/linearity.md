@@ -1,4 +1,4 @@
-[Upper](./index.md)
+[Up](./index.md)
 
 # 선형성 (linearity)에 대한 정의
 

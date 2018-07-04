@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # ConvNet: Convolutional Neural Networks
 

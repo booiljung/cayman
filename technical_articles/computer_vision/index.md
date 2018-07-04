@@ -1,4 +1,4 @@
-[Upper](../index.md)
+[Up](../index.md)
 
 # 컴퓨터 비전 (Computer Vision)
 

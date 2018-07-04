@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 벡터(vector)
 

@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 ## Pix2Pix: Image To Image
 

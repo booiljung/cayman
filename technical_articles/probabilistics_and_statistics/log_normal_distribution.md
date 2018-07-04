@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 로그정규분포 (log normal distribution)
 

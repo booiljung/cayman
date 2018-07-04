@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 책 리뷰: Vue.js 첫걸음
 

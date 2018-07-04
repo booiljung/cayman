@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 [Signal Processing](signal_processing.md)
 
 ## Deconvolutional Networks

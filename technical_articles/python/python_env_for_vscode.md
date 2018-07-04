@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # VSCODE에서 파이썬 환경 선택하기
 

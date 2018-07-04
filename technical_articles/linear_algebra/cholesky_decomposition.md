@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 숄레스키 분해(Cholesky decomposition)
 

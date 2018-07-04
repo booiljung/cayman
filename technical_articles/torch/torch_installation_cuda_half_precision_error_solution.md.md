@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # Torch 설치시 CUDA 관련 half-precision 오류 해결.
 

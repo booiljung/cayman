@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # Bayes' theorem
 

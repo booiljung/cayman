@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 이미지 기하 변환(Image Geometry Transformation)
 

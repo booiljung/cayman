@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # well1024a 유사 난수 발생기 C# 소스코드
 

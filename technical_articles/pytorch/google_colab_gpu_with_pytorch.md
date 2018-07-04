@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # Google Colab의 GPU 정보 확인.
 

@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # RNN: Recurrent Neural Networks
 

@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 이산 확률 분포 (Discrete probability distribution)
 

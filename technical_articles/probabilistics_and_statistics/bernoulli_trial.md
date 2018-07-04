@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 베르누이 시행(Bernoulli Trial)
 

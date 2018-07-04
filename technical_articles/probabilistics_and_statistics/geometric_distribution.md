@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 기하분포 (Geometric distribution)
 

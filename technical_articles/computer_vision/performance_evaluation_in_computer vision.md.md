@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 컴퓨터 비전에서 성능 평가
 

@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 베이블분포 (Weibull distribution)
 

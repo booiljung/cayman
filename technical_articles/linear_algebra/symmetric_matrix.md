@@ -1,4 +1,4 @@
-[Upper](index.md)
+[Up](index.md)
 
 # 대칭행렬(Symmetric Matrix)
 
