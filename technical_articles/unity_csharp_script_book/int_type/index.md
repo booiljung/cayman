@@ -92,7 +92,7 @@ MyNumber 컴포넌트를 ‘MyGameObject’에 추가하겠습니다. Hierarchy�
 MyNumber 컴포넌트 이름 아래에 Start 메서드가 있습니다.
 
 ```c#
-08	    void Start () {
+08		void Start () {
 09        
 10		}
 ```
@@ -106,16 +106,16 @@ Start 메서드에 새 코드를 추가하겠습니다. 최종 소스 코드는 
 04
 05	public class MyNumber : MonoBehaviour {
 06    
-07	    // Use this for initialization
-08	    void Start () {
-09  		int a;
+07		// Use this for initialization
+08		void Start () {
+09			int a;
 10			a = 100;
 11			Debug.Log(a);      
 12		}
 13
 14		// Update is called once per frame
 15		void Update () {
-16    
+16
 17		}
 18	}
 ```
@@ -139,7 +139,7 @@ Console뷰에 숫자 ‘100‘이 표시되었으면 성공입니다. 표시되�
 아래 코드처럼 3개 라인입니다.
 
 ```c#
-09  		int a;
+09			int a;
 10			a = 100;
 11			Debug.Log(a);
 ```
@@ -147,7 +147,7 @@ Console뷰에 숫자 ‘100‘이 표시되었으면 성공입니다. 표시되�
 여러 줄의 코드는 위에서 아래 방향으로 순서대로 실행 됩니다.
 
 ```c#
-09  		int a;			// 1st
+09			int a;			// 1st
 10			a = 100;		// 2nd
 11			Debug.Log(a);	// 3rd
 ```
@@ -173,7 +173,7 @@ Console뷰에 숫자 ‘100‘이 표시되었으면 성공입니다. 표시되�
 Start 메서드의 첫번째 라인을 보겠습니다.
 
 ```c#
-09  		int a;
+09			int a;
 ```
 
 첫번째 토큰은 int 입니다. 이 int는 C#에서 정수(integer)를 나타내는 데이터 타입 입니다. 수학에서 정수란 자연수, 0, 그리고 음의 자연수로 이루어진 수라고 했죠?  C#에서 정수를 나타내는 int 타입도 자연수, 0, 음의 자연수를 표현합니다. 다만,  컴퓨터는 물리적 제약으로 범위가 제한되어 있습니다. 수학은 음수와 양수 방향이 무한이지만, C#의 int 타입은 -2,147,483,648 ~ 2,147,483,647 범위입니다.
@@ -223,7 +223,7 @@ int network;	// 메모리에 network라는 이름(식별자)을 가진 int 타�
 변수를 만드는 구문(syntax) 순서와 토큰만 지키면 됩니다. 토큰 사이의 공백은 1개 이상이면 됩니다. 아래 예제 코드는 모두 동일하게 a라는 이름의 int 타입 변수를 만듭니다.
 
 ```C#
-		int         a;	// 여러개의 공백이 있어도 문제 없다. 다만 알아보기 어렵다.
+	int		a;	// 여러개의 공백이 있어도 문제 없다. 다만 알아보기 어렵다.
 		int      a      ;	// 세미콜론 이전에 공백이 있어도 문제 없다. 다만 알아보기 어렵다.
 	int				// 여러줄에 써도 문제 없다. 다만 알아보기 어렵다.
 			a
@@ -297,7 +297,7 @@ C, C++, Objective-C 같은 언어는 선언과 정의가 명확하게 구분되�
 	a = 100;	// 공백이 양쪽에 모두 있어도 됩니다.
 	a=100;		// 공백이 없어도 동일합니다.
 	a  =100;	// 앞에 공백을 2개씩 두어도 동일합니다.
-	a		// 여러 라인에 걸쳐도 잘 동일합니다. 다만 사람이 읽기가 어렵습니다.
+	a			// 여러 라인에 걸쳐도 잘 동일합니다. 다만 사람이 읽기가 어렵습니다.
 		=
 	100;
 ```
@@ -305,19 +305,19 @@ C, C++, Objective-C 같은 언어는 선언과 정의가 명확하게 구분되�
 세번째 라인을 확인해 보겠습니다.
 
 ```c#
-11	Debug.Log(a);
+11			Debug.Log(a);
 ```
 
 ‘Hello 프로젝트‘에서 비슷한 코드를 보았죠?
 
 ```c#
-09 Debug.Log(”Hello, World”);
+09		Debug.Log(”Hello, World”);
 ```
 
 Hello프로젝트는 “Hello, World”라는 메시지를 표시했습니다. 이 Number 프로젝트는 변수 a를 Console 뷰에 표시합니다.
 
 ```c#
-11	Debug.Log(a);
+11		Debug.Log(a);
 ```
 
 그래서 Console뷰에 변수 a가 가지고 있는 값 100을 표시하게 됩니다.
@@ -332,7 +332,7 @@ Start 메서드의 두번째 라인 대입문을 다시 보겠습니다.
 10			a = 100;
 ```
 
-대입연산자의 좌측에 반드시 변수가 있어야 한다고 했죠? 대입식의 우측은 반드시 식(expression)이 와야 합니다.
+대입연산자(assign operator)의 좌측에 반드시 변수가 있어야 한다고 했죠? 대입식의 우측은 반드시 식(expression)이 와야 합니다.
 
 왜 우측에 식이 와야할까요?
 
@@ -345,22 +345,22 @@ Start 메서드의 두번째 라인 대입문을 다시 보겠습니다.
 Start 메서드의 첫번째 라인 변수정의문을 다시 볼까요?
 
 ```c#
-09  		int a;
+09			int a;
 ```
 
-첫번째 토큰 int는 C#에서 정수 타입 데이터를 사용할 수 있도록 합니다. C# 컴파일러 만든 엔지니어들이 미리 int라는 이름을 정해 두었죠. 컴파일러 제작자들이 미리 만들어 둔 이름들을 예약어(keyword)라고 합니다. C#의 예약어는 아래와 같습니다. 한번 읽어 보세요.
+첫번째 토큰 int는 C#에서 정수 타입 데이터를 사용할 수 있도록 합니다. C# 언어를 만든 연구자들과 엔지니어들이 미리 int라는 이름을 정해 두었죠. 이들이 미리 만들어 둔 이름들을 예약어(keyword)라고 합니다. C#의 예약어는 아래와 같습니다. 한번 읽어 보세요.
 
-```c#
+```
 abstract	as			base		bool		break
 byte		case		catch		char		checked
 class		const		continue	decimal		default
 delegate	do			double		else		enum
-event		explicit	extern		false 		finally
+event		explicit	extern		false		finally
 fixed		float		for			foreach		goto
 if			implicit	in			int			interface
 internal	is			lock		long		namespace
 new			null		object		operator	out
-override	params		private 	protected	public
+override	params		private		protected	public
 readonly	ref			return		sbyte 		sealed
 short		sizeof		stackalloc	static		string
 struct		switch		this		throw		true
@@ -377,7 +377,7 @@ MonoDevelop에서 예약어는 하늘색으로 표시되고 예약어가 아닌 
 다시 코드를 보겠습니다.
 
 ```c#
-09			int	a;
+09			int a;
 ```
 
 두번째 토큰 a 는 제가 변수의 이름을 위해 임의로 정했습니다. b나 c로 정할 수 있는데 a로 정했다고 했죠?  독자도 변수 이름을 임으로 정할 수 있습니다. 이것을 식별자(identifier)라고 합니다.  식별자는 소스코드 내에서 다른 식별자나 예약어를 구별하는 역할을 합니다. 식별자의 이름은 임으로 정하되 목적에 맞게 다른 식별자나 예약어를 구분할 수 있게 중복되지 않은 이름을 주어야 합니다. 식별자의 이름을 정하는 규칙이 있습니다.
@@ -389,7 +389,7 @@ MonoDevelop에서 예약어는 하늘색으로 표시되고 예약어가 아닌 
 - 두번째 문자부터 숫자를 사용할 수 있다.
 - 영어 알파벳, 숫자, 언더스코어를 혼합하여 사용할 수 있다.
 
-사실 이 제약 표현은 정확하지 않습니다.  스코프나 유니코드, 축자 식별자를 사용할 수 있지만 지금 레벨은 이 제약만으로도 충분 합니다.
+사실 이 제약 표현은 정확하지 않습니다.  스코프나 유니코드, 축자 식별자를 사용할 수 있지만 지금 학습 레벨은 이 제약만으로도 충분 합니다.
 
 바른 식별자의 예시들을 들어 보겠습니다.
 
@@ -401,7 +401,7 @@ world_mouse	vector		matrix		identity	multiply
 
 잘못된 식별자에 대한 예시들을 들어 보겠습니다.
 
-```c#
+```
 25a			숫자로 시작할 수 없습니다.
 36			숫자는 식별자가 아닙니다. 이것은 정수 리터럴입니다.
 int			C#의 예약어입니다. 정수 타입이죠.
