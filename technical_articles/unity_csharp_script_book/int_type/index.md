@@ -1,4 +1,4 @@
-[Up](..\index.md)
+[Up](../index.md)
 
 # 체력 int 타입
 
