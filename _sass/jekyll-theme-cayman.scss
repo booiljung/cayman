@@ -195,6 +195,7 @@ a {
     background-color: $code-bg-color;
     border-radius: 0.3rem;
     tab-size: 4;
+    -moz-tab-size: 4; /* Firefox */
   }
 
   pre {
