@@ -10,6 +10,7 @@
 
 * [Basic Theory](basic_theory.md)
 * [Algorithms](algorithms.md)
+* [Geometry](geometry.md)
 * [Linear Algebra](linear_algebra.md)
 * [Probablity and Statistics](probability_and_statistics.md)
 * [Numerical Methods](numerical_methods.md)
