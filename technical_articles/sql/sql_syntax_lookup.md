@@ -5,6 +5,7 @@
 ### `CREATE DATABASE` 문
 
 데이터베이스를 생성합니다.
+
 ```sql
 CREATE DATABASE databasename; 
 ```
@@ -23,6 +24,7 @@ DROP DATABASE databasename;
 ### `CREATE TABLE` 문
 
 테이블을 생성합니다.
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype,
@@ -35,6 +37,7 @@ CREATE TABLE table_name (
 ### `DROP TABLE` 문
 
 테이블을 제거합니다.
+
 ```sql
 DROP TABLE table_name;
 ```
@@ -42,35 +45,45 @@ DROP TABLE table_name;
 ### `ALTER TABLE` 문
 
 기존 테이블의 컬럼을 추가, 삭제, 변경 합니다.
+
 ##### `ADD COLUMN`
 
 컬럼을 추가 합니다.
+
 ```sql
 ALTER TABLE table_name
 ADD column_name datatype; 
 ```
+
 ##### `DROP COLUMN`
 
 컬럼을 제거합니다.
+
 ```sql
 ALTER TABLE table_name
 DROP COLUMN column_name;
 ```
+
 ##### `ALTER` / `MODIFY` `COLUMN`
 
 컬럼을 변경합니다.
+
 ###### SQL Server / MS Access
 
 ```sql
 ALTER TABLE table_name
 ALTER COLUMN column_name datatype;
 ```
+
 ###### My SQL / Oracle (10G 전)
+
 ```sql
 ALTER TABLE table_name
 MODIFY COLUMN column_name datatype; 
 ```
+
 ###### My SQL / Oracle (10G 이후)
+
 ```sql
 ALTER TABLE table_name
 MODIFY column_name datatype;
@@ -81,6 +94,7 @@ MODIFY column_name datatype;
 ### 제약
 
 제약은 테이블을 생성하거나 테이블을 변경할때 지정할 수 있습니다.
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype constraint,
@@ -89,7 +103,9 @@ CREATE TABLE table_name (
     ....
 );
 ```
+
 제약은 7가지가 있습니다.
+
 1. `NOT NULL`: `NULL`일 수 없습니다. 반드시 값이 있어야 합니다.
 2. `UNIQUE`: 컬럼내에서 유일한 값이어야 합니다.
 3. `PRIMARY KEY`: `NOT NULL`이며 `UNIQUE` 입니다. 각 열을 유니크하게 식별 할 수 있게 합니다.
@@ -101,26 +117,33 @@ CREATE TABLE table_name (
 #### `NOT NULL` 제약
 
 `NULL` 가질 수 없습니다. 값이 반드시 지정되어야 합니다.
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype NOT NULL,
     ...
 );
 ```
+
 #### `UNIQUE` 제약
 
 컬럼내에서 유일한 값이어야 합니다.
+
 ##### `CREATE TABLE`에서의 `UNIQUE` 제약
 
 테이블 생성시 컬럼에 `UNIQIE` 제약을 정의합니다.
+
 ###### SQL Server / Oracle / MS Access
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype NOT NULL UNIQUE,
     ...
 );
 ```
+
 ###### MySQL
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype NOT NULL,
@@ -128,8 +151,11 @@ CREATE TABLE table_name (
     ...
 );
 ```
+
 ###### MySQL / SQL Server / Oracle / MS Access:
+
 `UNIQUE`제약에 이름을 주어 다수의 컬럼에 `UNIQUE`제약을 정의 합니다.
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype NOT NULL,
@@ -143,12 +169,16 @@ CREATE TABLE table_name (
 ##### `ALTER TABLE`에서의 `UNIQUE` 제약
 
 테이블 변경시 `UNIQUE` 제약을 설정합니다.
+
 ###### MySQL / SQL Server / Oracle / MS Access:
+
 ```sql
 ALTER TABLE table_name
 ADD UNIQUE (column1));
 ```
+
 ###### MySQL / SQL Server / Oracle / MS Access:
+
 ```sql
 ALTER TABLE table_name
 ADD CONSTRAINT constrain_name UNIQUE (column1, column2);
@@ -157,13 +187,16 @@ ADD CONSTRAINT constrain_name UNIQUE (column1, column2);
 ##### `DROP UNIQUE` 제약
 
 테이블에서 `UNIQUE`제약을 제거합니다.
+
 ###### MySQL:
 
 ```sql
 ALTER TABLE table_name
 DROP UNIQUE constraint_name;
 ```
+
 ###### SQL Server / Oracle / MS Access:
+
 ```sql
 ALTER TABLE table_name
 DROP CONSTRAINT constraint_name;
@@ -172,6 +205,7 @@ DROP CONSTRAINT constraint_name;
 #### `PRIMARY KEY` 제약
 
 데이터베이스의 테이블에서 각 레코드의 유일성을 식별하는 제약입니다. `PRIMARY KEY`는 `NOT NULL` 이고 `UNIQUE` 입니다. 테이블은 하나의 `PRIMARY KEY`를 가질 수 있습니다.
+
 ##### `CREATE TABLE`에서의 `PRIMARY KEY` 제약
 
 ###### MySQL:
@@ -183,14 +217,18 @@ CREATE TABLE table_name (
     ...
 ); 
 ```
+
 ###### SQL Server / Oracle / MS Access:
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype NOT NULL PRIMARY KEY,
     ...
 ); 
 ```
+
 ###### MySQL / SQL Server / Oracle / MS Access:
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype NOT NULL,
@@ -202,13 +240,17 @@ CREATE TABLE table_name (
 ##### `ALTER TABLE`에서의 `PRIMARY KEY` 제약
 
 `ALTER TABLE`에서 `PRIMARY KEY`를 변경합니다.
+
 ###### MySQL / SQL Server / Oracle / MS Access:
+
 ```sql
 ALTER TABLE table_name
 ADD PRIMARY KEY (column1);
 ...
 ```
+
 ###### MySQL / SQL Server / Oracle / MS Access:
+
 ```sql
 ALTER TABLE table_name
 ADD CONSTRAINT constraint_name PRIMARY KEY (column1, ...)
@@ -217,12 +259,16 @@ ADD CONSTRAINT constraint_name PRIMARY KEY (column1, ...)
 ##### `DROP PRIMARY KEY` 제약
 
 테이블에서 `PRIMARY KEY`를 제거합니다.
+
 ###### MySQL:
+
 ```sql
 ALTER TABLE table_name
 DROP PRIMARY KEY;
 ```
+
 ###### SQL Server / Oracle / MS Access:
+
 ```sql
 ALTER TABLE Persons
 DROP CONSTRAINT constraint_name;
@@ -245,14 +291,18 @@ CREATE TABLE table_name1 (
     ...
 );
 ```
+
 외래키 생성시 별도의 옵션을 지정하지 않으면 참조되고 있는 값을 삭제 또는 변경하려고 하면, 오류가 발생합니다. 기본 옵션은 아래와 같습니다.
 - `ON DELETE RESTRICT`: 삭제시 제악
 - `ON UPDATE RESTRICT`: 갱신시 제약.
 옵션이 `RESTRICT`일때 참조 당하는 레코드에 대한 삭제를 시도하면 다음과 같은 오류가 발생합니다.
+
 ```shell
 ERROR 1451 (23000): Cannot delete or update a parent raw: a foregin key constraint fail (database_name/tablename, column) REFEREnCES table_name (column))
 ```
+
 삭제하거나 변경할때 `CASCADE`를 적용할 수 있습니다.
+
 ```sql
 CREATE TABLE table_name1 (
     column1 datatype NOT NULL,
@@ -262,7 +312,9 @@ CREATE TABLE table_name1 (
     ...
 );
 ```
+
 `ON DELETE CASCADE`의 적용은 매우 주의해야 한다. 참조하고 있는 다른 테이블의 레코드까지 삭제합니다. `FOREIGN KEY`의 옵션은 다음과 같습니다.
+
 - `CASCASDE`: 종속 레코드까지 함께 영향을 받습니다. (삭제 되거나 변경 됩니다.)
 - `RESTRICT`: 종속 레코드의 삭제나 변경을 금지합니다.
 - `NO ACTION`: 해당 레코드만 삭제하거나 변경됩니다.
@@ -270,6 +322,7 @@ CREATE TABLE table_name1 (
 - `SET DEFAULT`: 종속 레코드의 컬럼의 값이 기본값으로 됩니다.
 
 ###### SQL Server / Oracle / MS Access:
+
 ```sql
 CREATE TABLE table_name1 (
     column1 datatype NOT NULL PRIMARY KEY,
@@ -281,11 +334,14 @@ CREATE TABLE table_name1 (
 ##### `ALTER TABLE`에서의 `FOREIGN KEY` 제약
 
 ###### MySQL / SQL Server / Oracle / MS Access:
+
 ```sql
 ALTER TABLE table_name1
 ADD FOREIGN KEY (column2) REFERENCES table_name2(column_of_table_name2);
 ```
+
 ###### MySQL / SQL Server / Oracle / MS Access:
+
 ```sql
 ALTER TABLE table_name1
 ADD CONSTRAINT constraint_name
@@ -300,7 +356,9 @@ FOREIGN KEY (column_name2) REFERENCES table_name2(column_of_table_name2);
 ALTER TABLE table_name1
 DROP FOREIGN KEY foreign_key_of_column2;
 ```
+
 ###### SQL Server / Oracle / MS Access:
+
 ```sql
 ALTER TABLE table_name1
 DROP CONSTRAINT foreign_key_of_column2;
@@ -322,7 +380,9 @@ CREATE TABLE table_name (
     ...
 );
 ```
+
 ###### SQL Server / Oracle / MS Access:
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype NOT NULL,
@@ -330,7 +390,9 @@ CREATE TABLE table_name (
     ...
 ); 
 ```
+
 ###### MySQL / SQL Server / Oracle / MS Access:
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype NOT NULL,
@@ -348,7 +410,9 @@ CREATE TABLE table_name (
 ALTER TABLE table_name
 ADD CHECK (column2 condition);
 ```
+
 ###### MySQL / SQL Server / Oracle / MS Access:
+
 ```sql
 ALTER TABLE table_name
 ADD CONSTRAINT constraint_name CHECK (column2 condition AND column3 condition);
@@ -362,7 +426,9 @@ ADD CONSTRAINT constraint_name CHECK (column2 condition AND column3 condition);
 ALTER TABLE table_name
 DROP CONSTRAINT constraint_name;
 ```
+
 ###### MySQL:
+
 ```sql
 ALTER TABLE table_name
 DROP CHECK constraint_name;
@@ -392,12 +458,16 @@ CREATE TABLE Persons (
 ALTER TABLE table_name
 ALTER column1 SET DEFAULT value;
 ```
+
 ###### SQL Server / MS Access:
+
 ```sql
 ALTER TABLE table_name
 ALTER COLUMN column1 SET DEFAULT value;
 ```
+
 ###### Oracle:
+
 ```sql
 ALTER TABLE table_name
 MODIFY column1 DEFAULT value;
@@ -411,7 +481,9 @@ MODIFY column1 DEFAULT value;
 ALTER TABLE table_name
 ALTER column1 DROP DEFAULT;
 ```
+
 ###### SQL Server / Oracle / MS Access:
+
 ```sql
 ALTER TABLE table_name
 ALTER COLUMN column1 DROP DEFAULT;
@@ -428,6 +500,7 @@ ALTER COLUMN column1 DROP DEFAULT;
 CREATE INDEX index_name
 ON table_name (column1, column2, ...);
 ```
+
 ##### `CREATE UNIQUE INDEX` 구문
 
 테이블에 유일 색인을 생성합니다. 중복값을 허용하지 않습니다.
@@ -439,20 +512,27 @@ ON table_name (column1, column2, ...);
 ##### `DROP INDEX` 문
 
 색인을 제거합니다.
+
 ###### MS Access:
 
 ```sql
 DROP INDEX index_name ON table_name;
 ```
+
 ###### SQL Server:
+
 ```sql
 DROP INDEX table_name.index_name;
 ```
+
 ###### DB2/Oracle:
+
 ```sql
 DROP INDEX index_name;
 ```
+
 ###### MySQL:
+
 ```sql
 ALTER TABLE table_name
 DROP INDEX index_name;
@@ -465,36 +545,47 @@ DROP INDEX index_name;
 ###### MySQL:
 
 기본적으로 1에서 시작하여 1씩 증가합니다.
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype NOT NULL AUTO_INCREMENT,
     ...
 )
 ```
+
 또는, 시작값을 지정할 수도 있습니다.
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype NOT NULL AUTO_INCREMENT=start_value,
     ...
 )
 ```
+
 ###### SQL Server:
+
 `IDENTITY` 키워드를 사용합니다. 
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype IDENTITY(start_value1, increamental_value1) PRIMARY KEY,
     ...
 )
 ```
+
 ###### Access:
+
 ```sql
 CREATE TABLE table_name (
     column1 datatype PRIMARY KEY AUTOINCREMENT,
     ...
 )
 ```
+
 ###### Oracle
+
 별도의 시퀀스를 생성하여 테이블 삽입시 직접 값을 지정합니다.
+
 ```sql
     CREATE SEQUENCE sequence_name
     MINVALUE min_value
@@ -509,11 +600,14 @@ CREATE TABLE table_name (
 ### 날짜
 
 ###### MySQL:
+
 - DATE: YYYY-MM-DD
 - DATETIME: YYYY-MM-DD HH:MI:SS
 - TIMESTAMP: YYYY-MM-DD HH:MI:SS
 - YEAR: YYYY 또는 YY
+
 ###### SQL Server:
+
 - DATE: YYYY-MM-DD
 - DATETIME: YYYY-MM-DD HH:MI:SS
 - SMALLDATETIME: YYYY-MM-DD HH:MI:SS
@@ -528,24 +622,29 @@ CREATE TABLE table_name (
 #### `CREATE VIEW` 문
 
 뷰를 생성합니다.
+
 ```sql
 CREATE VIEW view_name AS
 SELECT column1, column2, ...
 FROM table_name
 WHERE condition;
 ```
+
 #### `CREATE OR REPLACE VIEW` 구문
 
 뷰를 변경합니다.
+
 ```sql
 CREATE OR REPLACE VIEW view_name AS
 SELECT column1, column2, ...
 FROM table_name
 WHERE condition;
 ```
+
 #### `DROP VIEW` 구문
 
 데이터베이스에서 뷰를 제거합니다.
+
 ```sql
 DROP VIEW view_name;
 ```
@@ -557,11 +656,14 @@ DROP VIEW view_name;
 ### `SELECT` 문
 
 지정한 테이블에서 지정한 컬럼을 선택하여 반환 합니다.
+
 ```sql
 SELECT column1, column2, ...
 FROM table_name;
 ```
+
 또는 모든 컬럼을 반환하려면,
+
 ```sql
 SELECT * FROM table_name; 
 ```
@@ -569,6 +671,7 @@ SELECT * FROM table_name;
 ### `SELECT DISTINCT` 문
 
 결과에 대해 중복을 제거 합니다. `MAX`, `SUM`, `HAVING` 절 등을 사용하려면 `GROUP BY`를 사용합니다.
+
 ```sql
 SELECT DISTINCT column1, column2, ...
 FROM table_name;
@@ -577,6 +680,7 @@ FROM table_name;
 ### `WHERE` 절
 
 레코드들에 대해 조건으로 필터를 적용합니다. 
+
 ```sql
 SELECT column1, column2, ...
 FROM table_name
@@ -587,6 +691,7 @@ WHERE condition;
 
 `WHERE`에서 조건들을 결합합니다.
 `NOT`, `AND`, `OR` 순서로 우선도가 높습니다.
+
 #### `AND` 구문
 
 ```sql
@@ -594,6 +699,7 @@ SELECT column1, column2, ...
 FROM table_name
 WHERE condition1 AND condition2 AND condition3 ...;
 ```
+
 #### `OR` 구문
 
 ```sql
@@ -601,6 +707,7 @@ SELECT column1, column2, ...
 FROM table_name
 WHERE condition1 OR condition2 OR condition3 ...; 
 ```
+
 #### `NOT` 구문
 
 ```sql
@@ -612,6 +719,7 @@ WHERE NOT condition;
 ### `ORDER BY` 키워드
 
 결과를 정렬합니다. `ASC`은 오름차순으로, `DESC`는 내림차순으로 정렬합니다.
+
 #### `ORDER BY` 구문
 
 ```sql
@@ -623,6 +731,7 @@ ORDER BY column1, column2, ... ASC|DESC;
 ### `INSERT INTO` 문
 
 지정한 테이블에 새 레코드를 삽입합니다.
+
 #### `INSERT INTO` 구문
 
 테이블에 새 레코드를 삽입하는 방법은 두가지가 있습니다. 컬럼 이름과 값을 매치하여 지정하는 방법이 있고,
@@ -631,7 +740,9 @@ ORDER BY column1, column2, ... ASC|DESC;
 INSERT INTO table_name (column1, column2, column3, ...)
 VALUES (value1, value2, value3, ...);
 ```
+
 또는 컬럼 순서에 따라 값만 지정하는 방법이 있습니다.
+
 ```sql
 INSERT INTO table_name
 VALUES (value1, value2, value3, ...);
@@ -644,14 +755,17 @@ VALUES (value1, value2, value3, ...);
 #### `IS NULL` 구문
 
 지정한 컬럼이 `NULL`인지 검사합니다.
+
 ```sql
 SELECT column_names
 FROM table_name
 WHERE column_name IS NULL;
 ```
+
 #### `IS NOT NULL` 구문
 
 지정한 컬럼이 `NULL`이 아닌지 검사합니다.
+
 ```sql
 SELECT column_names
 FROM table_name
@@ -684,21 +798,28 @@ WHERE condition;
 ###### SQL Server / MS Access 구문:
 
 첫 3개의 레코드를 지정합니다.
+
 ```sql
 SELECT TOP number|percent column_name(s)
 FROM table_name
 WHERE condition;
 ```
+
 ###### MySQL 구문:
+
 최대 수량을 지정합니다.
+
 ```sql
 SELECT column_name(s)
 FROM table_name
 WHERE condition
 LIMIT number;
 ```
+
 ###### Oracle 구문:
+
 행의 갯수를 지정합니다.
+
 ```sql
 SELECT column_name(s)
 FROM table_name
@@ -710,14 +831,17 @@ WHERE ROWNUM <= number;
 ##### `MIN()` 함수 구문
 
 선택된 컬럼에서 가장 작은 값을 반환 합니다.
+
 ```sql
 SELECT MIN(column_name)
 FROM table_name
 WHERE condition;
 ```
+
 ##### `MAX()` 구문
 
 선택된 컬럼에서 가장 큰 값을 반환 합니다.
+
 ```sql
 SELECT MAX(column_name)
 FROM table_name
@@ -729,22 +853,27 @@ WHERE condition;
 ##### `COUNT()` 구문
 
 지정한 컬럼의 레코드 수량을 반환합니다.
+
 ```sql
 SELECT COUNT(column_name)
 FROM table_name
 WHERE condition;
 ```
+
 ##### `AVG()` 구문
 
 지정한 숫자 컬럼의 평균을 반환합니다.
+
 ```sql
 SELECT AVG(column_name)
 FROM table_name
 WHERE condition;
 ```
+
 ### `SUM()` 구문
 
 지정한 숫자 컬럼의 합을 반환합니다.
+
 ```sql
 SELECT SUM(column_name)
 FROM table_name
@@ -754,20 +883,24 @@ WHERE condition;
 ### `LIKE` 연산자
 
 pattern이 포함되었는지 비교 합니다. pattern은 와일드카드 문자를 포함 할 수 있습니다.
+
 ```sql
 SELECT column1, column2, ...
 FROM table_name
 WHERE string_column LIKE pattern;
 ```
+
 #### 와일드카드 문자:
+
 - %: 0개 이상의 문자 대치.
 - _: 1개의 문자 대치.
+
 ###### MS Access나 SQL Server:
+
 문자 범위를 지정할 수 있습니다.
+
 - [charlist]: 문자 범위.
-
 - [^charlist]: 포함되지 않아야 하는 문자 범위.
-
 - [!charlist]: 포함되지 않아야 하는 문자 범위.
 
 ---
@@ -775,15 +908,19 @@ WHERE string_column LIKE pattern;
 ### `IN` 연산자
 
 `WHERE`절에서 다중 값을 지정할 수 있습니다.
+
 #### `IN` 구문
 
 `IN`다음에 직접 값을 지정합니다.
+
 ```sql
 SELECT column_name(s)
 FROM table_name
 WHERE column_name IN (value1, value2, ...); 
 ```
+
 또는 서브쿼리로 값을 지정합니다.
+
 ```sql
 SELECT column_name(s)
 FROM table_name
@@ -795,6 +932,7 @@ WHERE column_name IN (SELECT STATEMENT);
 #### `BETWEEN` 구문
 
 값의 범위를 지정합니다. 값은 숫자, 텍스트, 날짜일 수 있습니다. 두개의 값 사이에는 `AND`를 둡니다.
+
 ```sql
 SELECT column_name(s)
 FROM table_name
@@ -809,13 +947,18 @@ WHERE column_name BETWEEN value1 AND value2;
 복잡한 연산이 적용된 테이블이나 컬럼을 다룰때 유용합니다.
 
 ##### 별칭 컬럼 구문
+
 선택된 컬럼에 대해 별칭을 부여 합니다.
+
 ```sql
 SELECT column_name AS alias_name
 FROM table_name;
 ```
+
 #### 별칭 테이블 구문
+
 선택된 테이블에 대해 별칭을 부여 합니다.
+
 ```sql
 SELECT column_name(s)
 FROM table_name AS alias_name;
@@ -824,6 +967,7 @@ FROM table_name AS alias_name;
 ### `JOIN` 절
 
 두개 이상의 테이블에서 레코드를 결합하기 위해 사용되며 5가지가 있습니다.
+
 - `(INNER) JOIN`
 - `LEFT (OUTER) JOIN`
 - `RIGHT (OUTER) JOIN`
@@ -833,43 +977,53 @@ FROM table_name AS alias_name;
 ##### `(INNER) JOIN` 키워드
 
 두개의 테이블에서 값이 일치하는 레코드를 선택합니다.
+
 ```sql
 SELECT column_name(s)
 FROM table1
 INNER JOIN table2 ON table1.column_name = table2.column_name;
 ```
+
 ##### `LEFT (OUTER) JOIN` 키워드
 
 좌측 테이블의 모든 레코드를 선택하고, 우측 테이블에서 값이 일치하는 레코드를 선택합니다.
+
 ```sql
 SELECT column_name(s)
 FROM table1
 LEFT JOIN table2 ON table1.column_name = table2.column_name;
 ```
+
 ##### `RIGHT (OUTER) JOIN` 키워드
 
 우측 테이블의 모든 레코드를 선택하고, 좌측 테이블에서 값이 일치하는 레코드를 선택합니다.
+
 ```sql
 SELECT column_name(s)
 FROM table1
 RIGHT JOIN table2 ON table1.column_name = table2.column_name;
 ```
+
 ##### `FULL OUTER JOIN` 키워드
 
 두개의 테이블에서 값이 일치하는 모든 레코드를 반환합니다.
+
 ```sql
 SELECT column_name(s)
 FROM table1
 FULL OUTER JOIN table2 ON table1.column_name = table2.column_name; 
 ```
+
 ##### Self `JOIN`
 
 특별히 `JOIN` 절을 명시하지 않으며, 묵시적으로 별칭을 지정하여, 조건절에서 사용할 수 있습니다.
+
 ```sql
 SELECT column_name(s)
 FROM table1 T1, table1 T2
 WHERE condition;
 ```
+
 여기서 `T1`, `T2`는 별칭이며 쿼리 내에서 유효합니다.
 
 ### `UNION` 연산자
@@ -877,14 +1031,17 @@ WHERE condition;
 ##### `UNION` 구문
 
 두 개 이상의 `SELECT` 문의 결과를 결합합니다. 각 `SELECT` 문의 컬럼 갯수는 동일해야 하며, 컬럼의 데이터 타입은 유사해야 합니다, 각 `SELECT`  문 안의 컬럼은 순서가 같아야 합니다. `UNION` 구문은 기본적으로 중복을 허용하지 않습니다. 중복을 허용하려면 `UNION ALL`을 사용해야 합니다.
+
 ```sql
 SELECT column_name(s) FROM table1
 UNION
 SELECT column_name(s) FROM table2;
 ```
+
 ##### `UNION ALL` 구문
 
 중복을 허용하는 `UNION` 입니다.
+
 ```sql
 SELECT column_name(s) FROM table1
 UNION ALL
@@ -894,6 +1051,7 @@ SELECT column_name(s) FROM table2;
 ### `GROUP BY` 문
 
 데이터를 원하는 그룹으로 나눌 수 있습니다. `DISTINCT`와 다르게 집계함수(`COUNT`, `MAX`, `MIN`, `SUM`, `AVG`)를 적용할 수 있습니다.
+
 ```sql
 SELECT column_name(s)
 FROM table_name
@@ -910,6 +1068,7 @@ ORDER BY column_name(s);
 SELECT COUNT(DISTINCT column1)
 FROM table_name;
 ```
+
 ###### `GROUP BY`로만 가능한 경우
 
 ```sql
@@ -919,7 +1078,9 @@ GROUP BY column1;
 ```
 
 ### `HAVING` 절
+
 `WHERE`절에서는 집계함수를 사용할 수 없습니다. `HAVING`절에서 집계함수로 조건을 비교할 수 있으며, 일반적으로 `HAVING` 절은 `GROUP BY` 절과 함께 사용됩니다.
+
 ```sql
 SELECT column_name(s)
 FROM table_name
@@ -932,6 +1093,7 @@ ORDER BY column_name(s);
 ### `EXISTS` 연산자
 
 `WHERE`절에서 서브쿼리의 레코드가 존재하는지 확인합니다.
+
 ```sql
 SELECT column_name(s)
 FROM table_name
@@ -942,25 +1104,31 @@ WHERE EXISTS
 ### `ANY` 및 `ALL` 연산자
 
 `ANY`와 `ALL` 연산자는 `WHERE`절이나 `HAVING`절의 서브쿼리에서 사용됩니다.
+
 ##### `ANY` 구문
 
 서브쿼리 값이 조건에 하나라도 일치하면 `TRUE`를 반환합니다.
+
 ```sql
 SELECT column_name(s)
 FROM table_name
 WHERE column_name operator ANY
 (SELECT column_name FROM table_name WHERE condition);
 ```
+
 여기서 operator는 표준 비교 연산자 (=, <>, !=, >, >=, <, <=)입니다.
+
 ##### `ALL` 구문
 
 서브쿼리 값이 모두 조건에 일치하면 `TRUE`를 반환합니다.
+
 ```sql
 SELECT column_name(s)
 FROM table_name
 WHERE column_name operator ALL
 (SELECT column_name FROM table_name WHERE condition);
 ```
+
 여기서 operator는 표준 비교 연산자 (`=`, `<>`, `!=`, `>`, `>=`, `<`, `<=`)입니다.
 
 ### `SELECT INTO` 문
@@ -970,13 +1138,16 @@ WHERE column_name operator ALL
 ##### `SELECT INTO` 구문
 
 테이블의 전체 컬럼을 새 테이블로 복사합니다.
+
 ```sql
 SELECT *
 INTO newtable [IN externaldb]
 FROM oldtable
 WHERE condition; 
 ```
+
 특정 컬러만을 지정하여 새 테이블로 복사 할 수 있습니다.
+
 ```sql
 SELECT column1, column2, column3, ...
 INTO newtable [IN externaldb]
@@ -987,6 +1158,7 @@ WHERE condition;
 ### `INSERT INTO SELECT` 문
 
 소스과 타겟 컬럼의 데이터 타입이 일치해야 합니다. 타겟 테이블에 레코드가 이미 있으면 영향을 받지 않습니다.
+
 ##### `INSERT INTO SELECT` 구문
 
 ```sql
@@ -994,7 +1166,9 @@ INSERT INTO table2
 SELECT * FROM table1
 WHERE condition;
 ```
+
 특정 컬럼을 다른 테이블로 복사
+
 ```sql
 INSERT INTO table2 (column1, column2, column3, ...)
 SELECT column1, column2, column3, ...
@@ -1006,8 +1180,9 @@ WHERE condition;
 
 ## 데이터 타입
 
-###### MySQL 데이터 타입:
-###### MySQL 문자열 데이터 타입:
+### MySQL 데이터 타입:
+
+#### MySQL 문자열 데이터 타입:
 
 - `CHAR(size)`: 고정길이 문자열, 최대 255 문자.
 - `VARCHAR(size)`: 가변길이 문자열, 최대 255 문자. 255 문자를 초과하면 `TEXT` 타입이 됩니다.
@@ -1021,7 +1196,7 @@ WHERE condition;
 - `ENUM(x,y,z,etc.)`: 최대 65,535 개의 값 리스트.
 - `SET`: 문자열 목록으로 64개의 서로 다른 멤버를 가질 수 있으며, 각각은 `,`으로 구분됩니다.
 
-####### MySQL 숫자 데이터 타입:
+#### MySQL 숫자 데이터 타입:
 - `TINYINT(size)`: -128 ~ 127.
 - `UNSIGNED TINYINT(size)`: 0 ~ 255.
 - `SMALLINT(size)`: -32,768 ~ 32,767.
@@ -1036,16 +1211,17 @@ WHERE condition;
 - `DOUBLE(size,d)`: 배정도형.
 - `DECIMAL(size,d)`: 문자열로 저장된 `DECIMAL`.
 
-####### MySQL 날짜 데이터 타입:
+#### MySQL 날짜 데이터 타입:
+
 - `DATE()`: YYYY-MM-DD.
 - `DATETIME()`: YYYY-MM-DD HH:MI:SS.
 - `TIMESTAMP()`: 초단위로 저장. YYYY-MM-DD HH:MI:SS (UTC 1970-01-01 00:00:01 부터 2038-01-09 03:14:07 까지)
 - `TIME()`: HH:MI:SS.
 - `YEAR()`: YYYY 또는 YY.
 
-###### SQL Server 데이터 타입.
+#### SQL Server 데이터 타입.
 
-####### SQL Server 문자열 데이터 타입.
+##### SQL Server 문자열 데이터 타입.
 
 - `char(n)`: 고정길이 문자열, 최대 8,000 문자.
 - `varchar(n)`: 가변길이 문자열, 최대 8,000 문자.
@@ -1060,7 +1236,7 @@ WHERE condition;
 - `varbinary(max)`: 가변길이 바이너리 문자열. 최대 2GB.
 - `image`: 가변 길이 바이너리 문자열. 최대 2GB.
 
-####### SQL Server 숫자 데이터 타입.
+##### SQL Server 숫자 데이터 타입.
 
 - `bit`: 0, 1 또는 `NULL`을 갖는 정수. 1 byte.
 - `tinyint`: 0 ~ 255 범위의 숫자. 1 byte.
@@ -1073,7 +1249,7 @@ WHERE condition;
 - `float(n)`: $-1.79^{308}$ ~ $1.79^{308}$. n이 24이면 4 바이트, n이 25~53이면 8 바이트.
 - `real`: $-3.40^{38}$ ~ $3.40^{38}$. 4바이트.
 
-####### SQL Server 날짜 데이터 타입.
+#### SQL Server 날짜 데이터 타입.
 
 - `datetime`: 1월 1일부터 12월 31일까지, 9999. 3.33 밀리초 정밀도. 8바이트.
 - `datetime2`: 1월 1일부터 12월 31일까지, 9999. 100 나노초 정밀도. 8바이트.
@@ -1083,14 +1259,15 @@ WHERE condition;
 - `datetimeoffset`: `datetime2`와 동일하며 타임존 옵셋이 추가됨. 8~10바이트.
 - `timestamp`: 행이 추가되거나 변경될때 유일한 숫자를 저장.
 
-####### SQL Server 기타 데이터 타입.
+#### SQL Server 기타 데이터 타입.
+
 - `sql_variant`: 최대 8,000 바이트의 various data types, except text, `ntext` 및 `timestamp`를 저장.
 - `uniqueidentifier`: GUID를 저장.
 - `xml`: XML 형식의 데이터를 저장. 최대 2GB.
 - `cursor`: 데이터베이서 조작시 커서 참조를 저장.
 - `table`: 나중의 처리 결과 집합을 저장.
 
-###### Access 데이터 타입.
+#### Access 데이터 타입.
 
 - `Text`: 텍스트 또는 텍스트와 숫자의 결합을 저장. 최대 255 문자.
 - `Memo`: 65,536 길이의 문자를 저장. 정렬 불가능.
