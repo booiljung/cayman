@@ -62,7 +62,7 @@
 
 ### 데이터
 
-- RDBMS, SQL
+- [SQL](sql/index.md)
 - [MySQL](mysql/index.md)
 - [데이터 분석 (Data Analytics)](data_analytics/index.md)
 - 데이터 시각화 (Data Visualization)
