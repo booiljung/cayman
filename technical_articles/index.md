@@ -105,5 +105,6 @@
 
 ### 관리
 
+- [git](./git/index.md)
 - 제품 및 서비스 기획 (Product Management)
 - 프로젝트 관리 (Project Management)
