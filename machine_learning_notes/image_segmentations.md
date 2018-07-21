@@ -74,6 +74,11 @@
 
 - A Theory of Mean Field Approximation - ???? [paper](https://papers.nips.cc/paper/1604-a-theory-of-mean-field-approximation.pdf)
 
+## Motion Segmentation
+
+- (Coherent Motion Segmentation in Moving Camera Videos using Optical Flow Orientations)[https://arxiv.org/pdf/1511.01619.pdf]
+
+
 # Facebook
 
 - Facebook Detection [article](https://facebook.ai/developers/tools/detectron)

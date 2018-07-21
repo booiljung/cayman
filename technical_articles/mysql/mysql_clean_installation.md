@@ -5,10 +5,9 @@
 우분투 16.04 LTS에서 클린 설치하는 방법.
 
 ```shell
-sudo rm -rf /var/lib/mysql/mysql
-sudo apt-get remove --purge mysql-server mysql-client mysql-common
+sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+sudo rm -rf /etc/mysql /var/lib/mysql
 sudo apt-get autoremove
 sudo apt-get autoclean
-sudo apt-get install mysql-server
 ```
 
