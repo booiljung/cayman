@@ -2,6 +2,7 @@
 
 #### 최신 글
 
+- [React Native AVD를 셸에서 실행](technical_articles/react_native/execution_avd.md)
 - [Node.js 설치 방법](technical_articles/nodejs/nodejs_installation.md)
 - [git 패스워드 캐시 설정 방법](technical_articles/git/setup_git_password_cache.md)
 - [근로기준법 개정안](technical_articles/project_managements/labor_standard_act.md)
