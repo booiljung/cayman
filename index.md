@@ -2,7 +2,8 @@
 
 #### 최신 글
 
-- [React Native errno 11 해결](technical_articles/react_native/resolve_errno_11.md)
+- [React Native에서 안드로이드 rebuild 다시 빌드 하기](./technical_articles/react_native/rebuild_android.md)
+- [React Native errno 11 해결](./technical_articles/react_native/resolve_errno_11.md)
 - [React Native AVD를 셸에서 실행](./technical_articles/react_native/execution_avd.md)
 - [Node.js 설치 방법](./technical_articles/nodejs/nodejs_installation.md)
 - [git 패스워드 캐시 설정 방법](./technical_articles/git/setup_git_password_cache.md)
