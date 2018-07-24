@@ -2,6 +2,7 @@
 
 #### 최신 글
 
+- [React native에서 8081 포트를 listen하지 못하는 문제](./technical_articles/react_native/listen_error_8081.md)
 - [React Native에서 안드로이드 rebuild 다시 빌드 하기](./technical_articles/react_native/rebuild_android.md)
 - [React Native errno 11 해결](./technical_articles/react_native/resolve_errno_11.md)
 - [React Native AVD를 셸에서 실행](./technical_articles/react_native/execution_avd.md)
