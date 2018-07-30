@@ -1,27 +1,88 @@
 # SQL 구문 룩업 테이블
 
+---
+
+## 사용자 및 사용자 권한
+
+#### 프로시저 사용 권한 부여 `GRANT EXECUTE ON`
+
+###### MS-SQL
+
+```mssql
+GRANT EXECUTE ON procedurename TO username;
+```
+
+#### 프로시저 사용 권한 제거 `REVOKE EXECUTE ON`
+
+###### MS-SQL
+
+```mssql
+REVOKE EXECUTE ON proceduername FROM username;
+```
+
+#### 데이터베이스 사용자 제거 `DROP USER`
+
+###### MS-SQL
+
+```mssql
+DROP USER username;
+```
+
+#### 서버 액세스 권한 제거 `DROP LOGIN`
+
+###### MS-SQL
+
+```mssql
+DROP LOGIN [<computername>\username];
+```
+
+---
+
 ## 데이터베이스
 
-### `CREATE DATABASE` 문
+### 데이터베이스 생성 `CREATE DATABASE`
 
 데이터베이스를 생성합니다.
 
 ```sql
-CREATE DATABASE databasename; 
+CREATE DATABASE databasename;
 ```
 
-### `DROP DATABASE` 문
+### 데이터베이스 제거 `DROP DATABASE`
 
-데이터베이스를 제거 합니다.
+데이터베이스를 제거 합니다. 사용자가 지우고자 하는 데이터베이스를 사용중인 동안은 해당 데이터베이스를 삭제할 수 없으므로 삭제하기 이전에 `USE database`로 다른 데이터베이스를 사용해야 합니다.
 ```sql
 DROP DATABASE databasename;
+```
+
+### 데이터베이스 사용 `USE DATABASE`
+
+데이터베이스를 사용하도록 선택합니다.
+
+###### MS-SQL
+
+```plsql
+USE databasename;
+```
+
+### 데이터베이스가 있는지 확인하여 데이터베이스 제거
+
+데이터베이스가 있는지 확인하여 데이터베이스가 있으면 데이터베이스를 제거합니다.
+
+###### MS-SQL
+
+```mssql
+IF EXIST(SELECT * from sys.databases WHERE name='databasename')
+BEGIN
+    DROP databasename;
+END
 ```
 
 ---
 
 ## 테이블
 
-### `CREATE TABLE` 문
+### 테이블 생성 `CREATE TABLE`
 
 테이블을 생성합니다.
 
@@ -34,7 +95,7 @@ CREATE TABLE table_name (
 );
 ```
 
-### `DROP TABLE` 문
+### 테이블 제거 `DROP TABLE`
 
 테이블을 제거합니다.
 
@@ -42,7 +103,7 @@ CREATE TABLE table_name (
 DROP TABLE table_name;
 ```
 
-### `ALTER TABLE` 문
+### 테이블 컬럼 추가, 삭제, 변경 `ALTER TABLE`
 
 기존 테이블의 컬럼을 추가, 삭제, 변경 합니다.
 
@@ -89,9 +150,17 @@ ALTER TABLE table_name
 MODIFY column_name datatype;
 ```
 
+### 테이블의 모든 행을 제거 `DELETE FROM`
+
+###### MS-SQL
+
+```mssql
+DELETE FROM tablename;
+```
+
 ---
 
-### 제약
+## 필드에 대한 제약
 
 제약은 테이블을 생성하거나 테이블을 변경할때 지정할 수 있습니다.
 
@@ -114,7 +183,7 @@ CREATE TABLE table_name (
 6. `DEFAULT`: 컬럽 삽입시 지정하지 않을때 기본값을 지정합니다.
 7. 데이터 베이스를 성능을 올립니다. (반드시 그러하지는 않습니다)
 
-#### `NOT NULL` 제약
+### Null을 허용하지 않는 제약 `NOT NULL`
 
 `NULL` 가질 수 없습니다. 값이 반드시 지정되어야 합니다.
 
@@ -125,9 +194,9 @@ CREATE TABLE table_name (
 );
 ```
 
-#### `UNIQUE` 제약
+### 컬럼 내에서 유일한 값을 가져야 한다는 제약 `UNIQUE`
 
-컬럼내에서 유일한 값이어야 합니다.
+컬럼 내에서 유일한 값이어야 합니다.
 
 ##### `CREATE TABLE`에서의 `UNIQUE` 제약
 
@@ -202,7 +271,7 @@ ALTER TABLE table_name
 DROP CONSTRAINT constraint_name;
 ```
 
-#### `PRIMARY KEY` 제약
+### `PRIMARY KEY` 제약
 
 데이터베이스의 테이블에서 각 레코드의 유일성을 식별하는 제약입니다. `PRIMARY KEY`는 `NOT NULL` 이고 `UNIQUE` 입니다. 테이블은 하나의 `PRIMARY KEY`를 가질 수 있습니다.
 
@@ -274,7 +343,7 @@ ALTER TABLE Persons
 DROP CONSTRAINT constraint_name;
 ```
 
-#### `FOREIGN KEY` 제약
+### `FOREIGN KEY` 제약
 
 외래키는 연결된 다른 테이블의 행이나 레코드를 식별하며, 다른 테이블의 `PRIMARY KEY`를 참조합니다.
 
@@ -364,7 +433,7 @@ ALTER TABLE table_name1
 DROP CONSTRAINT foreign_key_of_column2;
 ```
 
-#### `CHECK` 제약
+### `CHECK` 제약
 
 컬럼의 값이 특정 조건을 충족해야 합니다.
 
@@ -434,7 +503,7 @@ ALTER TABLE table_name
 DROP CHECK constraint_name;
 ```
 
-#### `DEFAULT` 제약
+### `DEFAULT` 제약
 
 특별히 지정하지 않을때 기본 값을 지정합니다.
 
@@ -489,7 +558,7 @@ ALTER TABLE table_name
 ALTER COLUMN column1 DROP DEFAULT;
 ```
 
-#### `INDEX` 문
+### `INDEX` 문
 
 검색 성능을 올리기 위해 색인을 생성합니다.
 
@@ -538,7 +607,7 @@ ALTER TABLE table_name
 DROP INDEX index_name;
 ```
 
-#### `AUTO INCERMENT` 필드
+### `AUTO INCERMENT` 필드
 
 유니크 값이 설정되어 있는 경우 새 레코드가 테이블에 삽입될때 자동 증가를 지정합니다.
 
@@ -597,7 +666,7 @@ CREATE TABLE table_name (
     VALUES (sequence_name.nextval, value2, value3, ...);    
 ```
 
-### 날짜
+### 날짜 타입
 
 ###### MySQL:
 
@@ -615,7 +684,7 @@ CREATE TABLE table_name (
 
 ---
 
-## 뷰
+## `VIEW`
 
 뷰는 `SELECT`를 통해 테이블처럼 보이게 합니다.
 
@@ -644,6 +713,8 @@ WHERE condition;
 #### `DROP VIEW` 구문
 
 데이터베이스에서 뷰를 제거합니다.
+
+###### MySQL, Oracle, MS-SQL
 
 ```sql
 DROP VIEW view_name;
@@ -1178,6 +1249,54 @@ WHERE condition;
 
 ---
 
+## 프로시저
+
+#### 프로시저 생성 `CREATE PROCEDURE`
+
+프로시저를 생성합니다.
+
+###### MS-SQL
+
+```mssql
+CREATE PROCEDURE procedurename @parametername parametertype
+	AS
+	BEGIN
+	-- 프로시저 코드
+	END
+```
+
+#### 프로시저 실행 `EXCUTE`
+
+프로시저를 실행합니다.
+
+###### MS-SQL
+
+```mssql
+EXECUTE procedurename argument;
+```
+
+#### 프로세저 제거 `DROP PROC`
+
+프로시저를 제거합니다.
+
+###### MS-SQL
+
+```mssql
+DROP PROC procedurename;
+```
+
+---
+
+## 트랜젝션
+
+###### MS-SQL
+
+```mssql
+BEGIN TRAN;
+    -- SQL statements
+COMMIT;
+---
+
 ## 데이터 타입
 
 ### MySQL 데이터 타입:
@@ -1601,3 +1720,4 @@ WHERE condition;
 - `SYSTIMESTAMP`:
 - `TRUNC`:
 - `TZ_OFFSET`:
+
