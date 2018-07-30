@@ -24,3 +24,8 @@
 
 - 박병일 박사님이 추천하시는 스타일시트 [web](https://onsen.io/)
 
+### .NET
+
+- .NET 서비스 만들기 [web](http://www.csharpstudy.com/Practical/Prac-service-program.aspx)
+- .NET 실행중에 동적 컴파일 [web](http://www.csharpstudy.com/Practical/Prac-dynamic-compile.aspx)
+- .NET에서 pdf 문서 사용하기 [web](http://www.csharpstudy.com/Practical/Prac-pdf.aspx)
