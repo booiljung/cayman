@@ -2,7 +2,6 @@
 
 # SQL
 
-- [SQL 구문 룩업](./sql_syntax_lookup.md)
 - [SQL 사용자 및 사용자 권한](./sql_user_and_permission.md)
 - [SQL 데이터베이스](./sql_database.md)
 - [SQL 테이블](./sql_table.md)
