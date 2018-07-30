@@ -202,7 +202,7 @@ CREATE TABLE table_name1 (
 ```
 
 외래키 생성시 별도의 옵션을 지정하지 않으면 참조되고 있는 값을 삭제 또는 변경하려고 하면, 오류가 발생합니다. 기본 옵션은 아래와 같습니다.
-- `ON DELETE RESTRICT`: 삭제시 제악
+- `ON DELETE RESTRICT`: 삭제시 제약.
 - `ON UPDATE RESTRICT`: 갱신시 제약.
 옵션이 `RESTRICT`일때 참조 당하는 레코드에 대한 삭제를 시도하면 다음과 같은 오류가 발생합니다.
 
@@ -261,7 +261,7 @@ FOREIGN KEY (column_name2) REFERENCES table_name2(column_of_table_name2);
 
 ###### MySQL:
 
-```sql
+```mysql
 ALTER TABLE table_name1
 DROP FOREIGN KEY foreign_key_of_column2;
 ```

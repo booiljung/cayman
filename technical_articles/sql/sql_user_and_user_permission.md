@@ -1,7 +1,5 @@
 [Up](./index.md)
 
-# SQL 구문 룩업 테이블
-
 ## 사용자 및 사용자 권한
 
 #### 프로시저 사용 권한 부여 `GRANT EXECUTE ON`
