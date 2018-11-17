@@ -1,12 +1,14 @@
 #  Oracle 개발용 준비
 
-## 조회
+## 접속
 
 DBMS에 접속
 
 ```sh
-sqlplus /as sysdba
+sqlplus '/as sysdba'
 ```
+
+## 조회
 
 사용자 보기
 
@@ -59,7 +61,7 @@ SIZE <default_size> AUTOEXTEND ON NEXT <extend_size>;
 
 ```
 CREATE TEMPORARY TABLESPACE TEMP테이블스페이스명
-DATAFILE <dbf_data_file_path>
+TEMPFILE <dbf_data_file_path>
 SIZE <default_size> AUTOEXTEND ON NEXT <extend_size>;
 ```
 
@@ -99,18 +101,39 @@ DEFAULT TABLESPACE <tablespace_name>;
 
 ```sql
 CREATE USER <username>
-IDENTIFIED <password>
+IDENTIFIED BY <password>
 DEFAULT TABLESPACE <tablespace_name>
-TEMPORARY TABLESPACE <temp_tablespace_name>;
+TEMPORARY TABLESPACE <temp_tablespace_name>
+PROFILE DEFAULT
+ACCOUNT UNLOCK;
 ```
 
 생성한 사용자에게 권한 부여하고 연결 
 
-```
-GRANT RESOURCE, CONNECT TO <username>;
+```sql
+GRANT RESOURCE TO <username>;
+GRANT CONNECT TO <username>;
+GRANT CREATE VIEW TO <username>;
+GRANT CREATE PROCEDURE TO <username>;
+GRANT CREATE SEQUENCE TO <username>;
+GRANT CREATE SESSION TO <username>;
+GRANT CREATE TABLE TO <username>;
 GRANT DBA TO <username>;
-GRANT CONNECT, RESOURCE, CREATE VIEW, CREATE PROCEDURE, CREATE SEQUENCE TO <username>;
 ```
+
+유저 잠금 해제
+
+```
+ALTER USER <username> ACCOUNT UNLOCK;
+```
+
+유저 삭제
+
+```
+DROP USER <username> CASCADE;
+```
+
+
 
 ## 관리
 

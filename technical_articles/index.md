@@ -102,6 +102,10 @@
 - [Node.js](./nodejs/index.md)
 - [React Native](./react_native/index.md)
 
+### 운영체제
+
+- [Ubuntu](../ubuntu/index.md)
+
 ### 마크업 언어
 
 - 레이텍 $\LaTeX$
