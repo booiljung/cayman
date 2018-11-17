@@ -20,7 +20,11 @@ sudo apt install fcitx-hangul
 
 ![1542451198108](./1542451198108.png)
 
-'Keyboard Input method system'을 fcitx으로 변경 합니다. 그리고 재부팅을 합니다.
+'Keyboard Input method system'을 fcitx으로 변경 합니다.
+
+![1542454529395](.\1542454529395.png)
+
+그리고 재부팅을 합니다.
 
 재부팅이 완료되면 우측 상단의 키보드 모양의 아이콘에서 'Configure'를 실행 합니다.
 
