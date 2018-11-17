@@ -2,18 +2,13 @@
 
 #### 최신 글
 
+- [Ubuntu에서 한글 입력기 fcitx 설정 방법](./technical_articles/linux/ubuntu_korean_fcitx_installation.md)
 - [React native에서 8081 포트를 listen하지 못하는 문제](./technical_articles/react_native/listen_error_8081.md)
 - [React Native에서 안드로이드 rebuild 다시 빌드 하기](./technical_articles/react_native/rebuild_android.md)
 - [React Native errno 11 해결](./technical_articles/react_native/resolve_errno_11.md)
 - [React Native AVD를 셸에서 실행](./technical_articles/react_native/execution_avd.md)
 - [Node.js 설치 방법](./technical_articles/nodejs/nodejs_installation.md)
 - [git 패스워드 캐시 설정 방법](./technical_articles/git/setup_git_password_cache.md)
-- [근로기준법 개정안](./technical_articles/project_managements/labor_standard_act.md)
-- Unity C# Script Book: [체력 int 타입](./technical_articles/unity_csharp_script_book/int_type/index.md)
-- Unity C# Script Book: [던전과 인사하기](./technical_articles/unity_csharp_script_book/hello_dungeon/index.md)
-- Unity C# Script Book: [던전 입구](./technical_articles/unity_csharp_script_book/entrance_dungeon/index.md)
-- [리뷰: Vue.js 첫걸음](./technical_articles/vuejs/vue_js_first_step.md)
-- Unity C# Script Book: [유니티 설치](./technical_articles/unity_csharp_script_book/install/index.md)
 
 #### 페이지
 

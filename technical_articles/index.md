@@ -104,7 +104,7 @@
 
 ### 운영체제
 
-- [Ubuntu](../ubuntu/index.md)
+- [Linux](./linux/index.md)
 
 ### 마크업 언어
 
