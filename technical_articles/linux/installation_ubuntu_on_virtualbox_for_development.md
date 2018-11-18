@@ -1,0 +1,14 @@
+# VirtualBox에 개발용 우분투 설치 체크리스트
+
+개발용 윈도우 PC에 가벼운 서버를 설치할 경우 관리면에서 불편한 점이 있습니다.  컨테이너를 도입해야 하지만, 리눅스 서브시스템을 설치할 수 있는 윈도우는 고가라 개인에게 부담 스럽습니다. 그렇다고 매번 설치 과정을 반복하기에 공수가 들고, 빠뜨리는 일도 발생 합니다.
+
+1. 우분투를 다운로드 받아 설치.
+2. [fcitx 설치](./ubuntu_korean_fcitx_installation/index.md).
+3. 자동 로그인 설정.
+4. 우분투 [설정 > Brightness & Lock]에서 스크린세이버 및 인증 끄기.
+5. [Devices > Insert Guest Addtions CD Image...] 메뉴를 선택하여 Guest Additions 설치.
+
+![1542553562876](.\installation_ubuntu_on_virtualbox_for_development.assets\1542553562876.png)
+
+6. 가상 머신을 끄고 Network 설정을 Bridge Adapter로 설정.
+7. 우분투 고정 IP 주소 설정.
