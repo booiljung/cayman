@@ -377,7 +377,7 @@ docker exec -it mysql mysql -uroot
 
 첫번째 `mysql` 은 컨테이너 ID이고, 두번째 `mysql`은 MySQL 클라이언트를 실행하는 명령 입니다.
 
-## 컨테이너 업데이트
+## Docker volume
 
 컨테이너를 업데이트 한다는 것은, 기존 컨테이너를 `stop`, `rm` 하고, 새 이미지를 `pull`하여, 새 컨테이너를 `run` 하면 되는데, 기존 컨테이너를 `rm` 하면 컨테이너가 생성한 컨테이너 내부의 파일이 모두 잃게 됩니다.
 
@@ -396,6 +396,54 @@ docker run -d -p 3306:3306 \
   -v /my/own/datadir:/var/lib/mysql \ # <- volume mount
   mysql:5.7
 ```
+
+### Docker volume 보기
+
+```
+docker volume ls
+```
+
+위 명령은 Docker volume의 일부 정보만 표시하므로 자세히 보려면
+
+```
+docker volume inspet <volume_id 또는 volume_name>
+```
+
+### Dockerfile에서 volume
+
+```dockerfile
+FROM ubuntu:lastest
+
+volume ["/volume/path"]
+```
+
+이것은 이미지가 실행되어 컨테이너로 올라갈때 지정한 경로를 자동으로 host에 연결합니다. 그 경로는 `/var/lib/docker/volumes/{volume_name}`에 만들어 집니다. 이 방법은 컨테어너가 삭제되었을때 데이터의 위치를 파악하기 어려운 문제가 있어 좋은 방법은 아닙니다.
+
+도커를 실행할때 -v 옵션으로 host에 매핑 할 수 있습니다.
+
+```
+docker run -itd -v /host/some/where:/container/some/where ubuntu
+```
+
+이것은 직관적이며 Dockerfile에 정의된 volume 경로를 오버라이드 합니다. 나쁜점은 `docker volume ls`로 추적할 수 없다는 것입니다.
+
+Volume container를 통해 volume을 연결 할 수 있습니다.
+
+```
+docker run --name volume_container -itd \
+	-v $HOME/host-volume1:/container-volume1 \
+	-v $HOME/host-volume2:/container-volume2 \
+	-v $HOME/host-volume3:/container-volume3 \
+	ubuntu
+```
+
+이렇게 volume이 잡한 Docker Container를 하나 `run`하고 
+
+```
+docker run --name target_container --volume-from volume_container -itd ubuntu
+```
+
+컨테이너째로 volume을 붙이는 방법입니다. 같은 볼륨을 가진 여러개의 컨테이너가 참조할때 유리합니다.
 
 ## Docker Compose
 
@@ -462,12 +510,10 @@ docker-compose up
 ## 참조
 
 - [초보를 위한 도커 안내서 - 도커란 무엇인가?](https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html)
-
 - [초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기](https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html)
-
 - [초보를 위한 도커 안내서 - 이미지 만들고 배포하기](https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html)
-
 - [도커와 도커 컨테이너의 이해](http://www.itworld.co.kr/news/110748)
 - [도커 무작정 따라하기](https://www.slideshare.net/pyrasis/docker-fordummies-44424016)
 - [Docker Container로 SFTP 사용](https://m.blog.naver.com/PostView.nhn?blogId=alice_k106&logNo=220650722592&proxyReferer=https%3A%2F%2Fwww.google.com%2F)
+- [Docker volume의 사용법과 차이점](https://darkrasid.github.io/docker/container/volume/2017/05/10/docker-volumes.html)
 
