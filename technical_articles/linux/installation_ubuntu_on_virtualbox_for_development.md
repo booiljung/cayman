@@ -12,13 +12,14 @@
 
 - 자동 로그인 설정.
 
-- 우분투 [설정 > Brightness & Lock]에서 스크린세이버 및 인증 끄기.
-
-- [Devices > Insert Guest Addtions CD Image...] 메뉴를 선택하여 Guest Additions 설치.
-
-  ![1542553562876](.\installation_ubuntu_on_virtualbox_for_development.assets\1542553562876.png)
-
-- 우분투 고정 IP 주소 설정.
-
-- Docker 설치.
 - `sudo apt install nemo` 설치.
+
+- 우분투 `[설정 > Brightness & Lock]`에서 스크린세이버 및 인증 끄기.
+
+- 머신의 `[Devices > Insert Guest Addtions CD Image...]` 메뉴를 선택하여 Guest Additions 설치.
+
+- [Docker 설치](../docker/docker_training.md)
+
+- [호스트 폴더를 게스트에 마운트](./virtual_box_shared_folder.md)
+
+- 우분투 고정 IP 주소 설정 (머신을 복제할 때마다 새로 설정해 주어야 한다).

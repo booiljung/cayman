@@ -26,29 +26,72 @@ Docker는 베이스 이미지에서 바뀐 부분만 이미지로 생성합니�
 
 ## Ubuntu 16.04에 도커 설치
 
-### 셸스크립트를 사용하여 자동으로 설치
-
-테스트 완료: Ubuntun에서 아래처럼 설치하면 성공적입니다.
+먼저 데비안 패키지 목록을 최신으로 갱신하고 업그레이드 합니다.
 
 ```sh
-wget -qO- https://get.docker.com/ | sh
-```
-
-셸스크립트에 `sudo`가 포함되어 있으로 수퍼유저 권한을 묻습니다.
-
-### 자동 설치 스크립트를 사용하지 않고 직접 설치.
-
-#### 데비안 리눅스 패키지로 설치
-
-이는 테스트 해보지 않았습니다.
-
-```
 sudo apt update
-sudo apt install docker.io
-sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker
+sudo apt upgrade # 선택
 ```
 
-마지막 라인은 `/usr/bin/docker.io`실행 파일을 `/usr/local/bin/docker`로 링크하여 사용합니다.
+도커에 필요한 필수 패키지들을 설치합니다.
+
+```sh
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+```
+
+데비안 리파지토리에서 직접 설치할 수 도 있지만, 이 경우 구버전의 도커가 설치됩니다. 최신 버전을 설치하기 위해서는 도커 공식 리파지토리를 추가합니다. 먼저, 도커의 공식 GPG 키를 추가 합니다.
+
+```
+booil@booil-linux:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+
+성공하면 `OK`가 표시됩니다.
+
+```
+OK
+```
+
+GPG 키를 확인합니다.
+
+```sh
+sudo apt-key fingerprint 0EBFCD88
+```
+
+성공하면 다음이 표시됩니다.
+
+```
+pub   4096R/0EBFCD88 2017-02-22
+      Key fingerprint = 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid                  Docker Release (CE deb) <docker@docker.com>
+sub   4096R/F273FCD8 2017-02-22
+```
+
+다음을 도커의 리파지토리를 추가 합니다.
+
+```sh
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+```
+
+다시 데비안 패키지 목록을 최신으로 갱신합니다.
+
+```sh
+sudo apt-get update
+```
+
+도커 리파지토리가 추가 되었으므로 출력 목록에서 다음 유사한 내용을 확인할 수 있습니다.
+
+```
+Get:O https://download.docker.com/linux/ubuntu xenial InRelease [66.2 kB]       
+Get:O https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages [5,491 B]
+- 중략 -
+Reading package lists... Done
+```
+
+다음은 도커 커뮤니티 에디션을 추가 합니다.
+
+```sh
+ sudo apt install docker-ce
+```
 
 #### Docker 서비스 실행:
 
@@ -61,37 +104,6 @@ sudo service docker start
 ```
 sudo chkconfig docker on
 ```
-
-### 배포판 저장소를 사용하지 않고 직접 설치하기.
-
-배포판 저장소는  보수적으로 오래된 경우가 있으므로 도커 패키지 버전이 낮은 경우가 있습니다. 배포판 패키지를 사용하지 않고 빌드된 바이너리를 직접 설치 합니니다.
-
-이미 패키지로 설치 하였을때:
-
-```
-sudo service docker stop
-sudo wget https://get.docker.com/builds/Linux/x86_64/docker-lastest \
--O $(type -P docker)
-sudo service docker start
-```
-
-새로 설치할때:
-
-```
-wget https://get.docker.com/builds/Linux/x86_64/docker-lastest
-chmod +x docker-lastest
-sudo mv docker-lastest /usr/local/bin/docker
-sudo /usr/local/bin/docker -d
-```
-
-아래는 뭔지 모르겠음.
-
-```
-sudo usermod -aG docker $USER # 현재 접속중인 사용자에게 권한 부여
-sudo usermod -aG docker your-user # user-user 사용자에게 권한 부여
-```
-
-사용자가 로그인 중이라면 다시 로그인 후에 권한이 적용됩니다.
 
 ### 도커 설치 확인
 
@@ -166,10 +178,6 @@ For more examples and ideas, visit:
 ```sh
  sudo docker container ps -a
 ```
-
-
-
-
 
 **(주의)** 다음은 모든 컨테이너를 제거합니다:
 
