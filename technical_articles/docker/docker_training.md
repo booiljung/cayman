@@ -1,20 +1,22 @@
-# Docker 연습
+# Docker 빠른 찾아보기
 
-개발용 컨테이너를 구성하기 위한 목적으로 Docker 다시 공부하면서 노트 합니다. 도커의 탄생과 도커의 원리는 [[번역]시작하는 이들을 위한 컨테이너, VM, 그리고 도커에 대한 이야기](https://medium.com/@jwyeom63/%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-%EC%9D%B4%EB%93%A4%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-vm-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EB%8F%84%EC%BB%A4%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%B4%EC%95%BC%EA%B8%B0-3a04c000cb5c)를 참조 합니다.
-
-## Docker란
-
-'도커는 BSD와 솔라리스(Solaris)와  같은 유닉스(Unix) 운영체제에서 수십 년 간 사용되었던 개념이 현대적으로 재탄생된 최신 개념이다. 유닉스에서 사용되었던  개념이란 특정 프로세스를 운영체제의 나머지와 일정 수준 분리해 실행시킬 수 있다는 개념이다' [원문보기](http://www.itworld.co.kr/news/110748)
-
-'리눅스 컨테이너를 이해하기 위한 출발점은  cgroups(control groups) 및 네임스페이스(namespaces)이다. 컨테이너와 호스트에서 실행되는 다른 프로세스  사이에 벽을 만드는 리눅스 커널 기능들이다. IBM이 최초 개발한 리눅스 네임스페이스는 시스템 리소스들을 묶어, 프로세스에 전용  할당하는 방식으로 제공한다.' [원문보기](http://www.itworld.co.kr/news/110748)
+개발용 도커를 빠르게 구성하기 위한 목적으로 노트 합니다. 도커의 정의나 원리 역사 등은 기술하지 않습니다.
 
 ## Docker Container
 
-격리된 공간에서 프로세스가 동작하는 기술입니다. 가상화 기술의 하나지만 기존의 OS 가상화 방식과 다릅니다. Docker Container는 Docker Image를 실행한 상태입니다. 하나의 Docker Image로 여러개의 Docker Container를 만들 수 있습니다.
+도커 컨테이너는 다음 명령으로 시작합니다.
+
+```sh
+sudo docker container <options>
+```
 
 ## Docker Image
 
-Docker Image는 서비스 운영에 필요한 서버 프로그램, 소스코드, 컴파일된 실행파일을 묶은 형태입니다. Docker Container에 필요한 파일과 설정을 포함하며 변하지 않습니다. Docker Image는 [Docker hub](https://hub.docker.com/)에 등록하거나 [Docker Registry](https://docs.docker.com/registry/)에 저장소를 만들어 관리할 수 있습니다.
+도커 이미지는 다음 명령으로 시작합니다.
+
+```sh
+sudo docker image <options>
+```
 
 ### Dockerfile
 
@@ -22,7 +24,7 @@ Docker Image는 서비스 운영에 필요한 서버 프로그램, 소스코드,
 
 ### Union File System
 
-Docker는 베이스 이미지에서 바뀐 부분만 이미지로 생성합니다. 컨테이너로 실행할때는 베이스 이미지와 바뀐 부분을 합쳐서 실행합니다. Docker Hub 및 개인 저장소에서 이미지를 공유할때 바뀐 부분만 주고 받습니다. 이미지는 의존관계를 형성합니다.
+도커는 베이스 이미지에서 바뀐 부분만 이미지로 생성합니다. 컨테이너로 실행할때는 베이스 이미지와 바뀐 부분을 합쳐서 실행합니다. Docker Hub 및 개인 저장소에서 이미지를 공유할때 바뀐 부분만 주고 받습니다. 이미지는 의존관계를 형성합니다.
 
 ## Ubuntu 16.04에 도커 설치
 
@@ -95,13 +97,25 @@ Reading package lists... Done
 
 #### Docker 서비스 실행:
 
-```
+```sh
 sudo service docker start
 ```
 
-부팅했을때 Docker 서비스를 자동으로 실행하기
+도커 서비스 중단:
 
+```sh
+sudo service docker stop
 ```
+
+도커 서비스 재시작:
+
+```sh
+sudo service docker restart
+```
+
+부팅했을때 Docker 서비스를 자동으로 실행:
+
+```sh
 sudo chkconfig docker on
 ```
 
@@ -219,12 +233,22 @@ Error response from daemon: conflict: unable to remove repository reference "hel
 OSX나 Windows는 Docker를 설치할때 함께 설치 됩니다. 리눅스의 경우 아래처럼 설치합니다.
 
 ```sh
-sudo curl -L "https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose version
 ```
 
+```
+docker-compose version 1.23.1, build 1719ceb
+```
+
 Docker compose의 사용법을 이해하려면 먼저 Docker를 이해해야 하므로 아래에서  설명합니다. 일단 설치해 둡니다.
+
+도커를 실행하려면 `DOCKER_HOST`변수를 설정해야 합니다.
+
+```sh
+export DOCKER_HOST=tcp://192.168.59.103:2375
+```
 
 ## 도커의 실행
 
@@ -629,9 +653,65 @@ mysql>
 
 컨테이너를 업데이트 한다는 것은, 기존 컨테이너를 `stop`, `rm` 하고, 새 이미지를 `pull`하여, 새 컨테이너를 `run` 하면 되는데, 기존 컨테이너를 `rm` 하면 컨테이너가 생성한 컨테이너 내부의 파일이 모두 잃게 됩니다.
 
-그래서 컨테이너가 삭제되어도 유지되어야 할 파일들은 반드시 컨테이너 밖에 저장해야 합니다. 클라우드 서비스를 사용중이 아니라면 '데이터 볼륨'을 컨테이너에 추가해서 사용합니다. 데이터 볼륨을 사용하면 해당 폴더는 컨테이너와 별도로 저장되고 컨테이너를 삭제해도 남아 있습니다.
+그래서 컨테이너가 삭제되어도 유지되어야 할 파일들은 반드시 컨테이너 밖에 저장해야 합니다. 클라우드 서비스를 사용중이 아니라면 '데이터 볼륨'을 컨테이너에 추가해서 사용합니다. 데이터 볼륨을 사용하면 해당 폴더는 컨테이너와 별도로 저장되고 컨테이너를 삭제해도 볼륨에 저장한 데이터는 남아 있습니다.
 
-데이터 볼륨을 사용하는 방법은 몇가지가 있습니다.
+다음은 볼륨을 생성합니다.
+
+```sh
+sudo docker volume create <volume_name>
+```
+
+다음은 볼륨 목록을 봅니다.
+
+```sh
+sudo docker volume ls
+```
+
+다음은 볼륨을 들여다 봅니다.
+
+```sh
+sudo docker inspect <volume_name>
+```
+
+다음 볼륨을 삭제 합니다.
+
+```sh
+sudo docker volume rm <volume_name>
+```
+
+의존을 받지 않는 모든 볼륨을 삭제 합니다.
+
+```sh
+sudo docker volume prune
+```
+
+의존성에 관계 없이 모든 볼륨을 제거하려면 `-f` 옵션을 줍니다. 이때 지워지는 볼륨에 의존하는 컨테이너가 실행중이면 오류가 발생 할 수 있습니다. 볼륨을 제거하는 것은 도커 서비스에서 제거할 뿐 실제 호스트 디렉토리가 제거 되는 것은 아닙니다.
+
+다음은, 컨테이너 생성시 생성된 볼륨을 `-v`옵션으로  컨테이너에 연결합니다.
+
+```sh
+sudo docker run -d --name <container_name> -v <volume_name>:<container_mount_name> <image_name>:<tag>
+```
+
+`-v` 옵션은 `--volume`로 지정할 수도 있습니다.
+
+다음은, 컨테이너 생성시 생성된 볼륨을 `--mount`옵션으로  컨테이너에 연결합니다.
+
+```sh
+sudo docker run -d --name <container_name> --mount source=<volume_name>,target=<container_mount_name> <image_name>:<tag>
+```
+
+다음은 볼륨으로 서비스를 시작합니다.
+
+```sh
+sudo docker service create -d --replicas=4 --name <service_name> --mount source=<volume_name>,target=<container_mount_name> <image_name>:<tag:
+```
+
+볼륨으로 시작한 서비스의 상태를 확인합니다.
+
+```sh
+sudo docker service ps <service_name>
+```
 
 ###  컨테이너 실행시 호스트의 디렉토리를 직접 마운트
 
@@ -826,3 +906,4 @@ docker-compose up
 - [Docker Container로 SFTP 사용](https://m.blog.naver.com/PostView.nhn?blogId=alice_k106&logNo=220650722592&proxyReferer=https%3A%2F%2Fwww.google.com%2F)
 - [Docker volume의 사용법과 차이점](https://darkrasid.github.io/docker/container/volume/2017/05/10/docker-volumes.html)
 
+- [Install Docker Compose](https://docs.docker.com/compose/install/#install-compose)

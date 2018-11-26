@@ -1,13 +1,3 @@
-# Ubuntu에 Oracle 12c 설치
-
-## [sath89/oracle-12c](https://hub.docker.com/r/sath89/oracle-12c/)
-
-oracle 12c release 1 도커 이미지
-
-### [Oracle Database 12c now available on Docker](https://sqlmaria.com/2017/04/27/oracle-database-12c-now-available-on-docker/)
-
----
-
 # 오라클 데이터베이스 서버 도커 이미지
 
 ## 주의사항
@@ -27,7 +17,7 @@ oracle 12c release 1 도커 이미지
 ### 도커 스토어에 로그인
 
 ```sh
-sudo docker login
+$ docker login
 ```
 
 username과  password를 물으면 입력하고 로긍인 합니다.
@@ -78,7 +68,7 @@ ff353b329a2a        store/oracle/database-enterprise:12.2.0.1   "/bin/sh -c '/bi
 
 ### 데이터베이스 서버로 접속
 
-`sys`유저의 기본 패쓰워드는 `Oracle_db1`입니다.
+`sys`유저의 기본 패스워드는 `Oracle_db1`입니다.
 
 #### 컨테이너 안에서 접속
 
@@ -205,7 +195,7 @@ sudo docker run -d -it --name <container_name> -v <host_data_volume>:/ORCL store
 sudo docker run -d -it --name <container_name> -v <host_data_volume>:/ORCL store/oracle/database-enterprise:12.2.0.1
 ```
 
-<host_data_volume>` 은 도커에 의해 생성되고 컨테이너 내부에 마운트된 데이터 볼륨 입니다. `<host_data_volume>에 의해 영구인 데이터 파일은 다른 컨테이너에 의해 재사용될 수 있습니다.
+`<host_data_volume>` 은 도커에 의해 생성되고 컨테이너 내부에 마운트된 데이터 볼륨 입니다. `<host_data_volume>`에 의해 영구인 데이터 파일은 다른 컨테이너에 의해 재사용될 수 있습니다.
 
 ## 데이터 볼륨에 호스트 시스템의 디렉토리 사용
 
@@ -223,16 +213,8 @@ sudo docker run -d -it --name <container_name> -v <host_data_volume>:/ORCL store
 
 으로 지정합니다. 여기서 `<host_data_volume>`은 호스트의 디렉토리입니다.
 
-------
+---
 
 ##### 참조
 
 - [Oracle Database Server Docker Image Documentation](https://store.docker.com/profiles/booiljung/content/sub-bb7a7749-c931-497a-9114-cc867728f53f)
-
-- [sath89/oracle-12c](https://hub.docker.com/r/sath89/oracle-12c/)
-- [oracle-12c를 docker를 이용하여 구동하기 ](http://hellogohn.com/post_one261)
-
-- [Docker를 기반으로 다양한 데이터베이스 환경 통합하기](https://medium.com/chequer/docker%EB%A5%BC-%EA%B8%B0%EB%B0%98%EC%9C%BC%EB%A1%9C-%EB%8B%A4%EC%96%91%ED%95%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%ED%99%98%EA%B2%BD-%ED%86%B5%ED%95%A9%ED%95%98%EA%B8%B0-96aa68363775)
-
-- [Oracle Database 12c now available on Docker](https://sqlmaria.com/2017/04/27/oracle-database-12c-now-available-on-docker/)
-
