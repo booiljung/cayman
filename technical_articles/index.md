@@ -90,6 +90,7 @@
 - Objective-C
 - JavaScript
 - 루아 (Lua)
+- [Anaconda](./anaconda/index.md)
 
 ### 프로그래밍 프레임워크
 

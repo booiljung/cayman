@@ -12,12 +12,23 @@ Google이 Colab이라는 개발자을 위한 엔비디아 K80, 주피터 노트�
 
 ![img](google_colab_netebook_settings.png)
 
-그리고 Code 셀에서 다음 명령을 추가하고
+3.0 을 설치하려면 Code 셀에서 다음 명령을 추가하고
 
 ```sh
 !pip3 install http://download.pytorch.org/whl/cu80/torch-0.3.0.post4-cp36-cp36m-linux_x86_64.whl
 !pip3 install torchvision
 ```
+
+4.1을 설치하려면 아래 명령을 추가 합니다.
+
+```sh
+!pip3 install http://download.pytorch.org/whl/cu80/torch-0.4.1-cp36-cp36m-linux_x86_64.whl
+!pip3 install torchvision
+```
+
+파이토치 버전을 선택하려면 [공식 홈페이지](https://pytorch.org/)에서 버전을 선택하면 링크를 얻을 수 있습니다.
+
+![1541938253970](google_colab_for_pytorch.assets/1541938253970.png)
 
 실행하면 설치가 됩니다.
 
