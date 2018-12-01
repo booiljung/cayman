@@ -2,18 +2,14 @@
 
 #### 최신 글
 
+- [Ubuntu 16.04에 FTP, FTPS, SFPT 설치](./technical_articles/linux/ubuntu_ftp.md)
+- [Ubuntu에서 한국어 입력기 fcitx 설정 방법](./technical_articles/linux/ubuntu_korean_fcitx_installation.md)
 - [React native에서 8081 포트를 listen하지 못하는 문제](./technical_articles/react_native/listen_error_8081.md)
 - [React Native에서 안드로이드 rebuild 다시 빌드 하기](./technical_articles/react_native/rebuild_android.md)
 - [React Native errno 11 해결](./technical_articles/react_native/resolve_errno_11.md)
 - [React Native AVD를 셸에서 실행](./technical_articles/react_native/execution_avd.md)
 - [Node.js 설치 방법](./technical_articles/nodejs/nodejs_installation.md)
 - [git 패스워드 캐시 설정 방법](./technical_articles/git/setup_git_password_cache.md)
-- [근로기준법 개정안](./technical_articles/project_managements/labor_standard_act.md)
-- Unity C# Script Book: [체력 int 타입](./technical_articles/unity_csharp_script_book/int_type/index.md)
-- Unity C# Script Book: [던전과 인사하기](./technical_articles/unity_csharp_script_book/hello_dungeon/index.md)
-- Unity C# Script Book: [던전 입구](./technical_articles/unity_csharp_script_book/entrance_dungeon/index.md)
-- [리뷰: Vue.js 첫걸음](./technical_articles/vue/vue_js_first_step.md)
-- Unity C# Script Book: [유니티 설치](./technical_articles/unity_csharp_script_book/install/index.md)
 
 #### 페이지
 
@@ -22,7 +18,6 @@
 - [Unity C# Script Book](technical_articles/unity_csharp_script_book/index.md)은 유니티에서 C# 스크립팅을 안내하는 웹북입니다.
 - [Dev Portal](dev_portal/index.md)은 개발에 도움이 되는 웹 페이지들을 연결 합니다.
 - [Machine Learning Notes](./machine_learning_notes/index.md)은 머신러닝을 다루는 웹사이트, 논문, 서적, 블로그의 페이지를 콘텐트별로 분류 하였으며 링크를 통해 참조 할 수 있습니다.
-
 
 ---
 
