@@ -7,6 +7,7 @@
 
 ### 수학 (Mathematics)
 
+- [Mathemathics Basics](./mathematics_basics/index.md)
 - 집합론 (Set Theory)
 - 논리학 (Logic)
 - 대수학 (Algebra)

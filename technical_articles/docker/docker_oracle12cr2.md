@@ -1,14 +1,214 @@
+[Up](./index.md)
+
 # Ubuntu에 Oracle 12c 설치
 
 ## [sath89/oracle-12c](https://hub.docker.com/r/sath89/oracle-12c/)
 
-oracle 12c release 1 도커 이미지
+- oracle 12c release 1 도커 이미지입니다.
+- `-v` 옵션으로 호스트 디렉토리를 지정하면 퍼미션 오류가 발생하는데 해결 방법은 모릅니다.
+- 그래서 개발용 테스용으로 사용하시기를 바랍니다.
+
+### 설치
+
+먼저 도커 이미지를 끌어옵니다. 파일이 비교적 큽니다.
+
+```sh
+sudo docker pull sath89/oracle-12c
+```
+
+다음은, 도커 이미지를 실행합니다. 컨테이너 이름은 `oracle_database`라고 주었습니다.
+
+```sh
+sudo docker run -d -p 8080:8080 -p 1521:1521 -e DBCA_TOTAL_MEMORY=1024 --name oracle_database sath89/oracle-12c
+```
+
+볼륨마운트는 `-v <host_directory>:/u01/app/oracle`이지만 퍼미션 오류가 발생합니다. 더 테스트가 필요하지만, 개발용 임시 DB를 구성하는것이 목적이므로 여기까지만 합니다.
+
+다음은, 컨테이너가 올라오는 과정을 추적합니다.
+
+```
+sudo docker logs oracle_database -f
+```
+
+```sh
+Database not initialized. Initializing database.
+Starting tnslsnr
+Copying database files
+1% complete
+3% complete
+11% complete
+18% complete
+26% complete
+37% complete
+Creating and starting Oracle instance
+40% complete
+45% complete
+50% complete
+55% complete
+56% complete
+60% complete
+62% complete
+Completing Database Creation
+66% complete
+70% complete
+73% complete
+85% complete
+96% complete
+100% complete
+Look at the log file "/u01/app/oracle/cfgtoollogs/dbca/xe/xe.log" for further details.
+Configuring Apex console
+Database initialized. Please visit http://#containeer:8080/em http://#containeer:8080/apex for extra configuration if needed
+Starting web management console
+
+PL/SQL procedure successfully completed.
+
+Starting import from '/docker-entrypoint-initdb.d':
+ls: cannot access /docker-entrypoint-initdb.d/*: No such file or directory
+Import finished
+
+Database ready to use. Enjoy! ;)
+```
+
+### 접속
+
+접속시 다음 설정으로 접속 합니다.
+
+| key          | value     |
+| ------------ | --------- |
+| hostname     | localhost |
+| poart        | 1521      |
+| sid          | xe        |
+| service name | xe        |
+| username     | system    |
+| password     | oracle    |
+
+sqlplus로 접속시 다음과 같습니다.
+
+```sh
+sqlplus system/oracle@/localhost:1521/xe
+```
+
+`sys` 와 `system`계정의 비밀번호는 `oracle`입니다.
+
+https://github.com/MaksymBilenko/docker-oracle-12c/issues/16)
+
+### 어드민
+
+컨테이너 내부의 `/bin/bash`를 실행합니다.
+
+```sh
+sudo docker exec -it oracle_database /bin/bash
+```
+
+컨테이너 내부의 `oracle` 유저로 전환합니다.
+
+```sh
+su oracle
+```
+
+컨테이너 내부의 `ORACLE_HOME` 폴더로 이동합니다.
+
+```sh
+cd $ORACLE_HOME
+```
+
+컨테이너 내부의 sqlplus를 실행하여 `sysdba`로 로그인 합니다.
+
+```sh
+bin/sqlplus /as sysdba
+```
+
+```
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue May 17 12:11:19 2016
+
+Copyright (c) 1982, 2014, Oracle. All right reserved.
+
+Connected to:
+Oracle Database 12c Standard Edition Release 12.1.0.2.0 - 64bit Production
+
+```
+
+sqlplus에서 오라클 인스턴스의 상태를 확인합니다.
+
+```sql
+SQL> select database_status from v$instance;
+```
+
+```sql
+DATABASE_STATUS
+-----------------
+ACTIVE
+
+SQL>
+```
+
+### 컨테이너 재실행
+
+컨테이너를 재실행하려면
+
+```sh
+sudo docker start oracle_database
+```
+
+### APEX
+
+오라클 Application Express web management console로 접속시 다음과 같이 설정 합니다.
+
+| key        | value                         |
+| ---------- | ----------------------------- |
+|            | http://localhost:8080/apex    |
+| workspalce | INTERNAL                      |
+| user       | ADMIN                         |
+| password   | `0Racle$` #첫글자 zero에 주의 |
+
+Apex를 v5.*으로 업그레이드 하려면
+
+```sh
+sudo docker run -it --rm --volumes-from ${DB_CONTAINER_NAME} --link ${DB_CONTAINER_NAME}:oracle-database -e PASS=YourSYSPASS sath89/apex install
+```
+
+### 오라클 Enterprise Management console.
+
+| key               | value                    |
+| ----------------- | ------------------------ |
+|                   | http://localhost:8080/em |
+| user              | sys                      |
+| password          | oracle                   |
+| connect as sysdba | true                     |
+
+EM을 끄려면
+
+```sh
+sudo docker run -d -e WEB_CONSOLE=false -p 1521:1521 -v /my/oracle/data:/u01/app/oracle sath89/oracle-12c
+```
+
+additional init 스크립트로 시작하거나 덤프를 하려면
+
+```sh
+docker run -d -p 1521:1521 -v /my/oracle/data:/u01/app/oracle -v /my/oracle/init/SCRIPTSorSQL:/docker-entrypoint-initdb.d sath89/oracle-12c
+```
+
+By default Import from `docker-entrypoint-initdb.d` is enabled only if you are initializing database (1st run).
+
+To customize dump import use `IMPDP_OPTIONS` env variable like `-e IMPDP_OPTIONS="REMAP_TABLESPACE=FOO:BAR"`
+To run import at any case add `-e IMPORT_FROM_VOLUME=true`
+
+**In case of using DMP imports dump file should be named like ${IMPORT_SCHEME_NAME}.dmp**
+
+**User credentials for imports are  ${IMPORT_SCHEME_NAME}/${IMPORT_SCHEME_NAME}**
+
+If you have an issue with database init like DBCA operation failed, please reffer to this [issue](
+
+
 
 ### [Oracle Database 12c now available on Docker](https://sqlmaria.com/2017/04/27/oracle-database-12c-now-available-on-docker/)
 
 ---
 
 # 오라클 데이터베이스 서버 도커 이미지
+
+ 제대로 설치되지 않음.
 
 ## 주의사항
 
@@ -40,7 +240,7 @@ username과  password를 물으면 입력하고 로긍인 합니다.
 sudo docker container run -d -it --name <container_name> store/oracle/database-enterprise:12.2.0.1
 ```
 
- 슬림 변형판을 사용하려면
+ 슬림판을 사용하려면
 
 ```
 sudo docker run -d -it --name -it <container_name> store/oracle/database-enterprise:12.2.0.1-slim
@@ -76,6 +276,19 @@ ff353b329a2a        store/oracle/database-enterprise:12.2.0.1   "/bin/sh -c '/bi
 
 데이터베이스 컨테이너 상태는 `(health)`로 표시되었습니다.
 
+### bash에 접속
+
+```sh
+sudo docker exec -it <container_name> bash
+```
+
+루트 디렉토리는 다음과 같습니다.
+
+```
+ORCL  boot  etc   lib    media  opt   root  sbin  sys  u01  u03  usr
+bin   dev   home  lib64  mnt    proc  run   srv   tmp  u02  u04  var
+```
+
 ### 데이터베이스 서버로 접속
 
 `sys`유저의 기본 패쓰워드는 `Oracle_db1`입니다.
@@ -91,6 +304,14 @@ sudo docker exec -it <container_name> bash -c "source /home/oracle/.bashrc; sqlp
 #### 컨테이너 밖에서 접속
 
 데이터베이스 서버는 SQLNet 프로토콜을 통한 오라클 클라이언트의 접속을 위해 1512포트와 오라클 XML DB를 위해 5500 포트를 노출(expose)합니다. SQLPlus 또는 어느 JDBC 클라이언트라도 외부에서 접속 할 수 있습니다.
+
+컨테이너 외부에서 SQLPlus를 사용하여 접속하려면 
+
+```sh
+sqlplus sys/Oradoc_db1@ORCLCDB as sysdba
+```
+
+합니다.
 
 외부에서 접속하려면 다음처럼 `-p` 또는 `-p` 옵션을 지정하여야 합니다.
 
@@ -128,14 +349,6 @@ ORCLPDB1=(
 	)
 )
 ```
-
-컨테이너 외부에서 SQLPlus를 사용하여 접속하려면 
-
-```sh
-sqlplus sys/Oradoc_db1@ORCLCDB as sysdba
-```
-
-합니다.
 
 ### 커스텀 구성
 

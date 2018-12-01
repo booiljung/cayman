@@ -97,9 +97,13 @@ Reading package lists... Done
 
 #### Docker 서비스 실행:
 
-```sh
-sudo service docker start
+오류
+
 ```
+docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
+```
+
+가 발생하면 도커 서비스가 정지되었을 가능성이 있습니다. 아래를 참조하여 도커를 시작하면 됩니다.
 
 도커 서비스 중단:
 
@@ -111,6 +115,12 @@ sudo service docker stop
 
 ```sh
 sudo service docker restart
+```
+
+도커 서비스 시작:
+
+```sh
+sudo service docker start
 ```
 
 부팅했을때 Docker 서비스를 자동으로 실행:
