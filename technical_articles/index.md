@@ -76,6 +76,7 @@
 
 ### 인공지능
 
+- [Anaconda](./anaconda/index.md)
 - [Google Colaboratory](colaboratory/index.md)
 - [컴퓨터 비전 (Computer Vision)](computer_vision/index.md)
 - dlib
