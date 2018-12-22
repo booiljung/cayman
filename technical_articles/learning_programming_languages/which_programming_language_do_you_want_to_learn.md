@@ -336,3 +336,10 @@ Lua 언어 예제는 다음 항목들에 대한 이해를 필요로 합니다.
 ## 결론
 
 나쁜 언어 좋은 언어 구분은 좋지 않은 행동이며 그것을 주장하는 것은 의미가 없는 발언입니다. 언어마다 분야에 있어 강점과 약점이 있습니다. 첫 프로그래밍 언어를 선택할때 여러 언어 중 첫 프로그래밍 언어로 어떤 언어를 선택해야 할까요? 이미 여러분께서 적절한 언어를 선택 하셨으리라 생각 합니다.
+
+---
+
+##### 참조
+
+- 숙묵님 추천 링크 1: [Hello world collection](http://helloworldcollection.de/?fbclid=IwAR3-cCPA3H4kCZkZx--8LZKbs5BarBXn5-F6KuQQcDFXlO6CdXteAQGuBsw)
+- 숙묵님 추천 링크 2: [Hello World Quiz](http://helloworldquiz.com/?fbclid=IwAR0N3wuLdVauYcYmvGTrtlII-rZ-zNpHqmiNLjUB4q3VUPTuA_d9vYd7NOE)
