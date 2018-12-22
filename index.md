@@ -2,6 +2,7 @@
 
 #### 최신 글
 
+- [첫 프로그래밍 언어?](./technical_articles/learning_programming_languages/which_programming_language_do_you_want_to_learn.md)
 - [Installation of FTP, FTPS, SFPT on Ubuntu 16.04](./technical_articles/linux/ubuntu_ftp.md)
 - [Installation of 한국어 입력기 fcitx on Ubuntu 16.04](./technical_articles/linux/ubuntu_korean_fcitx_installation.md)
 
