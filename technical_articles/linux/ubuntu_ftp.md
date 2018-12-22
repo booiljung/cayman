@@ -170,8 +170,8 @@ sudo chown root:root /home/<username>
 4.8. 홈 디렉토리에 `upload`디렉토리를 만들고 소유권을 수정합니다. 이 디렉토리는 파일을 서버에 업로드하는 데 사용할 수 있습니다.
 
 ```sh
-sudo mkdir /home/harry/upload
-sudo chown <username>:ftpaccess /home/<username>/upload
+sudo mkdir /home/<username>/<diectoryname>
+sudo chown <username>:ftpaccess /home/<username>/<diectoryname>
 ```
 
 4.9. SFTP 클라이언트에서 접속이 되는지 확인 합니다.

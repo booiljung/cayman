@@ -90,11 +90,13 @@ sqlplus system/oracle@/localhost:1521/xe
 
 `sys` 와 `system`계정의 비밀번호는 `oracle`입니다.
 
+다음 이슈를 참조 합니다.
+
 https://github.com/MaksymBilenko/docker-oracle-12c/issues/16)
 
 ### 어드민
 
-컨테이너 내부의 `/bin/bash`를 실행합니다.
+컨테이너 내부의 `/bin/bash`를 실행하려면 다음과 같습니다.
 
 ```sh
 sudo docker exec -it oracle_database /bin/bash
@@ -115,7 +117,7 @@ cd $ORACLE_HOME
 컨테이너 내부의 sqlplus를 실행하여 `sysdba`로 로그인 합니다.
 
 ```sh
-bin/sqlplus /as sysdba
+bin/sqlplus '/as sysdba'
 ```
 
 ```
@@ -141,6 +143,20 @@ DATABASE_STATUS
 ACTIVE
 
 SQL>
+```
+
+버전을 조회합니다.
+
+```sql
+select * from v$version;
+```
+
+전체 테이블스페이스를 조회합니다.
+
+```sql
+select * from dba_data_files
+또는
+select * from dba_tablespaces
 ```
 
 ### 컨테이너 재실행

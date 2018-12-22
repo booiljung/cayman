@@ -92,6 +92,7 @@
 
 ### 프로그래밍 언어
 
+- [프로그래밍 언어 배우기](./learning_programming_languages/index.md)
 - [파이썬 (Python)](python/index.md)
 - C#
 - C/C++
