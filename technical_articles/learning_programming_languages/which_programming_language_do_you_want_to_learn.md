@@ -289,6 +289,24 @@ Go 언어 예제는 다음 항목들에 대한 이해를 필요로 합니다.
 - 문자열 리터럴
 - 컴파일, 링크, 패키징
 
+### Scala 언어
+
+```scala
+object HelloWorld extends App {
+  println "Hello, world!"
+}
+```
+
+Scala 언어 예제는 다음 항목들에 대한 이해를 필요로 합니다.
+
+- `object`
+- `HelloWorld`
+- `{}` 블록
+- `extends`
+- `App`
+- `println()`
+- 문자열 리터럴
+
 ### Python 3 언어
 
 ```python
