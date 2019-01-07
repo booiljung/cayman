@@ -2,7 +2,7 @@
 
 # 숄레스키 분해(Cholesky decomposition)
 
-주의: 이 글의 수학은 공학 분야 활용 중심이며 수학 전공자가 보기에 엄밀하지 않을 수 있습니다.
+주의: 이 글은 공학 분야 활용 중심이며 수학 전공자가 보기에 엄밀하지 않을 수 있습니다.
 
 숄레스키 분해(Cholesky decomposition)란, 행렬을 하삼각행렬(lower triangular matrix)과 그 전치행렬의 곱으로 표현하는 것입니다.
 

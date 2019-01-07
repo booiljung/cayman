@@ -2,7 +2,8 @@
 
 # 이미지 기하 변환(Image Geometry Transformation)
 
-주의: 이 글의 수학은 공학 분야 활용 중심이며 수학 전공자가 보기에 엄밀하지 않을 수 있습니다.
+주의: 이 글은 공학 분야 활용 중심이며 수학 전공자가 보기에 엄밀하지 않을 수 있습니다.
+
 디지털 이미지 프로세싱(digital image processing0에서 2차원 이미지(2 dimensional image)는 행렬(matrix)에 표현되며, 행렬의 항목(element) 하나는 하나의 픽셀(picture element; pixel)을 표현합니다. 픽셀이 행렬에 표현되므로 $y, x$ 순서로 나타냅니다.
 
 동차 좌표(homogeneous coordinates) 벡터:

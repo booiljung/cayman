@@ -83,7 +83,7 @@ $$
 
 가 성립하고, 헤시안 행렬이 대칭행렬이 되므로 대칭행렬의 특성대로 항상 고유값 분해가 가능하며 서로 일차독립인 $n$개의 고유벡터를 가지게 됩니다.
 
-##참조
+## 참조
 
 - [wikipedia.org](https://en.wikipedia.org/wiki/Hessian_matrix)
 
