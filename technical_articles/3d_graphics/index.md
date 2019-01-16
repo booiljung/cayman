@@ -16,5 +16,6 @@
 
 ## 3D 그래픽스
 
+- [3D geometry transformation](3d_transformation.md)
 - [오일러 회전과 짐벌락](euler_angles_and_gimbol_lock.md)
 
