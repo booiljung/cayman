@@ -8,3 +8,4 @@ $$
 
 - [시그모이드 함수 (Sigmoid function)](sigmoid_function.md)
 - [ReLU 함수](relu_function.md)
+

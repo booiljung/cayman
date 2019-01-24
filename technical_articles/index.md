@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 [Up](../index.md)
 
 # 기술 블로그
 
-연구 개발 과정에서 부딪히는 내용들을 정리 합니다.
+연구 개발 과정에서 부딪히는 내용들을 기록 합니다.
 
 
 ### 수학 (Mathematics)
@@ -14,7 +13,7 @@
 - 대수학 (Algebra)
 - 수론 (Number Theory)
 - 기하학 (Geometry)
-- [선형대수학 (Linear Algebra)](./linear_algebra/index.md)
+- [선형대수학 (Linear Algebra)](./mathematics/linear_algebra/index.md)
 - 미적분 및 해석학 (Calculus and Analysis)
 - [확률 및 통계 (Probabilistics and Statistics)](probabilistics_and_statistics/index.md)
 
@@ -58,7 +57,7 @@
 
 ### 네트워크
 
-- [잘 알려진 포트](./well_known_port.md_x)
+- [잘 알려진 포트](./networks/index.md)
 
 ### 게임 개발
 

@@ -48,3 +48,8 @@
 
 - Leeds Sports Pose Dataset, Sam Johnson and Mark Everingham [web](http://sam.johnson.io/research/lsp.html)
 - Leeds Sports Pose Extended Training Dataset, Sam Johnson and Mark Everingham [web](http://sam.johnson.io/research/lspet.html)
+
+## Wordbag
+
+- [ Natural Questions: a New Corpus and Challenge for Question Answering Research ](http://ai.googleblog.com/2019/01/natural-questions-new-corpus-and.html) 
+
