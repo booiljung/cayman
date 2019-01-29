@@ -1,10 +1,8 @@
+[Up](index.md)
+
 ## t-SNE
 
-
-
-엉망이다 다시 정리하자...................
-
-t-분포 확률적 임베딩(t-SNE)은 데이터의 차원 축소나 차원 축소를 통한 시각화에 사용되는 기계학습 알고리즘 중 하나로, 제프리 힌튼에 의해 개발 되었습니다.
+t-Distributed Stochastic Neightbor Enbedding (t-SNE)은 데이터의 차원 축소나 차원 축소를 통한 시각화에 사용되는 기계학습 알고리즘 중 하나로, 제프리 힌튼에 의해 개발 되었습니다.
 
 t-SNE는 비선형 차원 축소 기법으로, 고차원 데이터를 특히 2, 3차원 등으로 줄여서 가시화하는데 사용됩니다. t-SNE는 유사도가 높은 데이터는 근접한 2, 3차원 지점으로, 유사도가 낮은 데이터는 멀리 떨어진 지점으로 맵핑합니다.
 
@@ -30,7 +28,7 @@ p_{ij} = p_{ji} = \frac{p_{j \backslash i} + p_{i \backslash j}}{2n}
 $$
 $p$는 고차원 원공간에 존재하는 $i$번째 개체 $\mathbf x_i$가 주어졌을 때 $j$번째 이웃인 $\mathbf x_j$가 선택될 확률을 의미합니다. 
 
-변환된 공간에서 유사도는 가우시안 분포대신 스튜던트 t 분포를 사용합니다. 스튜던트 t 분포는 원점에서 멀어질수록 가우시안보다 0에 덜 가까운 두꺼운 꼬리라는 성질을 가진 분포입니다. 변환 공간에서 점을 $\mathbf y$라고 표기하면 변환 공간에서 $\mathbf y_i$와 $\mathbf y_j$의 유사도는 다음으로 정의 됩니다.
+변환된 공간에서 유사도는 가우시안 분포대신 Student t-distribution를 사용합니다. 변환 공간에서 점을 $\mathbf y$라고 표기하면 변환 공간에서 $\mathbf y_i$와 $\mathbf y_j$의 유사도는 다음으로 정의 됩니다.
 $$
 q_{ij} =
 \frac{(1 + \| \mathbf y_i - \mathbf y_j \| _2 ^2) ^{-1}}
@@ -78,3 +76,4 @@ $$
 - Maaten [블로그](https://lvdmaaten.github.io/tsne/)
 - [Visualizing Data using t-SNE](http://www.jmlr.org/papers/v9/vandermaaten08a.html) Laurens van der Maaten, Geoffrey Hinton, Journal of Machine Learning Research 9 (2008) 2579-2605. 수식 유도, 품질 개선을 위한 요령, 다른 기법과의 비교, $n$이 무척 큰 상황에서의 처리.
 - 기계학습 오일석 2017.
+- Student t-distribution는 원점에서 멀어질수록 가우시안보다 0에 덜 가까운 두꺼운 꼬리라는 성질을 가진 분포입니다.

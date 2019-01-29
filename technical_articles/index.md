@@ -88,6 +88,11 @@
 - [토치 (Torch)](torch/index.md)
 - [파이토치 (PyTorch)](pytorch/index.md)
 - [케라스 (Keras)](keras/index.md)
+- [LUIS 챗봇](./azure_visual_studio/luis_chat_bot.md)
+
+## 클라우드 서비스
+
+- [애저와 비주얼 스튜디오](azure_visual_studio/index.md)
 
 ### 프로그래밍 언어
 

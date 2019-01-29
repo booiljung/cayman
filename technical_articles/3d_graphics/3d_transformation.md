@@ -263,7 +263,6 @@ z \\
 \end{bmatrix}
 $$
 
-
 ## Reflection
 
 Right handed reflection about x-axis:

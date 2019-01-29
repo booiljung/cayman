@@ -5,6 +5,8 @@
 ## 테크니컬 콘텐츠
 
 - [기초 확률론](probability_basic.md)
+- [t-SNE](tSNE.md)
+
 - [활성화 함수](activation_functions.md)
 - [Optimization](optimization.md)
 
