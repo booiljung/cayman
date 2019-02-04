@@ -80,7 +80,7 @@
 - [Google Colaboratory](colaboratory/index.md)
 - [컴퓨터 비전 (Computer Vision)](computer_vision/index.md)
 - dlib
-- OpenCV
+- [OpenCV](./opencv/index.md)
 - 패턴인식 (Pattern Recognition)
 - [머신러닝 (Machine Learning)](machine_learning/index.md)
 - [딥러닝 (Deep Learning)](deep_learning/index.md)
@@ -116,6 +116,7 @@
 
 ### 운영체제
 
+- [Windows](./windows/index.md)
 - [Linux](./linux/index.md)
 - [Docker](./docker/index.md)
 

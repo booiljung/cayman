@@ -52,6 +52,10 @@
 
 - [Data Visualization](data_visualizations.md)
 
+## Tutorial Source Codes
+
+- [Machine Learning Tutorial Source Code](tutorial_source_codes.md)
+
 ## Datasets
 
 - [Datasets](datasets.md)
