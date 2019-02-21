@@ -89,6 +89,7 @@
 - [파이토치 (PyTorch)](pytorch/index.md)
 - [케라스 (Keras)](keras/index.md)
 - [LUIS 챗봇](./azure_visual_studio/luis_chat_bot.md)
+- [Datasets](datasets/index.md)
 
 ## 클라우드 서비스
 
@@ -96,10 +97,12 @@
 
 ### 프로그래밍 언어
 
+- [코딩](coding/index.md)
+
 - [프로그래밍 언어 배우기](./learning_programming_languages/index.md)
 - [파이썬 (Python)](python/index.md)
 - C#
-- C/C++
+- [C/C++](c_language/index.md)
 - Objective-C
 - JavaScript
 - 루아 (Lua)

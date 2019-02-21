@@ -500,6 +500,54 @@ return std::sqrt(totalErr/totalPoints);              // calculate the arithmetic
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 카메라 보정 작업이란 이미지에서 카메라가 관측한 2D 공간과 3D 공간 사이의 변환 매개변수를 결정하는 것입니다.
 
 3D 월드 좌표에서 하나의 점 $\mathbf X​$ 는 다음

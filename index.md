@@ -17,5 +17,5 @@
 
 #### 신변잡기
 
-- [영화 이야기](movie\index.md)
+- [영화 이야기](movies/index.md)
 
