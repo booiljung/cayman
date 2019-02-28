@@ -4,8 +4,17 @@
 
 ## 언어 기본
 
+### 포인터
+
 - [C언어의 포인터 코딩 컨벤션에 대한 오래된 주제](pointer_coding_convention.md)
+
+### 캐스트
+
 - 캐스트
+
+### 람다
+
+- [람다를 파라미터로 받기](paramter_for_lambda.md)
 
 ## Visual Studio:
 
