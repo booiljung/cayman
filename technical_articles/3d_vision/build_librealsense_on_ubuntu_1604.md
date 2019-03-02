@@ -44,7 +44,7 @@ realsense 장치를 연결하고 realsense-viewer를 실행해 봅니다.
 realsense-viewer
 ```
 
-![1551538118506](/mnt/0CD3-1563/workspace/booiljung.github.io/technical_articles/3d_vision/build_librealsense_ubuntu.assets/1551538118506.png)
+![1551538118506](build_librealsense_ubuntu_1604.assets/1551538118506.png)
 
 ### 빌드 도구 준비
 
