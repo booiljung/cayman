@@ -51,7 +51,8 @@
 
 ### 3D 그래픽
 
-- [3D 그래픽스 (3D Graphics)](3d_graphics/index.md)
+- [3D Graphics](3d_graphics/index.md)
+- [3D Vision](3d_vision/index.md)
 - [OpenGL](opengl/index.md)
 - 셰이더 프로그래밍 (Shader Programming)
 
