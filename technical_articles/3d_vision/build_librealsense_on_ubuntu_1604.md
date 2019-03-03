@@ -4,7 +4,9 @@
 
 ## Ubuntu 18.04 LTS
 
-2019년 3월 2일. Ubuntu 16.04 LTS에서 librealsense를 빌드하는데 실패하였습니다. 오류 메시지는 <bits/semaphore.h>를 제대로 찾지 못하고 있는 것 같습니다. 아무래도 우분투 빌드 환경이 꼬인 것 같습니다. 새로 설치하는 김에 Ubuntu 18.04 LTS를 설치하기로 했습니다.
+2019년 3월 2일.
+
+Ubuntu 16.04 LTS에서 librealsense를 빌드하는데 실패하였습니다. 오류 메시지는 <bits/semaphore.h>를 제대로 찾지 못하고 있는 것 같습니다. 아무래도 우분투 빌드 환경이 꼬인 것 같습니다. 새로 설치하는 김에 Ubuntu 18.04 LTS를 설치하기로 했습니다.
 
 ### 리얼센스2 툴 및 라이브러리 설치
 
@@ -65,7 +67,7 @@ sudo apt install libusb-1.0-0-dev libglu1-mesa-dev freeglut3-dev mesa-common-dev
 
 ### 소스 다운로드
 
-적당한 폴더를 만들고 [소스 코드](https://github.com/IntelRealSense/librealsense)를 다운로드 합니다.
+적당한 폴더를 만들고 [github 저장소의 소스 코드](https://github.com/IntelRealSense/librealsense)를 클론 합니다.
 
 ```sh
 git clone https://github.com/IntelRealSense/librealsense.git
