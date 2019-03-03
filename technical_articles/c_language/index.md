@@ -23,7 +23,7 @@
 
 ## Visual Studio Code
 
-- [Linux에서 Visual Studio Code를 CMake로 빌드 하기 준비](build_cmake_in_vscode_on_linux.md)
+- [Ubuntu 18.04에서 VSCode로 CMake로 빌드 하고 디버깅 하기](build_cmake_in_vscode_on_linux.md)
 
 ## CMake
 

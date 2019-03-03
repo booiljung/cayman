@@ -1,10 +1,10 @@
 [Up](index.md)
 
-# Linux에서 VSCode를 CMake로 빌드 하기 준비
+# Ubuntu 18.04에서 VSCode로 CMake로 빌드 하고 디버깅 하기
 
 첫 C 프로그램은 아마도 Turbo-C 2.0 으로 작성하였습니다. 이후 임베디드 개발을 위해 Makefile을 사용하여 크로스컴파일을 하거나 Visual C/C++을 사용하거나, 리눅스 환경에서 Eclipse에 C/C++ Development ToolKit (CDT)를 설치하여 개발해 왔습니다. Eclipse CDT가 임베디드, 리눅스 환경에서 개발하기에 적절하였지만 시간이 지나며 무겁고 느리지니 점차 사용하지 않게 되었습니다.
 
-파이썬 개발을 주로 VSCode에서 해오다가 C/C++도 VSCode로 해보자는 생각으로, 4가지 방법을 실험하였고, 주로 사용중인 빌드 툴인 CMake와 조합이 잘 맞고, VSCode에서 편집하고, CLI에서 CMake로 빌드 한 후 실행해도 되지만, IDE의 디버거를 활용할 수 있는 잇점때문에, VSCode Extension을 사용하고자 하였고,  이 과정을 기록으로 남깁니다. 이 글의 내용은 2019년 3월 3일 현재 동작합니다.
+파이썬 개발을 주로 VSCode에서 해오다가, 요즘 C/C++을 사용 기회가 증가하여, C/C++도 VSCode로 해보자는 생각으로, 4가지 방법을 실험하였고, 주로 사용중인 빌드 툴인 CMake와 조합이 잘 맞고, VSCode에서 편집하고, CLI에서 CMake로 빌드 한 후 실행해도 되지만, IDE의 디버거를 활용할 수 있는 잇점때문에, VSCode Extension을 사용하고자 하였고,  이 과정을 기록으로 남깁니다. 이 글의 내용은 2019년 3월 3일 현재 동작합니다.
 
 - CMake는 오래된 역사만큼이나 기능이 많아 러닝 커브가 깊습니다만, Makefile과 달리 자동화 할 수 있는 부분들이 많습니다.
 
@@ -101,6 +101,8 @@ add_executable(${PROJECT_NAME} ${SOURCE})
 ![1551597896012](build_cmake_in_vscode_on_linux.assets/1551597896012.png)
 
 명령 팔레트에서 `CMake: Configure`를 선택합니다. 그러면 컴파일러를 선택하는 팔레트가 나타납니다. 사용하고자 하는 컴파일러를 선택합니다.
+
+![1551600228431](build_cmake_in_vscode_on_linux.assets/1551600228431.png)
 
 이제, CMake가 프로젝트 폴더에 `build`폴더가 생성하고 빌드 구성을 할것입니다.
 
