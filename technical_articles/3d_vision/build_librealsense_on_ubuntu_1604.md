@@ -79,7 +79,7 @@ cd realsense.build
 `cmake`를 먼저 구성합니다. 이 글은 `cmake`나 `cmake-gui`의 사용법을 설명하지는 않습니다.
 
 ```sh
-cmake ../realsense.build
+cmake ../librealsense
 ```
 
 `cmake` 구성이 100% 끝나면 `Makefile`이 생성되어 있습니다. 빌드를 합니다.
