@@ -27,4 +27,4 @@
 
 ## CMake
 
-- CMake 간단한 안내서
+- [CMake 간단한 소개서](simple_cmake_introduction.md)
