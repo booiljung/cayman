@@ -132,7 +132,7 @@ add_executable(${PROJECT_NAME} ${SOURCE})
 - `CMakeLists.txt`파일이 변경되면 명령 팔레트에서 `CMake: Configure`를 선택하여 다시 빌드를 구성합니다.
 - CMake는 VSCode와 별개이므로 배포시 각 개발자들이 스스로 선택하여 사용할 수 있습니다.
 
-예제에서 사용된 코드는 [이곳 github]()에 올려 두었습니다.
+예제에서 사용된 코드는 [이곳 github](https://github.com/booiljung/hello-vscode)에 올려 두었습니다.
 
 ## 참조
 

@@ -30,7 +30,7 @@
 ### 아키텍쳐, 디자인, 네트워크
 
 - 컴퓨터 아키텍처 (Computer Architecture)
-- 소프트웨어 아키텍쳐 (Software Architecture)
+- [Software Architecture](software_architecture/index.md)
 - 객체지향 프로그래밍 및 디자인 패턴 (Object Oriented Programming and Design Patterns)
 - 병렬처리 (Parallel Processing)
 - 분산 컴퓨팅 (Distributed Computing)
