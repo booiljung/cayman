@@ -1,8 +1,10 @@
+[Up](./index.md)
+
 # Build librealsense on Ubuntun 18.04 LTS
 
 ## Ubuntu 18.04 LTS
 
-2019년 3월 2일. Ubuntu 16.04 LTS에서 librealsense를 빌드하는데 실패하였습니다. 오류 메시지는 <bits/semaphore.h>를 제대로 찾지 못하고 있는 것 같습니다. 아무래도 우분투가 꼬인 것 같습니다. 새로 설치하는 김에 Ubuntu 18.04 LTS를 설치하기로 했습니다.
+2019년 3월 2일. Ubuntu 16.04 LTS에서 librealsense를 빌드하는데 실패하였습니다. 오류 메시지는 <bits/semaphore.h>를 제대로 찾지 못하고 있는 것 같습니다. 아무래도 우분투 빌드 환경이 꼬인 것 같습니다. 새로 설치하는 김에 Ubuntu 18.04 LTS를 설치하기로 했습니다.
 
 ### 리얼센스2 툴 및 라이브러리 설치
 
@@ -20,23 +22,25 @@ realsense 패키지 저장소를 등록 합니다.
 sudo add-apt-repository "deb http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo bionic main" -u
 ```
 
+패키지 관리자를 업데이트 합니다.
+
+```sh
+sudo apt update
+```
+
 realsense 라이브러리를 설치 합니다.
 
 ```sh
-sudo apt-get install librealsense2-dkms librealsense2-utils
+sudo apt install librealsense2-dkms librealsense2-utils
 ```
 
 선택적으로 개발자나 디버그를 위한 패키지를 설치 합니다.
 
 ```sh
-sudo apt-get install librealsense2-dev librealsense2-dbg
+sudo apt install librealsense2-dev librealsense2-dbg
 ```
 
-이제 다음과 같은 빌드 명령을 통해 관련 코드를 빌드 할 수 있습니다.
-
-```sh
-g++ -std=c++11 filename.cpp -lrealsense2
-```
+이제 `g++ -std=c++11 filename.cpp -lrealsense2`과 같은 빌드 명령을 통해 관련 코드를 빌드 할 수 있습니다.
 
 realsense 장치를 연결하고 realsense-viewer를 실행해 봅니다.
 
@@ -49,13 +53,13 @@ realsense-viewer
 ### 빌드 도구 준비
 
 ```sh
+sudo apt update
 sudo apt install git cmake cmake-gui build-essential
 ```
 
 ### 개발 라이브러리 설치
 
 ```sh
-sudo apt update
 sudo apt install libusb-1.0-0-dev libglu1-mesa-dev freeglut3-dev mesa-common-dev
 ```
 
