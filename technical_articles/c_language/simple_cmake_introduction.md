@@ -258,7 +258,7 @@ link_directories(my_lib_dir your_lib_dir ...)
 링크 옵션중 `-l`에 해당 합니다.
 
 ```cmake
-link_libraries(libmine libyours libhis libher ...)
+link_libraries(mine yours his her ...)
 ```
 
 이 명령 인자들을 `-`에서 시작하도록 하여 직접 링크 옵션을 지정할 수도 있습니다.

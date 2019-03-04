@@ -1,16 +1,32 @@
 # 3D transformation
 
-## Translation:
+이 글은 빠른 룩업을 위해 정리하였습니다. 따라서 수학적 근거등은 설명하지 않습니다.
 
-Right handed:
+오른손 좌표계만을 표시합니다. 왼손좌표게는 오른손 좌표계를 위한 행렬를 전치(transpose)하면 얻을 수 있습니다.
+
+## 3D Object
+
+### 이동 (translation):
+
+오른손 좌표계:
 $$
+\begin{aligned}
 \begin{bmatrix}
 x' \\
 y' \\
 z' \\
 1 \\
 \end{bmatrix}
-=
+&=
+\mathbf T
+\begin{bmatrix}
+x \\
+y \\
+z \\
+1 \\
+\end{bmatrix}
+\\
+&=
 \begin{bmatrix}
 1 & 0 & 0 & t_x \\
 0 & 1 & 0 & t_y \\
@@ -23,42 +39,29 @@ y \\
 z \\
 1 \\
 \end{bmatrix}
+\end{aligned}
 $$
-Left handed:
+### 축적 (scaling):
+
+Right handed & Right:
 $$
+\begin{aligned}
 \begin{bmatrix}
 x' \\
 y' \\
 z' \\
 1 \\
 \end{bmatrix}
-=
-\begin{bmatrix}
-1 & 0 & 0 & 0 \\
-0 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 \\
-t_x & t_y & t_z & 1 \\
-\end{bmatrix}
+&=
+\mathbf S
 \begin{bmatrix}
 x \\
 y \\
 z \\
 1 \\
 \end{bmatrix}
-$$
-
-
-## Scaling:
-
-Right handed & Right:
-$$
-\begin{bmatrix}
-x' \\
-y' \\
-z' \\
-1 \\
-\end{bmatrix}
-=
+\\
+&=
 \begin{bmatrix}
 s_x & 0 & 0 & 0 \\
 0 & s_y & 0 & 0 \\
@@ -71,25 +74,37 @@ y \\
 z \\
 1 \\
 \end{bmatrix}
+
+\end{aligned}
 $$
 
-## Rotation:
+### 회전 (rotation):
 
-#### About x-axis:
+#### x축에 대한 회전:
 
-Right handed:
+오른손 좌표계:
 $$
+\begin{aligned}
 \begin{bmatrix}
 x' \\
 y' \\
 z' \\
 1 \\
 \end{bmatrix}
-=
+&=
+\mathbf R_x
+\begin{bmatrix}
+x \\
+y \\
+z \\
+1 \\
+\end{bmatrix}
+\\
+&=
 \begin{bmatrix}
 1 & 0 & 0 & 0 \\
-0 & \cos(\theta) & -\sin(\theta) & 0 \\
-0 & \sin(\theta) & \cos(\theta) & 0 \\
+0 & \cos\alpha & -\sin\alpha & 0 \\
+0 & \sin\alpha & \cos\alpha & 0 \\
 0 & 0 & 0 & 1 \\
 \end{bmatrix}
 \begin{bmatrix}
@@ -98,45 +113,34 @@ y \\
 z \\
 1 \\
 \end{bmatrix}
+\end{aligned}
 $$
-Left handed:
+#### y축에 대한 회전:
+
+오른손 좌표계:
 $$
+\begin{aligned}
+
 \begin{bmatrix}
 x' \\
 y' \\
 z' \\
 1 \\
 \end{bmatrix}
-=
-\begin{bmatrix}
-1 & 0 & 0 & 0 \\
-0 & \cos(\theta) & \sin(\theta) & 0 \\
-0 & -\sin(\theta) & \cos(\theta) & 0 \\
-0 & 0 & 0 & 1 \\
-\end{bmatrix}
+&=
+\mathbf R_y
 \begin{bmatrix}
 x \\
 y \\
 z \\
 1 \\
 \end{bmatrix}
-$$
-
-#### About y-axis:
-
-Right handed:
-$$
+\\
+&=
 \begin{bmatrix}
-x' \\
-y' \\
-z' \\
-1 \\
-\end{bmatrix}
-=
-\begin{bmatrix}
-\cos(\theta) & 0 & \sin(\theta) & 0 \\
+\cos\beta & 0 & \sin\beta & 0 \\
 0 & 1 & 0 & 0 \\
--\sin(\theta) & 0 & \cos(\theta) & 0 \\
+-\sin\beta & 0 & \cos\beta & 0 \\
 0 & 0 & 0 & 1 \\
 \end{bmatrix}
 \begin{bmatrix}
@@ -145,44 +149,33 @@ y \\
 z \\
 1 \\
 \end{bmatrix}
+
+\end{aligned}
 $$
-Left handed:
+#### z축에 대한 회전:
+
+오른손 좌표계:
 $$
+\begin{aligned}
 \begin{bmatrix}
 x' \\
 y' \\
 z' \\
 1 \\
 \end{bmatrix}
-=
-\begin{bmatrix}
-\cos(\theta) & 0 & -\sin(\theta) & 0 \\
-0 & 1 & 0 & 0 \\
-\sin(\theta) & 0 & \cos(\theta) & 0 \\
-0 & 0 & 0 & 1 \\
-\end{bmatrix}
+&=
+\mathbf R_z
 \begin{bmatrix}
 x \\
 y \\
 z \\
 1 \\
 \end{bmatrix}
-$$
-
-### About z-axis:
-
-Right handed:
-$$
+\\
+&=
 \begin{bmatrix}
-x' \\
-y' \\
-z' \\
-1 \\
-\end{bmatrix}
-=
-\begin{bmatrix}
-\cos(\theta) & -\sin(\theta) & 0 & 0 \\
-\sin(\theta) & \cos(\theta) & 0 & 0 \\
+\cos\gamma & -\sin\gamma & 0 & 0 \\
+\sin\gamma & \cos\gamma & 0 & 0 \\
 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 1 \\
 \end{bmatrix}
@@ -192,41 +185,56 @@ y \\
 z \\
 1 \\
 \end{bmatrix}
+\end{aligned}
 $$
-Left handed:
+### 이동 $\times$ 축적 $\times$ 회전
+
+이동, 이동, 회전을 모두 적용한 행렬은 다음과 같습니다.
 $$
+\begin{aligned}
+\mathbf T \cdot \mathbf R_x \cdot \mathbf R_y \cdot \mathbf R_z \cdot \mathbf S
+\begin{bmatrix}
+s_x \cos\gamma \cos\beta &
+-s_y \sin\gamma \cos\beta &
+s_z \sin\beta &
+t_x \\
+s_x \cos\gamma \sin\beta \sin\alpha + s_x \sin\gamma \cos\alpha &
+s_y \cos\gamma \cos\alpha - s_y \sin\gamma \sin\beta \sin\alpha &
+-s_z \cos\beta \sin\alpha &
+t_y \\
+s_x \sin\gamma \sin\alpha - s_x \cos\gamma \sin\beta \cos\alpha &
+s_y \sin\gamma \sin\beta \cos\alpha + s_y \sin\alpha \cos\gamma &
+s_z \cos\beta \cos\alpha &
+t_z \\
+0 &
+0 &
+0 &
+1 \\
+\end{bmatrix}
+\end{aligned}
+$$
+
+### 기울이기 (Shear):
+
+오른손 좌표계:
+$$
+\begin{aligned}
 \begin{bmatrix}
 x' \\
 y' \\
 z' \\
 1 \\
 \end{bmatrix}
-=
-\begin{bmatrix}
-\cos(\theta) & \sin(\theta) & 0 & 0 \\
--\sin(\theta) & \cos(\theta) & 0 & 0 \\
-0 & 0 & 1 & 0 \\
-0 & 0 & 0 & 1 \\
-\end{bmatrix}
+&=
+\mathbf H
 \begin{bmatrix}
 x \\
 y \\
 z \\
 1 \\
 \end{bmatrix}
-$$
-
-### shear:
-
-Right handed:
-$$
-\begin{bmatrix}
-x' \\
-y' \\
-z' \\
-1 \\
-\end{bmatrix}
-=
+\\
+&=
 \begin{bmatrix}
 1 & sh_x^y & sh_x^z & 0 \\
 sh_y^x & 1 & sh_y^z & 0 \\
@@ -239,33 +247,14 @@ y \\
 z \\
 1 \\
 \end{bmatrix}
-$$
-Left handed:
-$$
-\begin{bmatrix}
-x' \\
-y' \\
-z' \\
-1 \\
-\end{bmatrix}
-=
-\begin{bmatrix}
-1 & sh_y^x & sh_z^x & 0 \\
-sh_x^y & 1 & sh_z^y & 0 \\
-sh_x^z & sh_y^z & 1 & 0 \\
-0 & 0 & 0 & 1 \\
-\end{bmatrix}
-\begin{bmatrix}
-x \\
-y \\
-z \\
-1 \\
-\end{bmatrix}
-$$
 
-## Reflection
+\end{aligned}
+$$
+### 반사 (reflection)
 
-Right handed reflection about x-axis:
+#### x축에 대한 반사.
+
+오른손 좌표계:
 $$
 \begin{aligned}
 x' &= x\\
@@ -280,7 +269,9 @@ z' &= -z
 0 & 0 & 0 & 1\\
 \end{bmatrix}
 $$
-Right handed reflection about y-axis:
+#### y축에 대한 반사
+
+오른손 좌표계:
 $$
 \begin{aligned}
 x' &= y\\
@@ -295,7 +286,9 @@ z' &= -z
 0 & 0 & 0 & 1\\
 \end{bmatrix}
 $$
-Right handed reflection about z-axis:
+#### z축에 대한 반사
+
+오른손 좌표계:
 $$
 \begin{aligned}
 x' &= -x\\
