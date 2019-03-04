@@ -32,6 +32,10 @@ git을 처음 설치하면 [글로벌 변수를 설정](../git/install_git_on_ub
 sudo apt install libeigen3-dev
 ```
 
+**Visual Studio:**
+
+[eigen3](https://launchpad.net/ubuntu/bionic/+package/libeigen3-dev) 를 다운로드 하여 압축을 해제 합니다.
+
 ## 소스 다운로드
 
 github.com에서 [opencv](https://github.com/opencv/opencv) 를 다운로드 합니다.
@@ -82,7 +86,11 @@ Ninja, Makefile, Visual Studio Solution 등을 선택할 수 있습니다. Windo
 
 **Windows 10 전용**
 
-Windows 10에서 빌드한다면 먼저 검색창에 `eigen`을 입력하여 해당 변수들을 찾습니다. `EIGEN_INCLUDE_PATH` 변수에 다운로드한 `libeigen` 경로를 지정합니다. Ubuntu는 해당되지 않습니다.
+Windows 10에서 빌드한다면 먼저 검색창에 `eigen`을 입력하여 해당 변수들을 찾습니다. `EIGEN_INCLUDE_PATH` 변수에 다운로드한 `libeigen` 경로를 지정합니다.
+
+![1551733168727](build_opencv_with_cmake.assets/1551733168727.png)
+
+Ubuntu는 패키지 메니저로 이미 eigen3을 설치했으므로 해당하지 않습니다.
 
 ![1551750084309](build_opencv_with_cmake.assets/1551750084309.png)
 
@@ -144,16 +152,6 @@ Windows 10에서 빌드한다면 먼저 검색창에 `eigen`을 입력하여 해
 
 ### 빌드 단계
 
-**Makefile**
-
-Ubuntu 를 위해서는 생성된 build 폴더에서 make를 입력하여 빌드 합니다.
-
-![1551751204803](build_opencv_with_cmake.assets/1551751204803.png)
-
-빌드가 끝나면 설치를 합니다.
-
-![1551753713471](build_opencv_with_cmake.assets/1551753713471.png)
-
 **Visual Studio**
 
 Generating 을 하고나서 `Open Project`  버튼을 누르면 Visual Studio가 솔루션 파일을 오픈합니다.
@@ -161,6 +159,18 @@ Generating 을 하고나서 `Open Project`  버튼을 누르면 Visual Studio가
 원하는 빌드 구성을 Debug나 Release중 선택하고, 솔루션 탐색기에서 `CMakeTarget`에서 `INSTALL`에서 콘텍스 메뉴를 표시하여 `빌드` 메뉴를 선택 합니다.
 
 빌드가 완료되면 `OUTPUT` 패인에 `Build: Success: ??, Fail: 0 ...`이 표시 됩니다.
+
+![1551736071431](build_opencv_with_cmake.assets/1551736071431.png)
+
+**Makefile**
+
+생성된 `build` 폴더에서 `make`를 입력하여 빌드 합니다.
+
+![1551751204803](build_opencv_with_cmake.assets/1551751204803.png)
+
+빌드가 끝나면 설치를 합니다.
+
+![1551753713471](build_opencv_with_cmake.assets/1551753713471.png)
 
 ## 참조
 
