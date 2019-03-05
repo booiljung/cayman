@@ -2,6 +2,8 @@
 
 #### 최신 글
 
+- OpenCV: [CMake로 빌드 및 설치](technical_articles/opencv/build_opencv_with_cmake.md)
+- OpenCV: [Contours hierarchy 구조](technical_articles/opencv/contours_hierarchy.md)
 - C/C++: [CMake 간단한 소개서](technical_articles/c_language/simple_cmake_introduction.md)
 - C/C++: [Ubuntu 18.04에서 VSCode로 CMake로 빌드 하고 디버깅 하기](technical_articles/c_language/build_cmake_in_vscode_on_linux.md)
 - 3D Vision: [Build librealsense on Ubuntun 18.04 LTS](technical_articles/3d_vision/build_librealsense_on_ubuntu_1604.md)
