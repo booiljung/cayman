@@ -161,6 +161,29 @@ add_executable(${PROJECT_NAME} ${SOURCE})
 
 를 추가해 줍니다.
 
+## VSCode CMake Tools로 Windows 용 빌드
+
+*2019년 3월 6일 추가*
+
+전통적으로 Visual Studio를 사용하지 않고 윈도우에서 빌드를 하려면 `msc`, `nmake`를 통해 Makefile을 빌드 하였습니다. 아직도 이런 방법으로 하는 것으로 추정하고, `msc`와 `nmake`로 빌드하는 방법을 찾았지만 찾을 수 없었습니다.
+
+윈도우용을 빌드할때는 Makefile을 사용하지 않고, Visual Studio Solution 파일을 커맨드 라인에서 빌드 할 수 있습니다. (정확하지 않지만 `MSBuild.exe`를 사용하는 것으로 추정 됩니다.). 
+
+VSCode에서 윈도우용을 빌드할때는 `.vscode/settings.json`에 다음을 지정합니다.
+
+```json
+{
+    ...
+	"cmake.generator": "Visual Studio 15 2017 Win64",
+    "cmake.preferredGenerators": [
+        "Visual Studio 15 2017 Win64"        
+    ],
+    ...
+}
+```
+
+이 설정을 지시하면, VSCode 명령 팰럿에서 `CMake: Configurate`, `CMake: build`를 호출하여 빌드를 완료 할 수 있습니다.
+
 ## 참조
 
 - [Quick Start to Use Visual Studio Code for C++ Programmers in Linux](https://www.codeproject.com/Articles/1184735/Quick-Start-to-Use-Visual-Studio-Code-for-Cplusplu)
