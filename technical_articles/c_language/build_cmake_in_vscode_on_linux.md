@@ -1,6 +1,6 @@
 [Up](index.md)
 
-# Ubuntu 18.04에서 VSCode로 CMake로 빌드 하고 디버깅 하기
+# VSCode로 CMake로 빌드 하고 디버깅 하기
 
 *2019년 3월 3일 작성*
 
@@ -34,7 +34,11 @@
 
 ## Visual Studio Code 설치
 
-먼저 [여기](https://code.visualstudio.com/Download)에서 Visual Stdio Code 설치 파일을 다운로드 받습니다. Ubuntu 이므로 데비안 패키지`.deb` 파일을 받아야 합니다. 다운로드가 완료 되면 설치 합니다.
+먼저 [여기](https://code.visualstudio.com/Download)에서 Visual Stdio Code 설치 파일을 다운로드 받습니다.
+
+**Unbuntu 18.04 LTS:**
+
+데비안 패키지`.deb` 파일을 받아야 합니다. 다운로드가 완료 되면 설치 합니다.
 
 ```sh
 sudo dpkg -i code_1.??.?-?????????_amd64.deb
@@ -183,6 +187,65 @@ VSCode에서 윈도우용을 빌드할때는 `.vscode/settings.json`에 다음�
 ```
 
 이 설정을 지시하면, VSCode 명령 팰럿에서 `CMake: Configurate`, `CMake: build`를 호출하여 빌드를 완료 할 수 있습니다.
+
+## 디버그
+
+*2019년 3월 6일 추가*
+
+디버그를 옵션을 위해 `.vscode/launch.json`을 작성 할 수 있습니다.
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "이 디버그 구성의 이름",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/.../실행 파일 바이너리",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/.../실행 할 경로",
+            "environment": [], // 환경변수
+            "externalConsole": true
+        },
+    ]
+}
+```
+
+## 변수 설정
+
+*2019년 3월 6일 추가*
+
+`cmake.configureSettings" 항목을 추가하여 cmake 변수의 값을 설정 할 수 있습니다. 다음은 `librealsense2`cmake를 설정하는 예제입니다.
+
+```json
+{
+    ...
+	"cmake.configureSettings": {
+        "BUILD_CSHARP_BINDINGS" : true,
+        "BUILD_CV_EXAMPLES" : false,
+        "BUILD_CV_KINFU_EXAMPLE" : false,
+        "BUILD_EXAMPLES" : true,
+        "BUILD_GRAPHICAL_EXAMPLES" : true,
+        "BUILD_UNITY_BINDINGS" : true,
+        "BUILD_EASYLOGGINGPP" : true,
+        "BUILD_WITH_TM2" : false,
+        "DOTNET_VERSION_EXAMPLES" : "4.5",
+        "DOTNET_VERSION_LIBRARY" : "4.5",
+        "GLFW_BUILD_DOCS" : true,
+        "GLFW_BUILD_EXAMPLES" : true,
+        "GLFW_BUILD_TESTS" : true,
+        "GLFW_INSTALL" : true,
+        "GLFW_USE_HYBRID_HPG" : true,
+        "GLFW_VULKAN_STATIC" : false,
+        "OpenCV_DIR" : "C:/usr/opencv.4.1.debug",
+        "UNITY_PATH" : "C:/Program Files/Unity/Editor/Unity.exe",
+        "USE_MSVC_RUNTIME_LIBRARY_DLL" : true,
+    },
+    ...
+}
+```
 
 ## 참조
 
