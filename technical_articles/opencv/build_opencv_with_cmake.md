@@ -198,7 +198,7 @@ VSCode로 OpenCV 소스 폴더를 엽니다. 그리고 `./vscode/settings.json`�
         "BUILD_PERF_TESTS" : false,
         "BUILD_TESTS" : false,
         "OPENCV_EXTRA_MODULES_PATH" : "${workspaceRoot}/../opencv_contrib.4.1/modules",
-        "OPENCV_ENABLE_NONFREE" : "true",
+        "OPENCV_ENABLE_NONFREE" : true,
         "CMAKE_INSTALL_PREFIX" : "C:/usr/opencv.4.1.debug",
         "INSTALL_C_EXAMPLES" : true,
         "WITH_1394" : false,
@@ -266,7 +266,7 @@ VSCode로 OpenCV 소스 폴더를 엽니다. 그리고 `./vscode/settings.json`�
 ```
 필요에 따라 `Ninaja`나 `XCode` 등도 선택 할 수 있습니다.
 
-`cmake.configureSettings` 항목은 필요에 따라 선택할 수 있을 것입니다.
+`cmake.configureSettings` 항목은 필요에 따라 선택할 수 있을  수 있습니다. 여기서 `EIGEN_INCLUDE_PATH` 변수는 Windows에 한정합니다. 리눅스는 따로 패키지 관리자로 설치할 수 있습니다.  다른 소스들의 위치는 절대 경로나 `${workspaceRoot}`를 사용하여 상대 경로를 지정해 주시면 됩니다.
 
 ## 참조
 
