@@ -90,7 +90,9 @@ Windows 10에서 빌드한다면 먼저 검색창에 `eigen`을 입력하여 해
 
 ![1551733168727](build_opencv_with_cmake.assets/1551733168727.png)
 
-Ubuntu는 패키지 메니저로 이미 eigen3을 설치했으므로 해당하지 않습니다.
+**Ubuntu 18.04 LTS**
+
+패키지 메니저로 이미 eigen3을 설치했으므로 해당하지 않으며 자동으로 찾아 줍니다.
 
 ![1551750084309](build_opencv_with_cmake.assets/1551750084309.png)
 
@@ -171,6 +173,100 @@ Generating 을 하고나서 `Open Project`  버튼을 누르면 Visual Studio가
 빌드가 끝나면 설치를 합니다.
 
 ![1551753713471](build_opencv_with_cmake.assets/1551753713471.png)
+
+## VSCode에서 OpenCV 빌드하기
+
+VSCode에서 빌드하면 예제들을 VSCode로 직접 디버깅 할 수 있다는 장점이 있습니다.
+
+먼저 [VSCode에서 CMake 빌드하는 방법](../c_language/build_cmake_in_vscode_on_linux.md)을 참조 합니다. 그리고, 이 문서 첫부분을 참조하여 빌드에 필요한 도구, 확장을 설치하고, 소스 파일들을 다운로드 받고 압축를 해제하여 준비 합니다.
+
+VSCode로 OpenCV 소스 폴더를 엽니다. 그리고 `./vscode/settings.json`파일을 추가하고 다음을 작성합니다.
+
+```json
+{
+    "cmake.generator": "빌드 도구 (옵션)",
+    "cmake.preferredGenerators": [
+        "빌드 도구 (옵션)"
+    ],      
+    "cmake.configureSettings": {
+        "EIGEN_INCLUDE_PATH" : "${workspaceRoot}/../eigen-323c052e1731",
+        "WITH_EIGEN" : true,
+        "BUILD_JAVA" : false,
+        "BUILD_OPENCV_TS" : false,
+        "BUILD_opencv_world" : false,
+        "BUILD_PACKAGE" : false,
+        "BUILD_PERF_TESTS" : false,
+        "BUILD_TESTS" : false,
+        "OPENCV_EXTRA_MODULES_PATH" : "${workspaceRoot}/../opencv_contrib.4.1/modules",
+        "OPENCV_ENABLE_NONFREE" : "true",
+        "CMAKE_INSTALL_PREFIX" : "C:/usr/opencv.4.1.debug",
+        "INSTALL_C_EXAMPLES" : true,
+        "WITH_1394" : false,
+        "WITH_GSTREAMER" : false,
+        "WITH_VTK" : false,
+        "WITH_LAPACK" : false,
+    },
+    "cmake.defaultVariants" : {
+        "buildType": {
+            "default": "debug",
+            "description": "The build type",
+            "choices": {
+                "debug": {
+                    "short": "Debug",
+                    "long": "Emit debug information without performing optimizations",
+                    "buildType": "Debug",
+                },
+                "release": {
+                    "short": "Release",
+                    "long": "Enable optimizations, omit debug info",
+                    "buildType": "Release",
+                },               
+            }
+        }
+    },
+    "cmake.buildDirectory": "${workspaceRoot}/../opencv.4.1.build.vs.debug",
+    "cmake.installPrefix" : "C:/usr/opencv.4.1.debug",
+    "cmake.configureArgs" : [
+    ],    
+    "cmake.buildArgs" :[
+    ],
+    "cmake.environment" :{
+    },
+    "cmake.configureEnvironment" :{
+    },
+    "cmake.buildEnvironment" : {
+    },
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
+}
+```
+
+첫 부분을 보면 `cmake.generator`와 `cmake.preferredGenerators`가 있습니다. 이 항목은 빌드 운영체제에 따라 다릅니다.
+
+**Windows**
+
+```json
+{
+	"cmake.generator": "Visual Studio 15 2017 Win64",
+	"cmake.preferredGenerators": [
+    	"Visual Studio 15 2017 Win64"
+	],      
+	...
+}
+```
+**Unix (Linux)**
+
+```json
+{
+	"cmake.generator": "Unix Makefile",
+	"cmake.preferredGenerators": [
+    	"Unix Makefile"
+	],
+	...
+}
+```
+필요에 따라 `Ninaja`나 `XCode` 등도 선택 할 수 있습니다.
+
+`cmake.configureSettings` 항목은 필요에 따라 선택할 수 있을 것입니다.
 
 ## 참조
 
