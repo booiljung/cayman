@@ -14,6 +14,63 @@ conda update conda
 conda update --all
 ```
 
+### 머신러닝 연구용 설치 패키지 (ml)
+
+아나콘다를 새로 설치할때마다 채널을 검색하기 귀찮아서 정리 합니다.
+
+```sh
+conda create -n ml python=3.6
+source activate ml # Windows에서는 conda activate ml
+conda install -c anaconda cudatoolkit
+conda install -c anaconda numpy
+conda install -c anaconda jupyter
+```
+
+#### datas
+
+```sh
+conda install -c anaconda pandas
+```
+
+#### visualization
+
+```sh
+conda install -c conda-forge matplotlib
+conda install -c anaconda pil
+```
+
+#### pytorch
+
+```sh
+conda install -c pytorch pytorch
+conda install -c pytorch torchvision
+conda install -c derickl torchtext
+```
+
+#### opencv
+
+```sh
+conda install -c conda-forge opencv
+```
+
+#### tensorflow-gpu
+
+```sh
+conda install -c conda-forge tensorflow-gpu
+```
+
+#### keras-gpu
+
+```sh
+conda install -c anaconda keras-gpu
+```
+
+#### chainer
+
+```sh
+conda install -c anaconda chainer 
+```
+
 ## env
 
 ### env 목록 보기
