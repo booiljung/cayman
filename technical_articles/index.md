@@ -44,7 +44,7 @@
 ## 병렬컴퓨팅
 
 - [GPGPU](gpgpu/index.md)
-- CUDA
+- [CUDA](cuda/index.md)
 - MetalKit
 - OpenMP
 - OpenACC

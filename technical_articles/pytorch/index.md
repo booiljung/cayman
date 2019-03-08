@@ -2,6 +2,16 @@
 
 # 파이토치 (PyTorch)
 
+## Models
+
+- [Conv2dClassifier](conv2d_classifier.md)
+
+## Tricks
+
+- [Parameter List in Module](parameter_list_in_module.md)
+
+## Google Colab
+
 - [Google CoLab에서 PyTorch 사용하기](google_colab_for_pytorch.md)
 - [Google Colab의 GPU 정보를 확인해 봤습니다.](google_colab_gpu_with_pytorch.md)
 
