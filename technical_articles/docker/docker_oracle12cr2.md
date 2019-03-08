@@ -347,7 +347,7 @@ sudo docker run -d -it --name <container_name> -P store/oracle/database-enterpri
 sudo docker port <container_name> 1521/tcp -> 0.0.0.0:<mapped_host_port>
 ```
 
-Using this `<mapped_host_port>` and `<ip_address_of_host>` create `tnsnames.ora` in the  directory pointed to by environment variable `TNS_ADMIN`.
+`<mapped_host_port>` 와 `<ip_address_of_host>` create `tnsnames.ora` in the  directory pointed to by environment variable `TNS_ADMIN`.
 
 ```
 ORCLCDB=(
@@ -434,7 +434,7 @@ sudo docker run -d -it --name <container_name> -v <host_data_volume>:/ORCL store
 sudo docker run -d -it --name <container_name> -v <host_data_volume>:/ORCL store/oracle/database-enterprise:12.2.0.1
 ```
 
-<host_data_volume>` 은 도커에 의해 생성되고 컨테이너 내부에 마운트된 데이터 볼륨 입니다. `<host_data_volume>에 의해 영구인 데이터 파일은 다른 컨테이너에 의해 재사용될 수 있습니다.
+`<host_data_volume>` 은 도커에 의해 생성되고 컨테이너 내부에 마운트된 데이터 볼륨 입니다. `<host_data_volume>`에 의해 영구인 데이터 파일은 다른 컨테이너에 의해 재사용될 수 있습니다.
 
 ## 데이터 볼륨에 호스트 시스템의 디렉토리 사용
 
@@ -452,9 +452,7 @@ sudo docker run -d -it --name <container_name> -v <host_data_volume>:/ORCL store
 
 으로 지정합니다. 여기서 `<host_data_volume>`은 호스트의 디렉토리입니다.
 
-------
-
-##### 참조
+## 참조
 
 - [Oracle Database Server Docker Image Documentation](https://store.docker.com/profiles/booiljung/content/sub-bb7a7749-c931-497a-9114-cc867728f53f)
 

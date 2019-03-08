@@ -5,5 +5,3 @@
 - [Docker 연습](./docker_training.md)
 
 - [Docker SFTP](docker_sftp.md)
-
-- [Docker Oracle 12c R2](docker_oracle12cr2.md)
