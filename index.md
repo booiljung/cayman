@@ -2,7 +2,8 @@
 
 #### 최신 글
 
-- Python: [Python Korea : numpy.place](technical_articles/python/python_krorea_numpy_place.md)
+- Coding: [디버깅 가능한 코드 (Debuggable code)](.\technical_articles\coding\debuggable_code.md)
+- Python: [numpy.place()](technical_articles/python/python_krorea_numpy_place.md)
 - OpenCV: [CMake로 빌드 및 설치](technical_articles/opencv/build_opencv_with_cmake.md)
 - OpenCV: [Contours hierarchy 구조](technical_articles/opencv/contours_hierarchy.md)
 - C/C++: [CMake 간단한 소개서](technical_articles/c_language/simple_cmake_introduction.md)
