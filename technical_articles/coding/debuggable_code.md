@@ -82,7 +82,7 @@ void Main()
 }
 ```
 
-실행했더니 `NullReferenceException`이 발생하였다.  어느 곳에서 `NullReferenceException`이 발생 하였을까? 브레이크 포인트를 걸어도 알 수 없다.
+실행했더니 `NullReferenceException`이 발생하였다.  어느 곳에서 `NullReferenceException`이 발생 하였을까? 브레이크 포인트를 걸어도 값의 변화를 알 수 없다. 스택을 뒤져야 한다.
 
 ```C#
 void Main()
