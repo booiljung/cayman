@@ -7,13 +7,16 @@
 ```python
 class Conv2dClassifier(nn.Module):
     
-    def __init__(self, features, fcdims, kernel_size=3, stride=1):
+    def __init__(self, features, fcdims, conv_kernel_size=3, conv_stride=1, pool_kernel_size=2, pool_stride=2):
         super(Conv2dClassifier, self).__init__()
+
+        self.pool_kernel_size = pool_kernel_size
+        self.pool_stride = pool_stride
 
         self.convs = []
         for i in range(len(features)-1):
-            name = 'conv'+str(i)
-            setattr(self, name, nn.Conv2d(features[i], features[i+1], 5, 1))
+            name = 'conv'+str(i+1)
+            setattr(self, name, nn.Conv2d(features[i], features[i+1], conv_kernel_size, conv_stride))
             self.convs.extend([
                 getattr(self, name)
             ])
@@ -22,7 +25,7 @@ class Conv2dClassifier(nn.Module):
 
         self.fcs = []
         for i in range(len(fcdims)-1):
-            name = 'fc'+str(i)
+            name = 'fc'+str(i+1)
             setattr(self, name, nn.Linear(fcdims[i], fcdims[i+1]))
             self.fcs.extend([
                 getattr(self, name)
@@ -32,7 +35,7 @@ class Conv2dClassifier(nn.Module):
         for i in range(len(self.convs)):
             x = self.convs[i](x)
             x = F.relu(x)
-            x = F.max_pool2d(x, 2, 2)
+            x = F.max_pool2d(x, self.pool_kernel_size, self.pool_stride)
         x = x.view(-1, self.fcdim0)
         for i in range(len(self.fcs)-1):
             x = self.fcs[i](x)
