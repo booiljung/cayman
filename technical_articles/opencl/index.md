@@ -1,3 +1,2 @@
 # OpenCL
 
-- [Basic](basic.md)

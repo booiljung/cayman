@@ -21,6 +21,7 @@
 #### 페이지
 
 - [기술 기록](./technical_articles/index.md)
+- [서적 리뷰](book_reviews/index.md)
 - [논문 리뷰](./reviews/index.md)
 - [오픈소스 프로젝트](./opensource_projects/index.md)
 - [Unity C# Script Book](technical_articles/unity_csharp_script_book/index.md)
