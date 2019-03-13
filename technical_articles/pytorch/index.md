@@ -9,6 +9,7 @@
 ## Tricks
 
 - [Parameter List in Module](parameter_list_in_module.md)
+- [onehot encoding](onehot_encoding.md)
 
 ## Google Colab
 

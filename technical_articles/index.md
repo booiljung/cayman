@@ -45,6 +45,7 @@
 
 - [GPGPU](gpgpu/index.md)
 - [CUDA](cuda/index.md)
+- [OpenCL](opencl/index.md)
 - MetalKit
 - OpenMP
 - OpenACC
