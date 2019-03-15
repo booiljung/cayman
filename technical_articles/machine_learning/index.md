@@ -7,6 +7,7 @@
 - [기초 확률론](probability_basic.md)
 - [가중치 초기값](weights_initialization.md)
 - [t-SNE](tSNE.md)
+- [Regularizations](regularizations.md)
 - [활성화 함수](activation_functions.md)
 - [Optimization](optimization.md)
 
