@@ -2,6 +2,7 @@
 
 #### 최신 글
 
+- Computer Vision: [Face Dataset](technical_articles/computer_vision/face_dataset.md)
 - Pytorch: [Onehot Encoding](technical_articles/pytorch/onehot_encoding.md)
 - Pytorch: [Conv2dClassifier](technical_articles/pytorch/conv2d_classifier.md)
 - Pytorch: [Parameter List in Module](technical_articles/pytorch/parameter_list_in_module.md)

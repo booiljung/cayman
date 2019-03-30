@@ -1,5 +1,7 @@
 # Onehot encoding
 
+2019년 3월 30일
+
 Pytorch does not provide a onehot encoding function. The following code is a Pytorch Python code that can do onehot encoding.
 
 ```pyhhon
