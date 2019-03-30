@@ -2,6 +2,7 @@
 
 #### 최신 글
 
+- Pytorch: [Onehot Encoding](technical_articles/pytorch/onehot_encoding.md)
 - Pytorch: [Conv2dClassifier](technical_articles/pytorch/conv2d_classifier.md)
 - Pytorch: [Parameter List in Module](technical_articles/pytorch/parameter_list_in_module.md)
 - CUDA: [aptitude로 Ubuntu 18.04 LTS에 CUDA 설치](./technical_articles/cuda/aptitude_cuda.md)
