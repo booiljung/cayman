@@ -119,6 +119,10 @@
 - [Node.js](./nodejs/index.md)
 - [React Native](./react_native/index.md)
 
+## 자동화
+
+- [Autopilot](autopilot/index.md)
+
 ### 운영체제
 
 - [Windows](./windows/index.md)

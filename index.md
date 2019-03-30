@@ -2,6 +2,7 @@
 
 #### 최신 글
 
+- Autopilot: [Public Testing with Autonomous Taxi Service](technical_articles/autopilot/public_testing_with_autonomous_taxi_service.md)
 - Computer Vision: [Face Dataset](technical_articles/computer_vision/face_dataset.md)
 - Pytorch: [Onehot Encoding](technical_articles/pytorch/onehot_encoding.md)
 - Pytorch: [Conv2dClassifier](technical_articles/pytorch/conv2d_classifier.md)
