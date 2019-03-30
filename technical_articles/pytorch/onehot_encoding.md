@@ -1,4 +1,6 @@
-# Onehot encoding
+[Up](index.md)
+
+# Pytorch: Onehot encoding
 
 2019년 3월 30일
 
@@ -13,7 +15,7 @@ print(onehot)
 
 The results are as follows.
 
-```python
+```
 tensor([[0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],
         [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],
         [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],
@@ -43,10 +45,10 @@ class Onehot(nn.Module):
     def __init__(self, n_classes, dtype=torch.float32):
         super(Onehot, self).__init__()
         self.n_classes = n_classes
-        self.eye = Parameter(torch.eye(self.n_classes, dtype=dtype))
+        self.weight = Parameter(torch.eye(self.n_classes, dtype=dtype))
 
     def forward(self, indices):
-        labels=self.eye[indices]
+        labels=self.weight[indices]
         return labels
 
 
@@ -68,7 +70,6 @@ OnehotFloat64 = OnehotDouble
 Here's how to use this Onehot classes:
 
 ````python
-
 indices = torch.tensor([2, 2, 2, 1, 1, 1, 0, 0, 8, 9, 0])
 onehot = OnehotFloat(10)    
 r = onehot(indices)
@@ -77,7 +78,7 @@ print(r)
 
 The results are as follows.
 
-```shell
+```
 tensor([[0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],
         [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],
         [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],
