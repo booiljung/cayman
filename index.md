@@ -2,6 +2,8 @@
 
 #### 최신 글
 
+- Life: [Youtube Best](./life/youtube_best.md)
+
 - Autopilot: [Public Testing with Autonomous Taxi Service](technical_articles/autopilot/public_testing_with_autonomous_taxi_service.md)
 - Computer Vision: [Face Dataset](technical_articles/computer_vision/face_dataset.md)
 - Pytorch: [Onehot Encoding](technical_articles/pytorch/onehot_encoding.md)
