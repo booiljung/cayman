@@ -2,11 +2,9 @@
 
 # 딥러닝 (Deep Learning)
 
-## 실험과 연구
+## 실험
 
-- [](cdcgan_is_mophable_without_training.md)
-
-
+- [Conditional Deep Convolution GAN is morphable without morph training](cdcgan_is_mophable_without_training.md)
 
 ## 콘텐츠
 

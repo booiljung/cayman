@@ -1,3 +1,5 @@
+[Up](index.md)
+
 # Conditional Deep Convolution GAN is morphable without morph training
 
 2019년 4월 1일 (왜 오늘이 만우절. 이건 만우절 조크 아니에요)
