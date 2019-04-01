@@ -1,10 +1,12 @@
 # Conditional Deep Convolution GAN is morphable without morph training
 
-Conditional GAN은 주어진 벡터를 주면 이미지를 생성하는 모델입니다. NMIST를 훈련한 모델은 0부터 9까지 생성합니다. 우리는 Conditional GAN + Deep Convolution GAN의 혼합 모델을 설계하고 테스트하였고 아래는 CDCGAN이 생성한 숫자 이미지 입니다.
+2019년 4월 1일 (왜 오늘이 만우절. 이건 만우절 조크 아니에요)
 
-![1554105050307](/home/booil/.config/Typora/typora-user-images/1554105050307.png)
+Conditional GAN은 주어진 벡터를 주면 이미지를 생성하는 모델입니다. NMIST를 훈련한 모델은 0부터 9까지 생성합니다. 우리는 Conditional GAN + Deep Convolution GAN의 혼합 모델을 설계하고 훈련하였습니다. 아래는 cDCGAN이 생성한 숫자 이미지 입니다.
 
-모델에 별도로 모핑을 훈련하지 않았고,  임베딩 벡터를 보간하여 이미지를 생성하여 모핑이 되는지 확인 하였습니다. 우리는 별도로 모핑 훈련을 하지 않아도 생성모델이 모핑을 할 수 있는 것을 보았습니다.
+![1554105050307](./cdcgan_is_mophable_without_training.assets/1554105050307.png)
+
+cDCGAN 모델에 별도로 모핑을 훈련하지 않았고,  임베딩 벡터를 보간하여 이미지를 생성하여 모핑이 되는지 확인 하였습니다. 별도로 모핑 훈련을 하지 않아도 생성모델이 모핑을 할 수 있는 것을 보았습니다.
 
 <iframe width="640" height="600" src="https://www.youtube.com/embed/J6hOlk4IHPY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
