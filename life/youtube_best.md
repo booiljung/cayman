@@ -4,6 +4,8 @@
 
 유튜브는 거대한 쓰레기통이라고 합니다. 하지만 찾아 보면 빛나는 보석이 있기도 합니다.
 
+## 컴퓨터 과학
+
 [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
 심층신경망, 신호처리, 3D그래픽스, 물리엔진 등을 시각적으로 다룹니다.
 
@@ -22,6 +24,8 @@
 [Numberphile](https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A)
 흥미로운 수학 강의
 
+## 기계
+
 [Complete Pictures](https://www.youtube.com/channel/UC3OmAtvd-9AsBDEPIv9JeQQ)
 농업과 어업을 위주로 보여줍니다. 기계들이 재미 있습니다.
 
@@ -37,11 +41,17 @@
 [The Small Workshop](https://www.youtube.com/channel/UCWSRNbhnlahD43ZNPkNUTzA)
 공구 만드는 공방
 
+## 역사
+
 [BazBattles](https://www.youtube.com/channel/UCx-dJoP9hFCBloY9qodykvw)
 전쟁사를 시각적으로 보여 줍니다. 서양은 전투의 과정을 자세히 기록하였으므로 가능하겠죠.
 
+## 물리학
+
 [지식보관소](https://www.youtube.com/channel/UC1Do3xw9OuUk7FQuPTmSVOw)
 물리학 잡학 강의
+
+## 영어
 
 [Aran TV](https://www.youtube.com/channel/UCmoUsPP4mD9-PPdRmeUI05A)
 한국인을 위한 영어 강의 입니다.
