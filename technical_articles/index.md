@@ -103,7 +103,7 @@
 
 - [프로그래밍 언어 배우기](./learning_programming_languages/index.md)
 - [파이썬 (Python)](python/index.md)
-- C#
+- [C#](csharp/index.md)
 - [C/C++](c_language/index.md)
 - Objective-C
 - JavaScript

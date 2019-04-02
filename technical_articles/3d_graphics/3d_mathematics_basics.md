@@ -4,9 +4,42 @@
 
 ## Vectors
 
+### 벡터의 합 (Vector Addition)
+
+두 벡터의 위치나 방향을 합합니다.
+$$
+\begin{aligned}
+\mathbf p + \mathbf q 
+= \begin{bmatrix}
+p_x\\ p_y\\ p_z
+\end{bmatrix}
++ \begin{bmatrix}
+q_x\\ q_y\\ q_z
+\end{bmatrix}
+= \begin{bmatrix}
+p_x + q_x\\ p_y + q_y\\ p_z + q_z
+\end{bmatrix}
+\end{aligned}
+$$
+
+### 벡터의 반전
+
+두 벡터의 방향을 반대로 하거나 위치를 원점의 반대 방향으로 옮깁니다.
+$$
+\begin{aligned}
+- \mathbf p
+= - \begin{bmatrix}
+p_x\\ p_y\\ p_z
+\end{bmatrix}
+= \begin{bmatrix}
+- p_x \\ - p_y \\ -p_z
+\end{bmatrix}
+\end{aligned}
+$$
+
 ### 벡터의 내적 (Dot product)
 
-두개의 n차원 벡터 $\mathbf p$와 $\mathbf q$의 내적(dot product)은 다음 식
+두개의 n차원 벡터 $\mathbf p$와 $\mathbf q​$의 내적(dot product)은 다음 식
 $$
 \begin{aligned}
 \mathbf p \cdot \mathbf q
