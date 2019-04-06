@@ -2,10 +2,11 @@
 
 #### 최신 글
 
+- Datasets: [Dump CIFAR10 in Pytorch](technical_articles/datasets/cifar10.md)
 - Deep Learning: [Conditional Deep Convolution GAN is morphable without morph training](technical_articles/deep_learning/cdcgan_is_mophable_without_training.md)
 - Life: [Youtube Best](./life/youtube_best.md)
 - Autopilot: [Public Testing with Autonomous Taxi Service](technical_articles/autopilot/public_testing_with_autonomous_taxi_service.md)
-- Computer Vision: [Face Dataset](technical_articles/computer_vision/face_dataset.md)
+- Computer Vision: [Face Datasets](technical_articles/computer_vision/face_datasets.md)
 - Pytorch: [Onehot Encoding](technical_articles/pytorch/onehot_encoding.md)
 - Pytorch: [Conv2dClassifier](technical_articles/pytorch/conv2d_classifier.md)
 - Pytorch: [Parameter List in Module](technical_articles/pytorch/parameter_list_in_module.md)
