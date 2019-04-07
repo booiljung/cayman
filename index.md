@@ -2,6 +2,7 @@
 
 #### 최신 글
 
+- C/C++: [GUI Libraries](./technical_articles/c_language/cpp_gui_libraries.md)
 - Datasets: [Dump CIFAR10 in Pytorch](technical_articles/datasets/cifar10.md)
 - Deep Learning: [Conditional Deep Convolution GAN is morphable without morph training](technical_articles/deep_learning/cdcgan_is_mophable_without_training.md)
 - Life: [Youtube Best](./life/youtube_best.md)

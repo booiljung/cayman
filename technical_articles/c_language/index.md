@@ -16,6 +16,10 @@
 
 - [람다를 파라미터로 받기](paramter_for_lambda.md)
 
+## Libraries
+
+- [C++ GUI Libraries](cpp_gui_libraries.md)
+
 ## Visual Studio:
 
 - [Boost Library 빌드](visual_studio_build_boost_library.md)
