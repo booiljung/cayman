@@ -2,9 +2,35 @@
 
 # 데이터셋
 
+컴퓨터 비전용 데이터셋를 찾아보며 정리하였습니다. 나중에 찾기 쉽게 분류하고, 샘플 이미지를 첨부하였습니다. 사진에 저작권에 침해 문제가 있다고 말씀하시면 삭제 하도록 하겠습니다.
+
 ## Contents
 
 [TOC]
+
+## Face Detection
+
+### [WIDER FACE: A Face Detection Benchmark](http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/index.html)
+
+얼굴 검출 데이터셋입으로 32,203개의 이미지에 393,703의 레이블이 있습니다 PASCAL VOC 데이터셋과  동일한 평가 기준을 채택했습니다. MALF 및 Caltech 데이터셋과 마찬가지로 테스트 이미지에 대한 bound box truth 를 공개하지 않습니다.![img](datasets.assets/intro.jpg)
+
+사진출처: 사이트 페이지
+
+### [MALF](http://www.cbsr.ia.ac.cn/faceevaluation/)
+
+Fine-grained Evaluation on Face Detection in the Wild. 인터넷에서 수집한 11,931 개의 주석이 달린 얼굴이있는 5,250 개의 이미지가 포함되어 있습니다.
+
+![1554617676446](datasets.assets/1554617676446.png)
+
+사진출처: 사이트 페이지
+
+### [FDDB]()
+
+얼굴 검출을 위한 데이터셋으로 Faces in the Wild 데이터셋에서 가져온 2,845 개의 이미지 세트에 있는 5,171 개의 얼굴에 대한 주석이 들어 있습니다.
+
+![1554617803923](datasets.assets/1554617803923.png)
+
+사진출처: 사이트 페이지
 
 ## Face Classification
 
@@ -16,32 +42,6 @@
 
 사진출처: 사이트 페이지
 
-### [Labelled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/):
-
-얼굴 인식을 포함하는 응용 프로그램을 개발할 때 사용하기 위해 인간 얼굴의 13,000 개의 라벨링된 이미지입니다.
-
-![logo](http://vis-www.cs.umass.edu/lfw/Six_Face_Panels_sm.jpg)
-
-사진출처: 사이트 페이지
-
-## Face Landmark
-
-### [300 Videos in the Wild (300-VW) Challenge & Workshop (ICCV 2015)](https://ibug.doc.ic.ac.uk/resources/300-VW/)
-
-Wild (300-VW) 데이터 세트의 300 개 비디오에는 얼굴 표식 추적을 위한 비디오가 포함되어 있습니다. 특히,이 데이터 세트에는 114 개의 비디오가 포함되어 있으며 68 개의 마크 업 랜드 마크 포인트가 주석으로 표시됩니다.
-
-![img](datasets.assets/300vw.jpg)
-
-사진출처: 사이트 페이지
-
-### [Helen Dataset](http://www.ifp.illinois.edu/~vuongle2/helen/)
-
-2000개의 훈련 데이터와 330개의 테스트 데이터를 포함하고 있습니다. 
-
-![1554560014718](datasets.assets/1554560014718.png)
-
-사진출처: [Helen Dataset](http://www.ifp.illinois.edu/~vuongle2/helen/)
-
 ## Facial Recognition
 
 ### [CelebFaces](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html):
@@ -51,6 +51,82 @@ Wild (300-VW) 데이터 세트의 300 개 비디오에는 얼굴 표식 추적�
 ![img](http://mmlab.ie.cuhk.edu.hk/projects/celeba/intro.png)
 
 사진출처: 사이트 페이지
+
+### [VGG Face Dataset](http://www.robots.ox.ac.uk/~vgg/data/vgg_face/)
+
+데이터셋은 2,622개의 신원으로 구성되며, 각 신원에는 이미지 URL과 당 얼굴 탐지를 위한 텍스트 파일이 있습니다.
+
+### [VGG Face Dataset 2](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/)
+
+데이터셋은 9,000개 이상의 신원으로 구성되며 3,000,000개의 얼굴이 포함되어 있습니다. 각 주제마다 362개 이상의 샘플이 있습니다.
+
+![1554618501966](datasets.assets/1554618501966.png)
+
+사진출처: 사이트페이지
+
+### [Labelled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/):
+
+얼굴 인식을 포함하는 응용 프로그램을 개발할 때 사용하기 위해 인간 얼굴의 13,000 개의 라벨링된 이미지입니다.
+
+![logo](http://vis-www.cs.umass.edu/lfw/Six_Face_Panels_sm.jpg)
+
+사진출처: 사이트 페이지
+
+## Facial Depth
+
+### [FLORENCE 3D/2D](https://www.micc.unifi.it/resources/datasets/florence-3d-faces/)
+
+이 데이터 세트는 2D, 외형 기반 인식 기술 및 완전 3D 접근법 간의 차이를 줄이는 기술에 대한 연구를 지원하기 위해 특별히 제작되었습니다. 현실적인 감시 조건을 제어 된 방식으로 시뮬레이션하고 실제 시나리오에서 3D 모델을 효과적으로 활용할 수 있도록 설계 되었습니다.
+
+![img](datasets.assets/superfaces-750x400.png)
+
+사진출처: 사이트 페이지
+
+[Florence Superface dataset](https://www.micc.unifi.it/resources/datasets/florence-superface/)는 저해상도 및 고해상도 3D 스캔으로 구성되어 있으며, 서로 다른 해상도로 스캔을 사용하는 혁신적인 3D 얼굴 인식 솔루션을 연구합니다. 현재 20 개의 피험자가 데이터 집합에 포함되어 있지만 등록은 계속 진행 중입니다.
+
+![img](datasets.assets/superface-dataset-750x400.png)
+
+사진출처: 사이트 페이지
+
+### [3D Mask Attack Database (3DMAD)](https://www.idiap.ch/dataset/3dmad)
+
+3D MAD (3D Mask Attack Database)는 생체 인식 (얼굴) 스푸핑 데이터베이스입니다. 현재 실제 액세스 및 스푸핑 공격에 대해 Kinect를 사용하여 기록 된 17 명의 76,500 프레임이 포함되어 있습니다. 각 프레임은 깊이 이미지, RGB 이미지, 눈 위치로 구성됩니다.
+
+![img](datasets.assets/fig_samples.png)
+
+사진출처: 사이트 페이지
+
+[파이썬 패키지: maskattack.lbp](https://pypi.org/project/maskattack.lbp/)
+
+### [DMCSv1 Database: Multimodal Biometric Database of 3D Face and Hand Scans](http://biometrics.dmcs.pl/en/databases/dmcsv1)
+
+DMCS는 Department of Microelectronics and Computer Science의 약자입니다. 데이터베이스는 3D 얼굴 및 손 스캔이 포함되어 있습니다.
+
+![FaceAcquisitionProcess](datasets.assets/FaceAcquisitionProcess.jpg)
+
+![HandAcquisitionProcess](datasets.assets/HandAcquisitionProcess.jpg)
+
+사진출처: 사이트 페이지
+
+### [EURECOM Kinect Face Dataset (EURECOM KFD)](http://rgb-d.eurecom.fr/)
+
+Kinect에서 얻은 여성 14 명, 남성 38 명에서 얻은 이미지로 구성됩니다. 데이터는 서로 다른 시간대 (약 30 개월)에 발생한 두 세션에서 캡처됩니다. 각 세션에서 데이터 세트는 서로 다른 얼굴 표정, 다른 조명 및 교합 상태 (중립, 미소, 열린 입, 왼쪽 프로필, 오른쪽 프로필, 눈 가림, 입 가림, 종이 가림) 로 각 개인의 얼굴 이미지를 제공합니다. 모든 이미지는 RGB 컬러 이미지, 깊이 맵 및 3D의 세 가지 정보 소스로 제공됩니다. 또한, 데이터 세트는 얼굴에 6 가지 위치의 수동 표식 (왼쪽 눈, 오른쪽 눈, 코 끝, 입의 왼쪽, 입 오른쪽 및 턱)을 제공합니다. 성별, 생년월일, 안경, 각 세션의 캡처 시간 등의 다른 정보도 사용할 수 있습니다.
+
+![img](datasets.assets/exampledb-crop.png)
+
+사진출처: 사이트 페이지
+
+###  [UMB-DB](http://www.ivl.disco.unimib.it/minisites/umbdb//description.html): The University of Milano Bicocca 3D Face Database
+
+143개의 대상이 있습니다. 98명의 남자, 45명의 여자, 아기와 남자도 포함되어 있습니다. 1,473개의 인수가 있습니다. 중립, 웃음, 지루함, 배고픔 4가지 표정이 있습니다. 883개의 가리지 않는 사진이 있습니다. 590개의 가린 사진이 있습니다. 눈, 코, 입에 대한 주석이 있습니다.
+
+![UMB-DB Logo](datasets.assets/header.png)
+
+사진출처: 사이트 페이지
+
+### [Texas 3D Face Recognition Database (Texas 3DFRD)](http://live.ece.utexas.edu/research/texas3dfr/)
+
+1149 개의 2D 및 3D 얼굴 이미지로 구성되었습니다.
 
 ## Facial Pose (Expression)
 
@@ -77,6 +153,40 @@ FERG-DB는 표정 주석이 붙은 캐릭터 데이터베이스입니다. 데이
 ![img](datasets.assets/sampleimages.jpg)
 
 사진출처: 사이트 페이지
+
+### [i-bug: 300 Faces In-the-Wild Challenge (300-W), ICCV 2013](https://ibug.doc.ic.ac.uk/resources/300-W/)
+
+![img](datasets.assets/figure_4_n_2.png)
+
+사진 출처: 사이트 페이지
+
+### [300 Videos in the Wild (300-VW) Challenge & Workshop (ICCV 2015)](https://ibug.doc.ic.ac.uk/resources/300-VW/)
+
+Wild (300-VW) 데이터 세트의 300 개 비디오에는 얼굴 표식 추적을 위한 비디오가 포함되어 있습니다. 특히,이 데이터 세트에는 114 개의 비디오가 포함되어 있으며 68 개의 마크 업 랜드 마크 포인트가 주석으로 표시됩니다.
+
+![img](datasets.assets/300vw.jpg)
+
+사진출처: 사이트 페이지
+
+### [Helen Dataset](http://www.ifp.illinois.edu/~vuongle2/helen/)
+
+2000개의 훈련 데이터와 330개의 테스트 데이터를 포함하고 있습니다. 
+
+![1554560014718](datasets.assets/1554560014718.png)
+
+사진출처: [Helen Dataset](http://www.ifp.illinois.edu/~vuongle2/helen/)
+
+### [1st 3D Face Tracking in-the-wild Competition](https://ibug.doc.ic.ac.uk/resources)
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/HkwkLnPhzic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+영상출처: 사이트페이지, 유튜브
+
+### [LS3D=W](https://www.adrianbulat.com/face-alignment)
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/8FdSHl4oNIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+영상출처: 사이트 페이지, 유튜브
 
 ## Image Pose
 
