@@ -2,6 +2,7 @@
 
 #### 최신 글
 
+- Linux: [Ubuntu 18.04 LTS에서 GUI와 CLI를 전환](technical_articles/linux/switch_gui_and_cli.md)
 - C/C++: [GUI Libraries](./technical_articles/c_language/cpp_gui_libraries.md)
 - Datasets: [Dump CIFAR10 in Pytorch](technical_articles/datasets/cifar10.md)
 - Deep Learning: [Conditional Deep Convolution GAN is morphable without morph training](technical_articles/deep_learning/cdcgan_is_mophable_without_training.md)

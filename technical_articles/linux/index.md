@@ -5,5 +5,6 @@
 - [VirtualBox: 우분투에 호스트 공유폴더를 설정](./virtual_box_shared_folder.md)
 - [Ubuntu 16.04 LTS에서 한국어 입력기를 fcitx로 변경](./ubuntu_korean_fcitx_installation.md)
 - [Ubuntu 16.04 LTS에 FTP, FTPS, SFTP 설치](./ubuntu_ftp.md)
+- [Ubuntu 18.04 LTS에서 GUI와 CLI를 전환](switch_gui_and_cli.md)
 
 

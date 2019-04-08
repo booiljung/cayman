@@ -1,4 +1,6 @@
-[Up](index.md)
+[
+
+Up](index.md)
 
 # 데이터셋
 
@@ -128,6 +130,38 @@ Kinect에서 얻은 여성 14 명, 남성 38 명에서 얻은 이미지로 구�
 
 1149 개의 2D 및 3D 얼굴 이미지로 구성되었습니다.
 
+### [3D Basel Face Model (BFM)](https://faces.dmi.unibas.ch/bfm/index.php?nav=1-0&id=basel_face_model)
+
+Morphable Model은 100 명의 남성과 100 명의 여성 얼굴의 등록 된 3D 스캔으로부터 계산됩니다. 학술 연구 및 교육에 응용 및 실험을 위해 BFM과 추가 데이터를 배포합니다.
+
+- [Paper: A 3D Face Model for Pose and Illumination Invariant FaceRecognition](https://gravis.dmi.unibas.ch/publications/2009/BFModel09.pdf)
+
+#### [3D Face Scans & Renderings](https://faces.dmi.unibas.ch/bfm/index.php?nav=1-1-1&id=scans)
+
+![example scans](datasets.assets/example-scans.png)
+
+#### [Basel Face Model](https://faces.dmi.unibas.ch/bfm/index.php?nav=1-1-0&id=details)
+
+![shape components](datasets.assets/pc-shape.png)
+
+![texture components](datasets.assets/pc-texture.png)
+
+![the model attributes](datasets.assets/model-attributes.png)
+
+[Coefficients for Face Recognition Experiments](https://faces.dmi.unibas.ch/bfm/index.php?nav=1-1-2&id=experiments)
+
+#### [Probabilistic Morphable Models (PMMs)](http://gravis.dmi.unibas.ch/PMM/)
+
+PMM은 "합성에 의한 분석"접근법을 사용하는 모델 기반 이미지 분석을 위한 확률론적 프레임워크입니다. 프레임워크는 통계 객체 모델링을 위한 구성 요소와 새로운 데이터에 그러한 모델을 적용하기위한 구성 요소로 나뉩니다. 새로운 데이터 분석은 MCMC 최적화를 사용하여 통계 객체 모델을 데이터에 적용하여 수행됩니다.
+
+![anim](datasets.assets/s-overview.png)
+
+### [BJUT 3D Face](http://www.escience.cn/people/huyongli/3Dface.html)
+
+500 명의 중국인, 250 명의 여성 및 250 명의 남성의 3D 얼굴 데이터를 포함합니다. 3D 얼굴 데이터는 CyberWare 3D 스캐너로 수집 되었습니다.
+
+![1554637288969](datasets.assets/1554637288969.png)
+
 ## Facial Pose (Expression)
 
 ### [VT-KFER: A Kinect-based RGBD+Time Dataset for Spontaneous and Non-Spontaneous Facial Expression Recognition](http://sufficiency.ece.vt.edu/VT-KFER/)
@@ -249,6 +283,20 @@ MIT Computer Science and Artificial  Intelligence Laboratory (CSAIL) 에 의해 
 이 데이터셋은 134 개의 이미지 쌍을 형성하는 129 개의 망막 이미지로 구성 되어 있습니다. 특성에 따라 3 가지 카테고리로 나뉩니다. 이미지는 Nidek AFC-210 안저 카메라로 촬영되었으며,이 카메라는 x와 y 차원에서 2912x2912 픽셀의 해상도와 45°의 FOV 해상도로 이미지를 수집합니다.
 
 ![1554294636062](datasets.assets/1554294636062.png)
+
+### [NIH Clinical Center releases dataset of 32,000 CT images ](https://www.nih.gov/news-events/news-releases/nih-clinical-center-releases-dataset-32000-ct-images)
+
+NIH 보건 센터는 과학계가 병변의 탐지 정확도를 높이는 데 도움이되는 공개적으로 이용 가능한 CT 이미지의 대규모 데이터 세트를 만들었습니다.  DeepLesion이라는이 데이터 세트는 CT 영상에서 확인 된 32,000개가 넘는 병변을 가지고 있습니다.
+
+![1554637929199](datasets.assets/1554637929199.png)
+
+- [Download](https://nihcc.app.box.com/v/DeepLesion)
+
+### [GSTRB: The German Traffic Sign Recognition Benchmark](http://benchmark.ini.rub.de/?section=gtsrb&subsection=news)
+
+독일 교통 표지판 벤치마크 데이터 입니다. 단일 이미지 또는 다중 클래스 분류 문제로 40개의 클래스가 있으며, 50,000개 이상의 이미지가 포함되어 있습니다. 
+
+![1554637721629](datasets.assets/1554637721629.png)
 
 ## Machine Understanding
 
