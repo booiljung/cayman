@@ -54,6 +54,8 @@ Fine-grained Evaluation on Face Detection in the Wild. 인터넷에서 수집한
 
 사진출처: 사이트 페이지
 
+다운로드: [Kaggle](https://www.kaggle.com/jessicali9530/celeba-dataset)
+
 ### [VGG Face Dataset](http://www.robots.ox.ac.uk/~vgg/data/vgg_face/)
 
 데이터셋은 2,622개의 신원으로 구성되며, 각 신원에는 이미지 URL과 당 얼굴 탐지를 위한 텍스트 파일이 있습니다.

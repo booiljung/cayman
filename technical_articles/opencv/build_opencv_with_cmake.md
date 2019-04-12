@@ -135,8 +135,8 @@ Windows 10에서 빌드한다면 먼저 검색창에 `eigen`을 입력하여 해
 검색창에 `with`를 입력하여 해당 변수들을 찾습니다. 요즘 1394는 사용하지 않으므로 `WITH_1394` 에 `false`를 지정합니다.
 
 - `WITH_GSTREAMER` 변수에 `false`를 지정합니다.
-- `WITH_VTK` 변수에 `false`를 지정합니다.
 - `WITH_LAPACK` 변수에 `false`를 지정합니다.
+- `WITH_VTK` 변수에 `false`를 지정합니다.
 
 **옵션: world**
 
@@ -168,9 +168,19 @@ Generating 을 하고나서 `Open Project`  버튼을 누르면 Visual Studio가
 
 생성된 `build` 폴더에서 `make`를 입력하여 빌드 합니다.
 
+```sh
+make
+```
+
+
+
 ![1551751204803](build_opencv_with_cmake.assets/1551751204803.png)
 
 빌드가 끝나면 설치를 합니다.
+
+```sh
+sudo make install
+```
 
 ![1551753713471](build_opencv_with_cmake.assets/1551753713471.png)
 
@@ -189,7 +199,7 @@ VSCode로 OpenCV 소스 폴더를 엽니다. 그리고 `./vscode/settings.json`�
         "빌드 도구 (옵션)"
     ],      
     "cmake.configureSettings": {
-        "EIGEN_INCLUDE_PATH" : "${workspaceRoot}/../eigen-323c052e1731",
+        "EIGEN_INCLUDE_PATH" : "${workspaceRoot}/../eigen-323c052e1731", // 윈도우에만 해당합니다. UNIX Like는 usr/include가 기본 지정됩니다.
         "WITH_EIGEN" : true,
         "BUILD_JAVA" : false,
         "BUILD_OPENCV_TS" : false,
@@ -197,9 +207,9 @@ VSCode로 OpenCV 소스 폴더를 엽니다. 그리고 `./vscode/settings.json`�
         "BUILD_PACKAGE" : false,
         "BUILD_PERF_TESTS" : false,
         "BUILD_TESTS" : false,
-        "OPENCV_EXTRA_MODULES_PATH" : "${workspaceRoot}/../opencv_contrib.4.1/modules",
+        "OPENCV_EXTRA_MODULES_PATH" : "${workspaceRoot}/../opencv_contrib.4.1/modules", // 경로에 따라 정확히 지정합니다.
         "OPENCV_ENABLE_NONFREE" : true,
-        "CMAKE_INSTALL_PREFIX" : "C:/usr/opencv.4.1.debug",
+        "CMAKE_INSTALL_PREFIX" : "C:/usr/opencv.4.1.debug", // 윈도우만 해당합니다. Unix Like는 /usr/local이 기본 지정됩니다.
         "INSTALL_C_EXAMPLES" : true,
         "WITH_1394" : false,
         "WITH_GSTREAMER" : false,
@@ -225,7 +235,7 @@ VSCode로 OpenCV 소스 폴더를 엽니다. 그리고 `./vscode/settings.json`�
         }
     },
     "cmake.buildDirectory": "${workspaceRoot}/../opencv.4.1.build.vs.debug",
-    "cmake.installPrefix" : "C:/usr/opencv.4.1.debug",
+    "cmake.installPrefix" : "C:/usr/opencv.4.1.debug", // 윈도우에만 해당합니다. Unix Like는 /usr/local이 기본 지정됩니다.
     "cmake.configureArgs" : [
     ],    
     "cmake.buildArgs" :[
