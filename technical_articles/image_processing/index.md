@@ -2,6 +2,12 @@
 
 # 영상처리 (image processing)
 
+## 형식
+
+- 라이브러리별 image의  shape
+
+## 알고리즘
+
 - [이미지 기하 변환(Image Geometry Transformation)](image_geometry_transformation.md)
 - Cross Corelation 과 Convolution
 - Gradiant, Laplacian, Hessian

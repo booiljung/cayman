@@ -14,8 +14,8 @@
 - 수론 (Number Theory)
 - 기하학 (Geometry)
 - [선형대수학 (Linear Algebra)](./mathematics/linear_algebra/index.md)
-- 미적분 및 해석학 (Calculus and Analysis)
-- [확률 및 통계 (Probabilistics and Statistics)](probabilistics_and_statistics/index.md)
+- 해석학 (Analysis): 미적분
+- [통계학 (Statistics)](statistics/index.md)
 
 ### 알고리즘
 
@@ -81,9 +81,6 @@
 - [Anaconda](./anaconda/index.md)
 - [Google Colaboratory](colaboratory/index.md)
 - [컴퓨터 비전 (Computer Vision)](computer_vision/index.md)
-- dlib
-- [OpenCV](./opencv/index.md)
-- 패턴인식 (Pattern Recognition)
 - [머신러닝 (Machine Learning)](machine_learning/index.md)
 - [딥러닝 (Deep Learning)](deep_learning/index.md)
 - [텐서플로우 (Tensorflow)](tensorflow/index.md)
@@ -133,7 +130,9 @@
 
 - 레이텍 $\LaTeX$
 
-### 관리
+### 관리 및 운영
+
+- [패키지](./packages/index.md)
 
 - [git](./git/index.md)
 - [제품 및 서비스 기획 (Product Management)](product_managements/index.md)
