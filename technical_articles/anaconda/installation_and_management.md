@@ -55,24 +55,28 @@ conda update --all
 ```sh
 conda create -n ml python=3.6
 conda activate ml
-conda install cudatoolkit
-conda install numpy
-conda install scipy
-conda install jupyter
-conda install pandas
-conda install matplotlib
-conda install tensorflow-gpu
-conda install pytorch
-conda install torchvision
-conda install -c derickl torchtext
-conda install opencv
-conda install keras-gpu
-conda install -c anaconda chainer
-conda install -c conda-forge tensorboardx 
-conda install -c anaconda pyqt5
+conda install cudatoolkit --yes
+conda install numpy --yes
+conda install scipy --yes
+conda install jupyter --yes
+conda install pandas --yes
+conda install matplotlib --yes
+conda install tensorflow-gpu --yes
+conda install pytorch --yes
+conda install torchvision --yes
+conda install -c derickl torchtext --yes
+conda install opencv --yes
+conda install visvis --yes
+conda install imageio --yes
+conda install keras-gpu --yes
+conda install -c anaconda h5py --yes
+conda install -c anaconda chainer --yes
+conda install -c conda-forge tensorboardx --yes 
+conda install -c anaconda pyqt5 --yes
+conda install -c conda-forge torchfile --yes
 ```
 
-PyQt5에서 `icu.so` 오류가 발생시
+PyQt5에서 `from PyQt5 import Qt`에서  `icu.so` 오류가 발생시
 
 ```
 ImportError: libicui18n.so.54: cannot open shared object file: No such file or directory
@@ -81,13 +85,13 @@ ImportError: libicui18n.so.54: cannot open shared object file: No such file or d
 강제로 버전을 설치합니다.
 
 ```sh
-conda install icu=54
+conda install icu=54 --yes
 ```
 
 그러면 pyqt5가 삭제 된다. 다시 pyqt를 설치합니다.
 
 ```sh
-conda install -c anaconda pyqt5
+conda install -c anaconda pyqt5 --yes
 ```
 
 pyqt5도 사용할 수 있게 됩니다.
