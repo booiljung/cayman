@@ -65,15 +65,15 @@ conda install tensorflow-gpu --yes
 conda install pytorch --yes
 conda install torchvision --yes
 conda install -c derickl torchtext --yes
-conda install opencv --yes
-conda install visvis --yes
-conda install imageio --yes
+conda install -c menpo opencv --yes
 conda install keras-gpu --yes
 conda install -c anaconda h5py --yes
 conda install -c anaconda chainer --yes
 conda install -c conda-forge tensorboardx --yes 
 conda install -c anaconda pyqt5 --yes
 conda install -c conda-forge torchfile --yes
+conda install visvis --yes
+conda install imageio --yes
 ```
 
 PyQt5에서 `from PyQt5 import Qt`에서  `icu.so` 오류가 발생시
