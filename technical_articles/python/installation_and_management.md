@@ -1,3 +1,5 @@
+[Up](./index.md)
+
 # Installation and Management
 
 ## 설치
@@ -72,8 +74,12 @@ conda install -c anaconda chainer --yes
 conda install -c conda-forge tensorboardx --yes 
 conda install -c anaconda pyqt5 --yes
 conda install -c conda-forge torchfile --yes
+conda install -c conda-forge pika
 conda install visvis --yes
 conda install imageio --yes
+conda install -c anaconda cloudpickle --yes
+conda install -c conda-forge progress --yes
+conda install torchfile
 ```
 
 PyQt5에서 `from PyQt5 import Qt`에서  `icu.so` 오류가 발생시

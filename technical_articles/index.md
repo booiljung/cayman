@@ -78,7 +78,6 @@
 
 ### 인공지능
 
-- [Anaconda](./anaconda/index.md)
 - [Google Colaboratory](colaboratory/index.md)
 - [컴퓨터 비전 (Computer Vision)](computer_vision/index.md)
 - [머신러닝 (Machine Learning)](machine_learning/index.md)
@@ -106,7 +105,7 @@
 - JavaScript
 - 루아 (Lua)
 
-### 프로그래밍 프레임워크
+### 프레임워크 라이브러리
 
 - iOS 프로그래밍 (iOS Programming)
 - [Qt 프로그래밍 (Qt Programming)](qt_programming/index.md)
