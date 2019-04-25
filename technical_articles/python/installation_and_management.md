@@ -74,13 +74,14 @@ conda install -c anaconda chainer --yes
 conda install -c conda-forge tensorboardx --yes 
 conda install -c anaconda pyqt5 --yes
 conda install -c conda-forge torchfile --yes
-conda install -c conda-forge pika
+conda install -c conda-forge pika --yes
 conda install visvis --yes
 conda install imageio --yes
 conda install -c anaconda cloudpickle --yes
 conda install -c conda-forge progress --yes
 conda install torchfile --yes
 conda install -c anaconda cython --yes
+conda install -c anaconda pillow --yes
 ```
 
 PyQt5에서 `from PyQt5 import Qt`에서  `icu.so` 오류가 발생시
@@ -95,7 +96,7 @@ ImportError: libicui18n.so.54: cannot open shared object file: No such file or d
 conda install icu=54 --yes
 ```
 
-그러면 pyqt5가 삭제 된다. 다시 pyqt를 설치합니다.
+그러면 pyqt5가 삭제 됩니다. 다시 pyqt를 설치합니다.
 
 ```sh
 conda install -c anaconda pyqt5 --yes
