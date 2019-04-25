@@ -1,8 +1,8 @@
 [Up](./index.md)
 
-# Installation and Management
+# Installation and Management of Anaconda
 
-## 설치
+## Installation
 
 2018년 3월 12일
 
@@ -79,7 +79,8 @@ conda install visvis --yes
 conda install imageio --yes
 conda install -c anaconda cloudpickle --yes
 conda install -c conda-forge progress --yes
-conda install torchfile
+conda install torchfile --yes
+conda install -c anaconda cython --yes
 ```
 
 PyQt5에서 `from PyQt5 import Qt`에서  `icu.so` 오류가 발생시
