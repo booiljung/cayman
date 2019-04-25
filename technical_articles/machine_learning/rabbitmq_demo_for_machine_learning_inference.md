@@ -21,7 +21,7 @@ Python에서 RabbitMQ를 사용하여 데이터를 전송하고 받기 위해서
 
 RabbitMQ는 여러가지 메시지프로토콜을 지원합니다. 그중에 AMQP도 지원하는데 pika는 파이썬에서 AMQP를 통해 RabbitMQ에 메시지를 보내고 받는데 필요합니다.
 
-AMQP는 바이트배열이나 문자열만을 주고 받을 수 있습니다. 그래서 메모리에 존재하는 파이썬 개체는   바로 보낼 수 없는 경우가 많습니다. 파이썬 패키지 pickle은 파이썬 개체들을 바이너리나 문자열로 변환하여 파일이나 네트워크를 통해 보내고 받을 수 있게 합니다. 
+AMQP는 바이트배열이나 문자열만을 주고 받을 수 있습니다. 그래서 메모리에 존재하는 파이썬 개체는   바로 보낼 수 없는 경우가 많습니다. 파이썬 패키지 pickle은 파이썬 개체들을 바이트배열이나 문자열로 변환하여 네트워크를 통해 보내고 받을 수 있게 합니다. pickle는 파이썬 개체를 파일에 저장하고 읽어들이는데도 유용합니다. C# 같은 언어에서는 직렬화(Serialization)-역직렬화(Deserialization)하는 것과 유사하다고 보면 됩니다.
 
 ## Inference server
 
@@ -72,7 +72,7 @@ if __name__ == "__main__":
 	server = RpcServer()
 ```
 
-`RpcServer`를 보면 `load_model` 함수가 있습니다. 이 함수에서 모델을 로드하여 반환하도록 코드를 변경합니다. 별도의 장비에서 RabbitMQ를 돌린다면 `host='localhost'`를 수정하며 됩니다.
+`RpcServer`를 보면 `load_model` 함수가 있습니다. 이 함수에서 모델을 로드하여 반환하도록 코드를 변경합니다. 별도의 장비에서 RabbitMQ를 돌린다면 `host='localhost'`를 RabbitMQ가 설치된 장비의 주소로 수정하며 됩니다.
 
 실행은 다음과 같습니다.
 
@@ -80,7 +80,7 @@ if __name__ == "__main__":
 python3 rpc_server.py
 ```
 
-이 프로세스는 계속 띄워도면 됩니다.
+이 프로세스는 계속 띄워두면 됩니다.
 
 ## Client
 
@@ -126,7 +126,7 @@ class RpcClient(object):
 		return pickle.loads(self.response)
 ```
 
-RabbitMQ가 다른 서버에서 구동된다면 `lhost='localhost'`를 해당 서버 주소로 변경합니다.
+RabbitMQ가 다른 서버에서 구동된다면 `host='localhost'`를 해당 서버 주소로 변경합니다.
 
 ### Inference
 
