@@ -4,28 +4,18 @@
 
 연구 개발 과정에서 부딪히는 내용들을 잊지 위주로 기록 합니다. 생각나는 지식들도 정리 합니다.
 
-
-### 수학 (Mathematics)
-
-- [Mathemathics Basics](./mathematics/basics/index.md)
-- 집합론 (Set Theory)
-- 논리학 (Logic)
-- 대수학 (Algebra)
-- 수론 (Number Theory)
-- 기하학 (Geometry)
-- [선형대수학 (Linear Algebra)](./mathematics/linear_algebra/index.md)
-- 해석학 (Analysis): 미적분
-- [통계학 (Statistics)](statistics/index.md)
-
 ### 알고리즘
 
-- 데이터 구조와 알고리즘 (Data Structure and Algorithm)
-- 정보이론 (Information Theory)
-- 결정이론 (Decision Theory)
-- 동적계획법 (Dynamic Programming)
-- 컴파일러 이론 (Compiler Theory)
-- 암호학 (Cryptology)
-- 수치해석 (Numerical Methods)
+- [수학](mathematics/index.md)
+
+- [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+- 데이터 구조와 알고리즘
+- 정보이론
+- 결정이론
+- 동적계획법
+- 컴파일러 이론
+- 암호학
+- 수치해석
 
 ### 아키텍쳐, 디자인, 네트워크
 
@@ -96,12 +86,12 @@
 ### 프로그래밍 언어
 
 - [코딩](coding/index.md)
-
 - [프로그래밍 언어 배우기](./learning_programming_languages/index.md)
 - [파이썬 (Python)](python/index.md)
 - [C#](csharp/index.md)
 - [C/C++](c_language/index.md)
 - Objective-C
+- [Swift](./swfit/index.md)
 - JavaScript
 - 루아 (Lua)
 

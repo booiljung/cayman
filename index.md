@@ -2,6 +2,8 @@
 
 #### 최신 글
 
+- Image processing: [Convert photos to Sketches](./technical_articles/image_processing/convert_photos_to_sketches.md)
+
 - Machine Learning: [머신러닝 인퍼런스를 위한 RabbitMQ 데모](technical_articles/machine_learning/rabbitmq_demo_for_machine_learning_inference.md)
 - Linux: [Ubuntu 18.04 LTS에서 GUI와 CLI를 전환](technical_articles/linux/switch_gui_and_cli.md)
 - C/C++: [GUI Libraries](./technical_articles/c_language/cpp_gui_libraries.md)
@@ -30,6 +32,7 @@
 #### 페이지
 
 - [기술 기록](./technical_articles/index.md)
+- [연구노트](study_notes/index.md)
 - [서적 리뷰](book_reviews/index.md)
 - [논문 리뷰](./reviews/index.md)
 - [오픈소스 프로젝트](./opensource_projects/index.md)

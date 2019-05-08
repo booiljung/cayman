@@ -2,11 +2,15 @@
 
 # 영상처리 (image processing)
 
-## 형식
+## Toy
 
-- 라이브러리별 image의  shape
+- [Convert photos to sketches](convert_photos_to_sketches.md)
 
-## 알고리즘
+## Format
+
+- [라이브러리별 image의  shape](image_shape.md)
+
+## Algorithm
 
 - [이미지 기하 변환(Image Geometry Transformation)](image_geometry_transformation.md)
 - Cross Corelation 과 Convolution

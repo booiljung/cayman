@@ -2,6 +2,14 @@
 
 # 딥러닝 (Deep Learning)
 
+## 모델
+
+- [모델에 따른 함수 비교](function_comparison_by_model.md.md)
+
+## 함수
+
+- [목적함수](objective_functions.md)
+
 ## 실험
 
 - [Conditional Deep Convolution GAN is morphable without morph training](cdcgan_is_mophable_without_training.md)

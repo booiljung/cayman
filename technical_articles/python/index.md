@@ -8,6 +8,8 @@
 
 ### numpy
 
+- [numpy](./numpy/index.md)
+
 - [Python Korea : numpy.place](python_krorea_numpy_place.md)
 
 ### visvis

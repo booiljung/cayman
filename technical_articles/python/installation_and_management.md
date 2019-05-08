@@ -84,6 +84,39 @@ conda install -c anaconda cython --yes
 conda install -c anaconda pillow --yes
 ```
 
+### kaggle
+
+kaggle 커맨드라인 인터페이스는 
+
+```sh
+pip install kaggle
+```
+
+로 설치합니다. 사용자 계정과 비밀번호는 
+
+```json
+export KAGGLE_USERNAME=<username>
+export KAGGLE_KEY=<password>
+```
+
+로 지정할 수 있습니다.
+
+##### kaggle API Token 설치
+
+웹 브라우저로 다음 주소
+
+```
+https://www.kaggle.com/<username>/account
+```
+
+에 접속합니다. 여기서 `<username>`은 kaggle 계정이름을 지정합니다.
+
+페이지의 중간을 보면 **Create New API Token** 버튼이 있습니다. 이 버튼을 클릭하면 `kaggle.json`파일을 다운로드 합니다. 다운로드가 완료되면 `~/.kaggle` 폴더로 옮깁니다.
+
+이후 파일을 다운로드 하면 `~/.kaggle/competitions/` 폴더에 다운로드 받은 폴더가 생성되고 파일이 있습니다.
+
+### PyQt5 오류
+
 PyQt5에서 `from PyQt5 import Qt`에서  `icu.so` 오류가 발생시
 
 ```
@@ -158,3 +191,8 @@ conda create -n <new_env> --clone <source_env>
 conda update -n <env> --all
 ```
 
+## 참조
+
+- [github: Kaggle-API](https://github.com/Kaggle/kaggle-api)
+
+- [Blog: kaggle api 사용법](https://shakeratos.tistory.com/34)

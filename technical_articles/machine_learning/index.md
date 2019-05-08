@@ -10,6 +10,7 @@
 - [Regularizations](regularizations.md)
 - [활성화 함수](activation_functions.md)
 - [Optimization](optimization.md)
+- [Machine Learning Tuning Algorithm](./machine_learning_turning_algorithm.md)
 
 ## 기타 콘텐츠
 
