@@ -7,7 +7,6 @@
 ### 알고리즘
 
 - [수학](mathematics/index.md)
-
 - [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 - 데이터 구조와 알고리즘
 - 정보이론
@@ -24,12 +23,7 @@
 - 객체지향 프로그래밍 및 디자인 패턴 (Object Oriented Programming and Design Patterns)
 - 병렬처리 (Parallel Processing)
 - 분산 컴퓨팅 (Distributed Computing)
-- 네트워크 프로그래밍 (Network Programming)
-
-### 신호처리
-
-- 신호처리 (Signal Processing)
-- [영상처리 (Image Processing)](image_processing/index.md)
+- [네트워크 프로그래밍 (Network Programming)](./networks/index.md)
 
 ## 병렬컴퓨팅
 
@@ -43,13 +37,8 @@
 ### 3D 그래픽
 
 - [3D Graphics](3d_graphics/index.md)
-- [3D Vision](3d_vision/index.md)
 - [OpenGL](opengl/index.md)
 - 셰이더 프로그래밍 (Shader Programming)
-
-### 네트워크
-
-- [잘 알려진 포트](./networks/index.md)
 
 ### 게임 개발
 
@@ -66,10 +55,18 @@
 - 데이터 시각화 (Data Visualization)
 - [아파치 스파크 (Apache Spark)](apache_spark/index.md)
 
-### 인공지능
+## 툴
 
 - [Google Colaboratory](colaboratory/index.md)
+- [IDEs](ides/index.md)
+
+### 신호처리 머신러닝 인공지능
+
+- [신호처리 (Signal Processing)](signal_processing/index.md)
+- [영상처리 (Image Processing)](image_processing/index.md)
+- [음성처리(Audio Processing)](audio_processing/index.md)
 - [컴퓨터 비전 (Computer Vision)](computer_vision/index.md)
+- [3D 비전 (3D Vision)](3d_vision/index.md)
 - [머신러닝 (Machine Learning)](machine_learning/index.md)
 - [딥러닝 (Deep Learning)](deep_learning/index.md)
 - [텐서플로우 (Tensorflow)](tensorflow/index.md)
@@ -91,13 +88,17 @@
 - [C#](csharp/index.md)
 - [C/C++](c_language/index.md)
 - Objective-C
+- [Dart](./dart/index.md)
 - [Swift](./swfit/index.md)
 - JavaScript
 - 루아 (Lua)
+- [웹 개발](web/index.md)
 
 ### 프레임워크 라이브러리
 
 - iOS 프로그래밍 (iOS Programming)
+- [Flutter 프로그래밍 (Flutter Programming)](./flutter/index.md)
+- [Android 프로그래밍 (Android Programming)](./android/index.md)
 - [Qt 프로그래밍 (Qt Programming)](qt_programming/index.md)
 - 윈도우 프로그래밍 (Windows Programming)
 - 닷넷 프로그래밍 (.NET Programming)
@@ -122,7 +123,6 @@
 ### 관리 및 운영
 
 - [패키지](./packages/index.md)
-
 - [git](./git/index.md)
 - [제품 및 서비스 기획 (Product Management)](product_managements/index.md)
 - 프로젝트 관리 (Project Management)

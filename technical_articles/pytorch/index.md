@@ -8,6 +8,7 @@
 
 ## Tricks
 
+- [Tensor operations](tensor_operations.md)
 - [Parameter List in Module](parameter_list_in_module.md)
 - [Onehot encoding](onehot_encoding.md)
 

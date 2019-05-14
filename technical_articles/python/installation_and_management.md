@@ -54,36 +54,6 @@ conda update --all
 
 아나콘다는 기본 채널에 패키지가 있는 경우도 있고, 채널을 지정해야 하는 경우도 있습니다. 그래서 검색을 해봐야하는데 이게 꽤 귀찮습니다. 그래서 귀찮음을 날려 버리기 위해 정리 합니다. 따로 yml 파일로 덤프해두는 방법이 있지만, 업데이트를 잊기도 합니다. 설치할때 웹에 정리해두는 편이 더 효율적이라는 것을 깨달았습니다.
 
-```sh
-conda create -n ml python=3.6
-conda activate ml
-conda install cudatoolkit --yes
-conda install numpy --yes
-conda install scipy --yes
-conda install jupyter --yes
-conda install pandas --yes
-conda install matplotlib --yes
-conda install tensorflow-gpu --yes
-conda install pytorch --yes
-conda install torchvision --yes
-conda install -c derickl torchtext --yes
-conda install -c menpo opencv --yes
-conda install keras-gpu --yes
-conda install -c anaconda h5py --yes
-conda install -c anaconda chainer --yes
-conda install -c conda-forge tensorboardx --yes 
-conda install -c anaconda pyqt5 --yes
-conda install -c conda-forge torchfile --yes
-conda install -c conda-forge pika --yes
-conda install visvis --yes
-conda install imageio --yes
-conda install -c anaconda cloudpickle --yes
-conda install -c conda-forge progress --yes
-conda install torchfile --yes
-conda install -c anaconda cython --yes
-conda install -c anaconda pillow --yes
-```
-
 ### kaggle
 
 kaggle 커맨드라인 인터페이스는 
