@@ -18,8 +18,8 @@
 
 - [번역 기준](rules_of_translation.md)
 - [다트 플랫폼](./dart_platforms/index.md)
-- [다트 언어로의 여행](./language_tour/index.md)
-- 코어 라이브러리로의 여행
+- [다트 언어로의 여행 (A tour to the Dart language)](./language_tour/index.md)
+- 코어 라이브러리로의 여행 (A tour to the core libraries)
 
 ---
 
