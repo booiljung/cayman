@@ -2,7 +2,7 @@
 
 ## 함수 (Functions)
 
-다트는 진정한 객체 지향 언어이므로 함수도 객체이며 유형이 Function입니다. 즉, 함수를 변수에 할당하거나 다른 함수에 인수로 전달할 수 있습니다. 다트 클래스의 인스턴스를 함수처럼 호출 할 수도 있습니다. 자세한 내용은 Callable 클래스를 참조하십시오.
+다트는 진정한 객체 지향 언어이므로 함수도 객체이며 타입이 `Function`입니다. 즉, 함수를 변수에 할당하거나 다른 함수에 인수로 전달할 수 있습니다. 다트 클래스의 인스턴스를 함수처럼 호출 할 수도 있습니다. 자세한 내용은 Callable 클래스를 참조하십시오.
 
 다음은 함수 구현의 예입니다.
 
@@ -12,7 +12,7 @@ bool isNoble(int atomicNumber) {
 }
 ```
 
-Effective 다트는 공용 API에 대해 주석을 입력 할 것을 권장하지만이 유형을 생략하면 함수가 계속 작동합니다.
+**이펙티브 다트**는 [type annotations for public APIs](https://dart.dev/guides/language/effective-dart/design#prefer-type-annotating-public-fields-and-top-level-variables-if-the-type-isnt-obvious) 를 권장하지만이 타입을 생략하여도 함수가 계속 작동합니다.
 
 ```dart
 isNoble(atomicNumber) {
@@ -26,7 +26,7 @@ isNoble(atomicNumber) {
 bool isNoble(int atomicNumber) => _nobleGases[atomicNumber] != null;
 ```
 
-`=> expr` 문법은`{return expr; }`의 단축형입니다. `=>`표기법은 때로 화살표 구문이라고도 합니다.
+`=> 표현식` 문법은`{ return 표현식; }`의 약식입니다. `=>`표기법은 때로 화살 구문이라고도 합니다.
 
 ---
 
@@ -44,7 +44,7 @@ bool isNoble(int atomicNumber) => _nobleGases[atomicNumber] != null;
 enableFlags(bold: true, hidden: false);
 ```
 
-함수를 정의 할 때 `{param1, param2, ...}`를 사용하여 명명 된 매개 변수를 지정하십시오 :
+함수를 정의 할 때 `{param1, param2, ...}`를 사용하여 명명 된 매개 변수를 지정하세요. :
 
 ```dart
 /// Sets the [bold] and [hidden] flags ...
@@ -65,7 +65,7 @@ const Scrollbar({Key key, @required Widget child})
 
 ##### 선택적 위치 매개 변수 (Optional positional parameters)
 
-`[]`에 함수 매개 변수 집합을 래핑하면 선택적 위치 매개 변수로 표시됩니다.
+`[]`에 함수 매개 변수 세트를 래핑하면 선택적 위치 매개 변수로 표시됩니다.
 
 ```dart
 String say(String from, String msg, [String device]) {
@@ -92,7 +92,7 @@ assert(say('Bob', 'Howdy', 'smoke signal') ==
 
 #### 매개 변수 기본 값 (Default parameter value)
 
-함수는`= `을 사용하여 명명 된 매개 변수와 위치 매개 변수에 대한 기본값을 정의 할 수 있습니다. 기본값은 컴파일 타임 상수 여야 합니다. 기본값이 제공되지 않으면 기본값은 `null`입니다.
+함수는 `= `을 사용하여 명명 된 매개 변수와 위치 매개 변수에 대한 기본값을 정의 할 수 있습니다. 기본값은 컴파일 타임 상수 여야 합니다. 기본값이 제공되지 않으면 기본값은 `null`입니다.
 
 다음은 명명 된 매개 변수의 기본값을 설정하는 예제입니다.
 
@@ -106,7 +106,7 @@ enableFlags(bold: true);
 
 > 지원 중단 노트 :
 >
-> 이전 코드는`=` 대신 콜론 (`:`)을 사용하여 명명 된 매개 변수의 기본값을 설정할 수 있습니다. 이유는 원래는 명명 된 매개 변수에 대해서만`:`만이 지원 되었기 때문입니다. 이 지원은 더 이상 사용되지 않으므로 `=`를 사용하여 기본값을 지정하는 것이 좋습니다.
+> 이전 코드는`=` 대신 콜론 (`:`)을 사용하여 명명 된 매개 변수의 기본값을 설정할 수 있습니다. 이유는 원래는 명명 된 매개 변수에 대해서만 `:`만이 지원 되었기 때문입니다. 이 지원은 더 이상 사용되지 않으므로 `=`를 사용하여 기본값을 지정하는 것이 좋습니다.
 
 다음 예제는 위치 매개 변수의 기본값을 설정하는 방법을 보여줍니다.
 
@@ -144,7 +144,7 @@ void doStuff(
 
 ### `main()` 함수
 
-모든 앱은 app의 엔트리 포인트 역할을하는 최상위 `main()`함수를 가져야 합니다.  `main()`함수는 `void`를 리턴하고 인수를 위한 선택적 `List<String>` 매개 변수를 갖습니다.
+모든 앱은 app의 진입점 역할을하는 최상위 `main()`함수를 가져야 합니다.  `main()`함수는 `void`를 리턴하고 인수를 위한 선택적 `List<String>` 매개 변수를 갖습니다.
 
 다음은 웹 앱을 위한 `main ()`함수의 예입니다 :
 
@@ -157,7 +157,7 @@ void main() {
 ```
 
 > 노트 :
-> 위의 코드에서 `..`구문은 [캐스케이드] (https://dart.dev/guides/language/language-tour#cascade-notation-)이라고합니다. 캐스케이드를 사용하면 단일 객체의 멤버에 대해 여러 작업을 수행 할 수 있습니다.
+> 위의 코드에서 `..`구문은 [캐스케이드](https://dart.dev/guides/language/language-tour#cascade-notation-)이라고합니다. 캐스케이드를 사용하면 단일 객체의 멤버에 대해 여러 작업을 수행 할 수 있습니다.
 
 다음은 인수를 취하는 명령 행 응용 프로그램을 위한 `main ()`함수의 예입니다 :
 
@@ -174,7 +174,7 @@ void main(List<String> arguments) {
 
 [args library](https://pub.dev/packages/args)를 사용하여 명령 줄 인수를 정의하고 구문 분석 할 수 있습니다.
 
-### 일류 객체 함수 (Functions as first-class objects)
+### 일급 객체 함수 (Functions as first-class objects)
 
 함수를 매개 변수로 다른 함수에 전달할 수 있습니다. 예:
 
@@ -212,8 +212,6 @@ assert(loudify('hello') == '!!! HELLO !!!');
  };  
 ```
 
-The following example defines an anonymous function with an untyped parameter, `item`. The function, invoked for each item in the list, prints a string that includes the value at the specified index.
-
 다음 예제는 타입이 지정되지 않은 매개 변수 인 `item`을 사용하여 익명 함수를 정의 합니다. 리스트의 각 항목에 대해 호출 된 함수는 지정된 인덱스의 값을 포함하는 문자열을 인쇄합니다.
 
 ```dart
@@ -227,7 +225,7 @@ list.forEach((item) {
 
 <iframe src="https://dartpad.dartlang.org/embed-inline.html?id=5d70bc1889d055c7a18d35d77874af88&amp;verticalRatio=60" style="border: 1px solid #ccc;" width="100%" height="250px">
 </iframe>
-함수에 하나의 명령문만 있으면 화살표 표기법을 사용하여 명령문을 단축 할 수 있습니다. 다트 패드에 다음 줄을 붙여 넣고 실행을 클릭하여 기능상으로 동등한 지 확인하십시오.
+함수에 하나의 명령문만 있으면 화살 표기법 `=>`을 사용하여 명령문을 단축 할 수 있습니다. [다트 패드](https://dartpad.dartlang.org/)에 다음 줄을 붙여 넣고 실행을 클릭하여 기능상으로 동등한 지 확인하십시오.
 
 ```dart
 list.forEach(
@@ -261,7 +259,7 @@ void main() {
 }
 ```
 
-`nestedFunction ()`이 최상위 수준까지 모든 수준의 변수를 사용하는 방법에 주목하십시오.
+`nestedFunction()`이 최상위 수준까지 모든 수준의 변수를 사용하는 방법에 주목하십시오.
 
 ###  어휘 클로저 (Lexical closures)
 
@@ -270,17 +268,16 @@ void main() {
 함수는 주변 범위에 정의 된 변수를 닫을 수 있습니다. 다음 예제에서, `makeAdder()`는 변수 `addBy`를 캡쳐합니다. 반환 된 함수가 어디에서든지 `addBy`를 기억합니다.
 
 ```dart
-/// Returns a function that adds [addBy] to the
-/// function's argument.
+/// 함수의 인수에 [addBy]를 더하는 함수를 반환합니다.
 Function makeAdder(num addBy) {
   return (num i) => addBy + i;
 }
 
 void main() {
-  // Create a function that adds 2.
+  // 2를 더하는 함수를 만듭니다.
   var add2 = makeAdder(2);
 
-  // Create a function that adds 4.
+  // 4를 더하는 함수를 만듭니다.
   var add4 = makeAdder(4);
 
   assert(add2(3) == 5);
@@ -288,9 +285,9 @@ void main() {
 }
 ```
 
-### Testing functions for equality
+### 함수 항등성 테스트 (Testing functions for equality)
 
-다음은 최상위 함수, 정적 메서드 및 인스턴스 메서드가 같은지 테스트하는 예제입니다.
+다음은 최상위 함수, 정적 메서드 및 인스턴스 메소드가 같은지 테스트하는 예제입니다.
 
 ```dart
 void foo() {} // 최상위 함수
@@ -317,17 +314,15 @@ void main() {
   var y = w;
   x = w.baz;
 
-  // These closures refer to the same instance (#2),
-  // so they're equal.
+  // 이러한 클로저는 동일한 인스턴스 (#2)를 참조하므로 동일합니다.
   assert(y.baz == x);
 
-  // These closures refer to different instances,
-  // so they're unequal.
+  // 이러한 클로저는 서로 다른 인스턴스를 참조하므로 동일하지 않습니다.
   assert(v.baz != w.baz);
 }
 ```
 
-### Return values
+### 반환값 (Return values)
 
 모든 함수는 값을 반환합니다. 리턴 값이 지정되지 않으면`return null;`문이 암시적으로 함수 본문에 추가됩니다.
 
@@ -337,3 +332,6 @@ foo() {}
 assert(foo() == null);
 ```
 
+## 문서 변경 이력
+
+2019년 5월 15일: 첫 작성.

@@ -1,37 +1,28 @@
 [Up](../index.md)
 
-# Dart Programming Language
+# The Dart Language
 
-2019년 5월 14일
+#### 이 문서에 대해
 
-Dart는 2011년에 공개 되었습니다. 구글이 자바스트립트처럼 웹 프로그래밍을 목적으로 개발 하였습니다. Dart VM 위에서 돌아가며 다양한 종류의 기기에서 동작하도록 하였습니다.
+공부하는 방법중 가장 좋은 방법은 누군가를 가르치는 것이고, 두번째로 좋은 방법은 정리하여 공유하는 것입니다. 이 문서는 다트 프로그래밍 언어를 학습하는 과정에서 작성되었고 공유합니다.
 
-### 이 문서에 대해
+#### The Dart language
 
-이 문서는 Dart [공식 가이드](https://dart.dev/guides/language/language-tour)를 번역으로 시작하였습니다.
+[다트](https://dart.dev/)는 2011년에 공개 되었습니다. 자바스트립트처럼 웹 프로그래밍을 목적으로 [Google](https://google.com)이 개발 하였으며, 현재 다양한 클라이언트용 소프트웨어를 개발하는 목적으로 발전하고 있습니다. 구글이 만든 서버용 언어로는 [golang](https://golang.org/)이 있습니다. 다트 VM 위에서 돌아가며 다양한 종류의 기기에서 동작하도록 하였습니다.
 
-- [시작하기 (Getting started)](0_gettings_start.md)
-- [변수 (Variables)](1_variables.md)
-- [내장 타입 (Built in types)](2_built_in_types.md)
-- [함수 (Functions)](3_functions.md)
-- [연산자 (Operators)](4_operators.md)
-- [흐름 제어문 (Control flow statements)](5_control_flow_statements.md)
-- [예외 (Exceptions)](6_exceptions.md)
-- [클래스 (Classes)](7_classes.md)
-- [Generics](8_generics.md)
-- [Libraries and visibility](9_libraries_and_visibility.md)
-- [Asynchorony support](10_asynchrony_support.md)
-- [Generators](11_generators.md)
-- [Callable classes](12_callable_classes.md)
-- [Isolates](13_Isolates.md)
-- [Typedefs](14_typedefs.md)
-- [Metadata](15_metadata.md)
-- [Comments](16_comments.md)
+#### 다트패드 (DartPad)
 
-##  정리
+다트는 웹상에서 바로 다트 코드를 작성하고 실험해 볼 수 있는 [DartPad](https://dartpad.dartlang.org)를 제공합니다.
 
-이 페이지는 다트 언어에서 일반적으로 사용되는 기능을 요약 한 것입니다. 더 많은 기능이 구현되고 있지만 기존 코드를 손상시키지 않을 것으로 기대합니다. 자세한 내용은 [다트 언어 사양] (https://dart.dev/guides/language/spec) 및 [이펙티브 다트] (https://dart.dev/guides/language/effective-dart)를 참조하십시오.
+### 목차
 
-다트의 핵심 라이브러리에 대한 자세한 내용은 [다트 라이브러리 둘러보기] (https://dart.dev/guides/libraries/library-tour)를 참조하십시오.
+- [번역 기준](rules_of_translation.md)
+- [다트 플랫폼](./dart_platforms/index.md)
+- [다트 언어로의 여행](./language_tour/index.md)
+- 코어 라이브러리로의 여행
 
+---
 
+## 문서 변경 이력
+
+2019년 5월 15일: 첫 작성.

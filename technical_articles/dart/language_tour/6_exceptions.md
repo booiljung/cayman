@@ -2,11 +2,9 @@
 
 ##  예외 (Exceptions)
 
-당신의 다트 코드는 예외를 던지고 잡을 수 있습니다. 예외는 예상치 못한 일이 발생했음을 나타내는 오류를 나타냅니다. 예외를 잡지(catch) 않으면, 예외를 발생시킨 격리(isolate)가 일시 중단(suspend)되며, 일반적으로 격리(isolate) 및 해당 프로그램이 종료됩니다.
+다트 코드는 예외를 던지고 잡을 수 있습니다. 예외는 예상치 못한 일이 발생했음을 나타내는 오류를 나타냅니다. 예외를 잡지(catch) 않으면, 예외를 발생시킨 격리(isolate)가 일시 중단(suspend)되며, 일반적으로 격리(isolate) 및 해당 프로그램이 종료됩니다.
 
-Java와 달리 다트의 모든 예외는 unchecked exceptions입니다. 메서드는 throw 할 수있는 예외를 선언하지 않으며 예외를 catch 할 필요가 없습니다.
-
-Dart provides [Exception](https://api.dartlang.org/stable/dart-core/Exception-class.html) and [Error](https://api.dartlang.org/stable/dart-core/Error-class.html) types, as well as numerous predefined subtypes. You can, of course, define your own exceptions. However, Dart programs can throw any non-null object—not just Exception and Error objects—as an exception.
+자바와 달리 다트의 모든 예외는 unchecked exceptions입니다. 메서드는 throw 할 수 있는 예외를 선언하지 않으며 예외를 catch 할 필요가 없습니다.
 
 다트는 [Exception](https://api.dartlang.org/stable/dart-core/Exception-class.html)과 [Error](https://api.dartlang.org/stable/dart-core/Error)를 제공합니다. 물론 할 수 있다면 예외를 정의할 수 있습니다. 그러나 다트 프로그램은 Exception 및 Error 객체뿐만 아니라 모든 null이 아닌 객체를 예외로 throw 할 수 있습니다.
 
@@ -18,15 +16,13 @@ Dart provides [Exception](https://api.dartlang.org/stable/dart-core/Exception-cl
 throw FormatException('Expected at least 1 section');
 ```
 
-임의의 객체를 던질 수도 있습니다.
+임의의 객체를 throw 할 수도 있습니다.
 
 ```dart
 throw 'Out of llamas!';
 ```
 
-**Note:** Production-quality code usually throws types that implement   [Error](https://api.dartlang.org/stable/dart-core/Error-class.html) or [Exception](https://api.dartlang.org/stable/dart-core/Exception-class.html).
-
-프로덕션 수준의 코드는 일반적으로 [오류](https://api.dartlang.org/stable/dart-core/Error-class.html) 또는 [예외](https://api.dartlang.org/stable/dart-core/Exception-class.html))를 구현하는 타입을 throw합니다.
+**Note:** 프로덕션 수준의 코드는 일반적으로 [Error](https://api.dartlang.org/stable/dart-core/Error-class.html) 또는 [Exception](https://api.dartlang.org/stable/dart-core/Exception-class.html))를 구현하는 타입을 throw합니다.
 
 예외를 던지기 (throwing)는 표현식이므로, `=>` 명령문에서 뿐만 아니라 표현식을 허용하는 다른 곳에서도 예외를 던질 수 있습니다 :
 
@@ -36,7 +32,7 @@ void distanceTo(Point other) => throw UnimplementedError();
 
 ###  Catch
 
-예외를 잡거나 캡처하면 예외를 다시 발생시키지 않는 한 전파되는 것을 중지합니다. 예외를 잡으면 다룰 수 있습니다.
+예외를 catch하나 캡처하면 예외를 다시 발생시키지 않는 한 전파되는 것을 중지합니다. 예외를 catch하면 다룰 수 있습니다.
 
 ```dart
 try {
@@ -46,22 +42,24 @@ try {
 }
 ```
 
-둘 이상의 예외 타입을 던질 수 있는 코드를 처리하려면 여러 catch 절을 지정할 수 있습니다. Throw 된 객체의 타입과 일치하는 첫 번째 catch 절이 예외를 처리합니다. catch 절이 타입을 지정하지 않으면 해당 절은 모든 타입의 객체를 처리 할 수 있습니다.
+둘 이상의 예외 타입을 던질 수 있는 코드를 처리하려면 여러 `catch` 절을 지정할 수 있습니다. throw 된 객체의 타입과 일치하는 첫 번째 `catch` 절이 예외를 처리합니다. `catch` 절이 타입을 지정하지 않으면 해당 절은 모든 타입의 객체를 처리 할 수 있습니다.
 
 ```dart
 try {
   breedMoreLlamas();
 } on OutOfLlamasException {
-  // A specific exception
+  // 지정한 타입의 예외
   buyMoreLlamas();
 } on Exception catch (e) {
-  // Anything else that is an exception
+  // 그 밖의 예외
   print('Unknown exception: $e');
 } catch (e) {
-  // No specified type, handles all
+  // 지정된 타입 없음, 모두 처리
   print('Something really unknown: $e');
 }
 ```
+
+역자주: 모든 예외를 코드는 위험하며, 처리 후 반드시 다시 던질 것을 권합니다.
 
 앞의 코드에서 볼 수 있듯이 `on` 또는 `catch` 또는 둘 다 사용할 수 있습니다. 예외 타입을 지정할 필요가 있을 때 `on`을 사용하십시오. 예외 처리기가 예외 객체를 필요로 할 때 `catch`를 사용하십시오.
 
@@ -125,4 +123,8 @@ try {
 }
 ```
 
-라이브러리 둘러보기의 [예외](https://dart.dev/guides/libraries/library-tour#exceptions) 섹션을 읽어보십시오.
+라이브러리 둘러보기의 [Exception](https://dart.dev/guides/libraries/library-tour#exceptions) 섹션을 읽어보십시오.
+
+## 문서 변경 이력
+
+2019년 5월 15일: 첫 작성.
