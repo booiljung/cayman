@@ -1,8 +1,8 @@
 [Up](../index.md)
 
-# A tour to the Dart language
-
 이 **다트 언어로의 여행** 문서는 다트 [A tour of the Dart languag](https://dart.dev/guides/language/language-tour)를 번역으로 시작하였으며 문서의 권리는 [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)를 따릅니다. 이 문서는 프로그래밍 언어 안내서이지 프로그래밍 안내서가 아닙니다. 다른 프로그래밍 언어에 대한 지식을 가지고 있다면 유용하지만, 다른 프로그래밍 언어에 대한 지식이 없다면 이 문서로 프로그래밍을 배우기에 적합하지 않습니다.
+
+# A tour to the Dart language
 
 ### 목차
 
