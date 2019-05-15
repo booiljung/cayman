@@ -2,8 +2,8 @@
 
 #### 최신 글
 
+- Dart: [A tour to the Dart language](./technical_articles/dart/index.md)
 - Image processing: [Convert photos to Sketches](./technical_articles/image_processing/convert_photos_to_sketches.md)
-
 - Machine Learning: [머신러닝 인퍼런스를 위한 RabbitMQ 데모](technical_articles/machine_learning/rabbitmq_demo_for_machine_learning_inference.md)
 - Linux: [Ubuntu 18.04 LTS에서 GUI와 CLI를 전환](technical_articles/linux/switch_gui_and_cli.md)
 - C/C++: [GUI Libraries](./technical_articles/c_language/cpp_gui_libraries.md)
